@@ -39,7 +39,7 @@ const catamaran = localFont({
     variable: '--font-catamaran',
 })
 
-const fonts = `${catamaran.variable} ${bungee.variable} ${densonBold}` // this allows us to style our fonts using Tailwind class method as define in globals.css
+const fonts = `${catamaran.variable} ${bungee.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
 
 export default function RootLayout({
   children,

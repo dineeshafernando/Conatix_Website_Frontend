@@ -1,26 +1,20 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* colors */
+  --color-dark-grey: rgb(30, 31, 30); /* main background */
+  --color-grey: rgb(51, 52, 52); /* secondary background / footer, nav containers */
+  --color-electric-blue: rgb(49, 194, 241); /* CTA buttons, hover states, links */
+  --color-khaki-gold: rgb(145, 136, 81); /* accent — sparingly, e.g. icons or small highlights */
+  --color-white: rgb(246, 246, 246); /* text */
+
+  /* fonts */
+  --font-catamaran: var(--font-catamaran);
+  --font-bungee-reg: var(--font-bungee-reg);
+  --font-denson-bold: var(--font-denson-bold);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
