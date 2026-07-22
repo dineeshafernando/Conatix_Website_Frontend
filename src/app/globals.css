@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* custom tailwind in-line styling with colors and fonts */
 @theme {
   /* colors */
   --color-dark-grey: rgb(30, 31, 30); /* main background */
@@ -12,6 +13,37 @@
   --font-catamaran: var(--font-catamaran);
   --font-bungee-reg: var(--font-bungee-reg);
   --font-denson-bold: var(--font-denson-bold);
+}
+/* Order of specificity:
+1. Base (lowest)
+2. Component
+3. Utilities (highest) - in-line styling like className="text-center"
+
+*/
+/* base styles for certain HTML elements */
+@layer base {
+  h1 {
+    @apply text-6xl
+  }
+  h2 {
+    @apply text-5xl
+  }
+  h3 {
+    @apply text-2xl
+  }
+  h4 {
+    @apply text-xl
+  }
+}
+
+/* 
+custom in-line class styling using grouped Tailwind class styles (done with @apply)
+Note: @layer components - used so that in-line styling can still override these styles created in @layer components.
+ */
+@layer components {
+  .hover-effect {
+    @apply hover:opacity-70 transition duration-200 cursor-pointer
+  }
 }
 
 
