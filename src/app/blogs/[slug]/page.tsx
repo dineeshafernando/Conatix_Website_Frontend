@@ -1,7 +1,9 @@
 import Image from "next/image"
-import { fetchBlog, BlogPageProps, referenceProp } from "@/lib/strapi"
+import Link from "next/link"
+import { fetchBlog, BlogPageProps, referenceData } from "@/lib/strapi"
 import { formatDate } from "@/lib/util"
 import StrapiBlocksRenderer from "@/components/StrapiBlocksRenderer"
+import {ChevronLeft} from "lucide-react"
 
 export default async function BlogPage({params}:BlogPageProps) {
   const {slug} = await params;
@@ -9,12 +11,12 @@ export default async function BlogPage({params}:BlogPageProps) {
   console.log(blog)
 
   if (!blog) {
-    return <div>Blog not found!</div>
+    return <p className="text-center text-xl">Blog not found!</p>
   }
-  // console.log(blog)
 
   return (
     <main className="mx-auto mt-5 px-5 max-w-[800px] text-center">
+      <Link href="/blogs" className="static md:fixed md:top-28 md:left-10 hover-effect hover:underline text-xl flex items-center"><ChevronLeft/>Conatix Blogs</Link>
       <h2 className="font-bungee-reg font-bold leading-10">{blog.title}</h2>
       <div className="font-bungee-reg font-bold flex justify-center gap-2">
         <p>Author: {blog.author} |</p>
@@ -31,7 +33,7 @@ export default async function BlogPage({params}:BlogPageProps) {
       </div>
       <div className="text-left">
         <h4 className="italic">References</h4>
-        {blog.references.map((ref:referenceProp) => <p className="text-left text-electric-blue hover:underline hover-effect"><a href={ref.url} target="_blank">{ref.label}</a></p>)}
+        {blog.references.map((ref:referenceData, index) => <p key={index} className="text-left text-electric-blue hover:underline hover-effect"><a href={ref.url} target="_blank">{ref.label}</a></p>)}
       </div>
     </main>
   )
