@@ -5,10 +5,16 @@ import {getAllBlogs} from "@/lib/strapi"
 import {FlatBlogPost} from "@/lib/strapi"
 import {formatDate} from "@/lib/util"
 
-export default async function Blogs() {
-  const blogs = await getAllBlogs()
+type BlogsPageProps = {
+  searchParams: Promise<{search?: string}>; // promise that resolves to an object with an optional search property
+}
+
+export default async function Blogs({searchParams}:BlogsPageProps) {
+  const currentParams = await searchParams;
+  const searchWord = currentParams.search;
+
+  const blogs = await getAllBlogs(searchWord)
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
-    console.log(blog.image.small)
     return (
       <section key={blog.id} className="w-full flex flex-col items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
         <div className="flex-1 flex flex-col gap-2">
