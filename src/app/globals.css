@@ -44,6 +44,12 @@ Note: @layer components - used so that in-line styling can still override these 
   .hover-effect {
     @apply hover:opacity-70 transition duration-200 cursor-pointer
   }
+  .blogs-filter-border {
+    @apply border-grey border-4 rounded-lg
+  }
+  .center-chevron-icon {
+   @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
+  }
 }
 
 
