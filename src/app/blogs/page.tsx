@@ -1,19 +1,23 @@
 import Link from "next/link"
 import Image from "next/image"
-import SearchBar from "@/components/SearchBar"
-import {getAllBlogs} from "@/lib/strapi"
-import {FlatBlogPost} from "@/lib/strapi"
+import FilterBar from "@/components/BlogsFilterBar"
+import {getAllBlogs, getAllBlogCategories, FlatBlogPost} from "@/lib/strapi"
 import {formatDate} from "@/lib/util"
 
 type BlogsPageProps = {
-  searchParams: Promise<{search?: string}>; // promise that resolves to an object with an optional search property
+  searchParams: Promise<{search?: string, category?: string, sort?: string}>; // promise that resolves to an object with an optional search property
 }
 
 export default async function Blogs({searchParams}:BlogsPageProps) {
+  // For searches
   const currentParams = await searchParams;
-  const searchWord = currentParams.search;
+  const searchTerms = currentParams.search;
+  const category = currentParams.category;
+  const sort = currentParams.sort;
 
-  const blogs = await getAllBlogs(searchWord)
+  // creates the blogs array
+  const blogs = await getAllBlogs(searchTerms, category, sort)
+  // console.log(blogs[0]) see how an blog data structure looks like
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
     return (
       <section key={blog.id} className="w-full flex flex-col items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
@@ -28,12 +32,14 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
     )
   })
 
+  const blogCategories = await getAllBlogCategories()
+
   return (
     <main className="px-6">
       <h1 className="font-denson-bold text-center mb-5">Latest News</h1>
       <div className="max-w-5xl mx-auto">
         <div>
-          <SearchBar />
+          <FilterBar categories={blogCategories} />
         </div>
         <div className="flex flex-col gap-4">
           {blogsEntry}

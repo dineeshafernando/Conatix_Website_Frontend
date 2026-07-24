@@ -52,6 +52,16 @@ export interface referenceData {
   url: string,
 }
 
+export interface categoryData {
+  id: number,
+  attributes: {
+    label: string,
+    createdAt: string,
+    updatedAt: string,
+    publishedAt: string,
+  }
+}
+
 // Define the blog attributes that Strapi returns 
 export interface BlogAttributes {
   title: string;
@@ -67,6 +77,9 @@ export interface BlogAttributes {
   mainTexts: BlocksContent;
   media: MediaAttributes;
   references: referenceData[];
+  categories: {
+    data: categoryData[];
+  }
 }
 
 // Define the structure of the content inside the blog post, flattened. This will be used to display to the frontend.
@@ -79,6 +92,7 @@ export interface FlatBlogPost extends BlogAttributes {
     thumbnail: string,
   }
   altImgText: string,
+  articleCategories: string[],
 }
 
 // helper function to flatten the blog post (this is the blog data object that gets passed into the blogs page and individual blog page)
@@ -87,6 +101,7 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
   const imgFormats = mediaData.attributes.formats
   const altImgText = mediaData.attributes.alternativeText ? mediaData.attributes.alternativeText : blog.attributes.title
   const references = blog.attributes.references
+  const articleCategories = blog.attributes.categories.data.map(category => category.attributes.label)
 
   return {
     id: blog.id,
@@ -99,22 +114,24 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
     },
     altImgText: altImgText,
     references: references,
+    articleCategories: articleCategories,
   }
 }
 
 // Fetches and returns all blogs created on Strapi (for the blogs homepage)
-export async function getAllBlogs(searchTerm?: string) {
-  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*`
+export async function getAllBlogs(searchTerm?: string, category?:string, sort?:string) {
+  const sortParam = sort || 'date:desc';
+  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*&sort=${sortParam}`
   
-  // if user searched for specific articles
-  if (searchTerm) {
-    url += `&filters[title][$containsi]=${searchTerm}`;
-  }
+  // Condition A: if user searched for specific articles by title
+  if (searchTerm) url += `&filters[title][$containsi]=${searchTerm}`;
+  // Condition B: User filtered by category
+  if (category) url += `&filters[categories][label][$eq]=${category}`;
 
   const blogsPromise = await fetch(url)
   const jsonResponse = await blogsPromise.json()
   return jsonResponse.data.map(flattenBlog)
-}
+  }
 
 export interface BlogPageProps {
   params: Promise<{ 
@@ -127,5 +144,11 @@ export async function fetchBlog(slug: string) {
   const blogsPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`)
   const jsonResponse = await blogsPromise.json()
   return flattenBlog(jsonResponse.data[0])
+}
+
+export async function getAllBlogCategories() {
+  const categoryPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`)
+  const jsonResponse = await categoryPromise.json()
+  return jsonResponse.data.map((category:categoryData) => category.attributes.label)
 }
 
