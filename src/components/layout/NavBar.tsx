@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { navigation } from "@/lib/Navigation"
+import {ChevronDown} from "lucide-react"
 
 export default function NavBar() {
 
@@ -9,7 +10,10 @@ export default function NavBar() {
       <li key={nav.label}>
         {nav.children? (
           <div className="group relative">
-            <button className="hover-effect">{nav.label}</button>
+            <div className="flex items-center hover-effect">
+              <button>{nav.label}</button>
+              <ChevronDown />
+            </div>
             <ul className="group-hover:block hidden absolute">
               {nav.children.map(child => 
                 <li key={child.label}>
