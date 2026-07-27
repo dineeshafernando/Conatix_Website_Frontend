@@ -4,6 +4,7 @@ import "./globals.css";
 
 
 import NavBar from "@/components/layout/NavBar"
+import MobileNav from "@/components/layout/MobileNav"
 import Footer from "@/components/layout/Footer"
 
 export const metadata: Metadata = {
@@ -49,7 +50,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={fonts}>
       <body className="min-h-screen flex flex-col bg-dark-grey text-white font-catamaran">
-        <NavBar />
+        {/*navbar conditional rendering using tailwind styling */}
+        <div className="hidden md:block">
+          <NavBar />
+        </div>
+        <div className="block md:hidden">
+          <MobileNav />
+        </div>
         <main className="flex-1">{children}</main>
         <Footer /> 
       </body>
