@@ -119,9 +119,10 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
 }
 
 // Fetches and returns all blogs created on Strapi (for the blogs homepage)
-export async function getAllBlogs(searchTerm?: string, category?:string, sort?:string) {
-  const sortParam = sort || 'date:desc';
-  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*&sort=${sortParam}`
+export async function getAllBlogs(searchTerm?: string, category?:string, sort?:string, pageSize?:string) {
+  const sortParam = sort || "date:desc";
+  const activePageSize = pageSize || "5";
+  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*&sort=${sortParam}&pagination[pageSize]=${activePageSize}`
   
   // Condition A: if user searched for specific articles by title
   if (searchTerm) url += `&filters[title][$containsi]=${searchTerm}`;
@@ -130,8 +131,9 @@ export async function getAllBlogs(searchTerm?: string, category?:string, sort?:s
 
   const blogsPromise = await fetch(url)
   const jsonResponse = await blogsPromise.json()
-  return jsonResponse.data.map(flattenBlog)
-  }
+  const blogs = jsonResponse.data.map(flattenBlog)
+  return blogs
+}
 
 export interface BlogPageProps {
   params: Promise<{ 
