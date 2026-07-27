@@ -1,11 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import FilterBar from "@/components/BlogsFilterBar"
+import Pagination from "@/components/Pagination"
 import {getAllBlogs, getAllBlogCategories, FlatBlogPost} from "@/lib/strapi"
 import {formatDate} from "@/lib/util"
 
 type BlogsPageProps = {
-  searchParams: Promise<{search?: string, category?: string, sort?: string}>; // promise that resolves to an object with an optional search property
+  searchParams: Promise<{search?: string, category?: string, sort?: string, pageSize?: string}>; // promise that resolves to an object with an optional search property
 }
 
 export default async function Blogs({searchParams}:BlogsPageProps) {
@@ -14,20 +15,21 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
   const searchTerms = currentParams.search;
   const category = currentParams.category;
   const sort = currentParams.sort;
+  const pageSize = currentParams.pageSize
 
   // creates the blogs array
-  const blogs = await getAllBlogs(searchTerms, category, sort)
+  const blogs = await getAllBlogs(searchTerms, category, sort, pageSize)
   // console.log(blogs[0]) see how an blog data structure looks like
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
     return (
       <section key={blog.id} className="w-full flex flex-col items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
         <div className="flex-1 flex flex-col gap-2">
           <h3 className="font-bungee-reg">{blog.title}</h3>
-          <p className="font-bungee-reg">{formatDate(blog.date)}</p>
-          <p>{blog.summary}</p>
-          <Link href={`/blogs/${blog.slug}`} className="text-khaki-gold hover-effect hover:underline">Read More</Link>
+          <p className="font-bungee-reg text-2xl">{formatDate(blog.date)}</p>
+          <p className="text-xl">{blog.summary}</p>
+          <Link href={`/blogs/${blog.slug}`} className="text-khaki-gold text-xl hover-effect hover:underline">Read More</Link>
         </div>
-        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}`} height={250} width={250} alt={blog.altImgText} unoptimized/>
+        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}`} height={300} width={300} alt={blog.altImgText} unoptimized/>
       </section>
     )
   })
@@ -36,14 +38,15 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
 
   return (
     <main className="px-6">
-      <h1 className="font-denson-bold text-center mb-5">Latest News</h1>
+      <h1 className="font-denson-bold text-center mb-5 text-khaki-gold">News</h1>
       <div className="max-w-5xl mx-auto">
         <div>
           <FilterBar categories={blogCategories} />
         </div>
-        <div className="flex flex-col gap-4">
-          {blogsEntry}
+        <div className="flex flex-col gap-4 mb-5">
+          {blogsEntry.length == 0 ? <h2 className="text-center">No blogs found</h2> : blogsEntry}
         </div>
+        <Pagination />
       </div>
     </main>
   )

@@ -2,7 +2,7 @@
 
 import { Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 
 type BlogsFilterBarProps = {
   categories: string[];
@@ -13,6 +13,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
   const [category, setCategory] = useState("")
   const [sort, setSort] = useState("")
   const router = useRouter()
+  const searchParams = useSearchParams()
 
   // Single source of truth function
   const performSearch = (searchTerm: string, category: string, sort: string) => {
@@ -23,6 +24,10 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
     if (searchTerm) params.append("search", searchTerm);
     if (category) params.append("category", category);
     if (sort) params.append("sort", sort);
+
+    // 3. THE FIX: Grab the active pageSize from the URL (or default to 5)
+    const activePageSize = searchParams.get("pageSize") || "5";
+    params.set("pageSize", activePageSize);
 
     // Push the final URL to the router
     router.push(`/blogs?${params.toString()}`);
@@ -55,7 +60,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
   };
 
   return (
-    <section className="flex flex-col md:flex-row gap-5 mb-5">
+    <section className="flex flex-col md:flex-row gap-5 mb-5 text-xl">
       {/* Search Bar */}
       <form 
         onSubmit={handleSearchSubmit} 
@@ -72,7 +77,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
       {/* Filter: category */}
       <div className="relative">
         <select 
-          className="w-full md:w-[155px] blogs-filter-border p-5 appearance-none focus:outline-none"
+          className="w-full md:w-[180px] blogs-filter-border p-5 appearance-none focus:outline-none"
           value={category}
           onChange={(e) => handleCategoryChange(e)}
         >
@@ -86,7 +91,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
       {/* Filter: sort */}
       <div className="relative">
         <select 
-          className="w-full md:w-[120px] blogs-filter-border p-5 appearance-none focus:outline-none"
+          className="w-full md:w-[130px] blogs-filter-border p-5 appearance-none focus:outline-none"
           value={sort}
           onChange={(e) => handleSortChange(e)}
         >
