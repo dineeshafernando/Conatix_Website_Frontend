@@ -27,7 +27,7 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
           <h3 className="font-bungee-reg">{blog.title}</h3>
           <p className="font-bungee-reg text-2xl">{formatDate(blog.date)}</p>
           <p className="text-xl">{blog.summary}</p>
-          <Link href={`/blogs/${blog.slug}`} className="text-khaki-gold text-xl hover-effect hover:underline">Read More</Link>
+          <Link href={`/blogs/${blog.slug}`} className="text-electric-blue text-xl hover-effect hover:underline">Read More</Link>
         </div>
         <Image src={`${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}`} height={300} width={300} alt={blog.altImgText} unoptimized/>
       </section>
