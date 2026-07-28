@@ -3,9 +3,14 @@
 import { useRouter, useSearchParams } from "next/navigation"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function Pagination() {
+type PaginationProps = {
+  pageCount: number,
+}
+
+export default function Pagination({pageCount}:PaginationProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const currentPage: number = parseInt(searchParams.get("page") || "1")
 
   const handlePageSizeChange = (newPageSize: string) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -26,20 +31,39 @@ export default function Pagination() {
   })
 
   const handlePrevPage = () => {
-
+    // Take a snapshot of the current URL (keeps your search, category, and pageSize intact!)
+    const params = new URLSearchParams(searchParams.toString())
+    // if (currentPage <= 1) return;
+    // updates the current URL parameter page to be currentPage-1
+    params.set("page", (currentPage-1).toString())
+    router.push(`/blogs?${params.toString()}`)
   }
 
   const handleNextPage = () => {
-
+    const params = new URLSearchParams(searchParams.toString())
+    // if (currentPage >= pageCount) return;
+    params.set("page", (currentPage+1).toString())
+    router.push(`/blogs?${params.toString()}`)
   }
 
   return (
     <section className="text-2xl">
       <p className="text-center mb-5">Articles per page:</p>
       <div className="flex flex-row justify-center gap-5">
-        <button className="flex items-center" onClick={handlePrevPage}><ChevronLeft />Previous</button>
+        <button 
+          className={`flex items-center disabled:text-gray-500 disabled:cursor-not-allowed ${currentPage <= pageCount ? "" : "hover-effect" }`} 
+          onClick={handlePrevPage} 
+          disabled={currentPage == 1}
+        >
+          <ChevronLeft />Previous
+        </button>
         {choiceButtons}
-        <button className="flex items-center" onClick={handleNextPage}>Next<ChevronRight /></button>
+        <button 
+          className={`flex items-center disabled:text-gray-500 disabled:cursor-not-allowed ${currentPage >= pageCount ? "" : "hover-effect" }`} 
+          onClick={handleNextPage} 
+          disabled={currentPage >= pageCount}
+          >Next<ChevronRight />
+        </button>
       </div>
     </section>
   )

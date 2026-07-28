@@ -95,6 +95,13 @@ export interface FlatBlogPost extends BlogAttributes {
   articleCategories: string[],
 }
 
+export interface Pagination {
+  page: number, // current page you're on
+  pageSize: number, // how many blogs per page in the blogs homepage
+  pageCount: number, // total # of pages (determined by dividing total # of blogs / pageSize)
+  total: number, // total # of blogs in Strapi
+}
+
 // helper function to flatten the blog post (this is the blog data object that gets passed into the blogs page and individual blog page)
 function flattenBlog(blog: BlogPost):FlatBlogPost {
   const mediaData = blog.attributes.media.data[0]
@@ -119,10 +126,11 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
 }
 
 // Fetches and returns all blogs created on Strapi (for the blogs homepage)
-export async function getAllBlogs(searchTerm?: string, category?:string, sort?:string, pageSize?:string) {
+export async function getAllBlogs(searchTerm?: string, category?:string, sort?:string, page?:string, pageSize?:string) {
   const sortParam = sort || "date:desc";
+  const activePage = page || "1"
   const activePageSize = pageSize || "5";
-  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*&sort=${sortParam}&pagination[pageSize]=${activePageSize}`
+  let url = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs?populate=*&sort=${sortParam}&pagination[page]=${activePage}&pagination[pageSize]=${activePageSize}`
   
   // Condition A: if user searched for specific articles by title
   if (searchTerm) url += `&filters[title][$containsi]=${searchTerm}`;
@@ -131,8 +139,9 @@ export async function getAllBlogs(searchTerm?: string, category?:string, sort?:s
 
   const blogsPromise = await fetch(url)
   const jsonResponse = await blogsPromise.json()
-  const blogs = jsonResponse.data.map(flattenBlog)
-  return blogs
+  const blogs: FlatBlogPost[] = jsonResponse.data.map(flattenBlog)
+  const metaBlogs = jsonResponse.meta.pagination
+  return {blogs, metaBlogs}
 }
 
 export interface BlogPageProps {

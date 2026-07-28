@@ -6,7 +6,7 @@ import {getAllBlogs, getAllBlogCategories, FlatBlogPost} from "@/lib/strapi"
 import {formatDate} from "@/lib/util"
 
 type BlogsPageProps = {
-  searchParams: Promise<{search?: string, category?: string, sort?: string, pageSize?: string}>; // promise that resolves to an object with an optional search property
+  searchParams: Promise<{search?: string, category?: string, sort?: string, page?:string, pageSize?: string}>; // promise that resolves to an object with an optional search property
 }
 
 export default async function Blogs({searchParams}:BlogsPageProps) {
@@ -15,11 +15,11 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
   const searchTerms = currentParams.search;
   const category = currentParams.category;
   const sort = currentParams.sort;
+  const page = currentParams.page;
   const pageSize = currentParams.pageSize
 
   // creates the blogs array
-  const blogs = await getAllBlogs(searchTerms, category, sort, pageSize)
-  // console.log(blogs[0]) see how an blog data structure looks like
+  const {blogs, metaBlogs} = await getAllBlogs(searchTerms, category, sort, page, pageSize)
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
     return (
       <section key={blog.id} className="w-full flex flex-col items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
@@ -36,17 +36,24 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
 
   const blogCategories = await getAllBlogCategories()
 
+  // blogs range text
+  const totalBlogs: number = metaBlogs.total;
+  const startRange: number = totalBlogs == 0 ? 0 : (metaBlogs.page-1) * metaBlogs.pageSize + 1;
+  const endRange: number = Math.min(metaBlogs.page * metaBlogs.pageSize, totalBlogs);
+  
+
   return (
     <main className="px-6">
       <h1 className="font-denson-bold text-center mb-5 text-khaki-gold">News</h1>
       <div className="max-w-5xl mx-auto">
-        <div>
+        <div className="mb-2">
           <FilterBar categories={blogCategories} />
+          <span className="ml-2 text-xl">{startRange} - {endRange} of {totalBlogs} results</span>
         </div>
         <div className="flex flex-col gap-4 mb-5">
           {blogsEntry.length == 0 ? <h2 className="text-center">No blogs found</h2> : blogsEntry}
         </div>
-        <Pagination />
+        <Pagination pageCount={metaBlogs.pageCount} />
       </div>
     </main>
   )
