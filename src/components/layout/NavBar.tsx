@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { navigation } from "@/lib/Navigation"
+import { navigation } from "@/lib/navigation"
 import {ChevronDown} from "lucide-react"
 
 export default function NavBar() {

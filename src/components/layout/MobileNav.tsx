@@ -4,7 +4,7 @@ import {useState} from "react"
 
 import Link from "next/link"
 import Image from "next/image"
-import { navigation } from "@/lib/Navigation"
+import { navigation } from "@/lib/navigation"
 import {ChevronDown, Menu, X} from "lucide-react"
 
 export default function MobileNav() {
