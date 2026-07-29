@@ -22,7 +22,7 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
   const {blogs, metaBlogs} = await getAllBlogs(searchTerms, category, sort, page, pageSize)
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
     return (
-      <section key={blog.id} className="w-full flex flex-col items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
+      <section key={blog.id} className="w-full flex flex-col-reverse items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
         <div className="flex-1 flex flex-col gap-2">
           <h3 className="font-bungee-reg">{blog.title}</h3>
           <p className="font-bungee-reg text-2xl">{formatDate(blog.date)}</p>
