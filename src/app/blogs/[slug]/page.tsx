@@ -33,7 +33,7 @@ export default async function BlogPage({params}:BlogPageProps) {
         <StrapiBlocksRenderer content={blog.mainTexts} />
       </div>
       <div className="text-left">
-        <h3 className="italic">References</h3>
+        <h4 className="italic">References</h4>
         <ul>
           {blog.references.map((ref:referenceData, index) => <li key={index} className="list-disc list-outside ml-4 text-left text-khaki-gold hover:underline hover-effect text-lg"><a href={ref.url} target="_blank">{ref.label}</a></li>)}
         </ul>
