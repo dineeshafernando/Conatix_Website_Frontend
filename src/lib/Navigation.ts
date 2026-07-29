@@ -22,8 +22,8 @@ export const navigation: NavSection[] = [
   {
     label: "Services",
     children: [
-      { label: "Product #1", href: "/services/product-1" },
-      { label: "Product #2", href: "/services/product-2" },
+      { label: "Cysana", href: "/services/cysana" },
+      { label: "Insider Fraud", href: "/services/insider-fraud" },
     ],
   },
   { label: "Shop", href: "/shop" },
