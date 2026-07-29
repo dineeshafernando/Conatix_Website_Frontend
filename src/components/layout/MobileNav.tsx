@@ -20,9 +20,9 @@ export default function MobileNav() {
       <li key={nav.label}>
         {nav.children? (
           <div className="group text-center">
-            <div className="flex items-center justify-center hover-effect">
+            <div className="relative flex items-center justify-center hover-effect">
               <button>{nav.label}</button>
-              <ChevronDown />
+              <ChevronDown className="absolute right-0" />
             </div>
             <ul className="group-hover:block hidden">
               {nav.children.map(child => 
