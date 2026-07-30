@@ -1,29 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
-import { navigation } from "@/lib/navigation"
-import {ChevronDown} from "lucide-react"
+import DesktopNavDropdown from "@/components/layout/DesktopNavDropdown"
+import { navigation, NavSection } from "@/lib/navigation"
 
 export default function NavBar() {
 
-  const navigations = navigation.map((nav) => {
+  const navigations = navigation.map((nav:NavSection) => {
     return (
       <li key={nav.label}>
-        {nav.children? (
-          <div className="group relative">
-            <div className="flex items-center hover-effect">
-              <button>{nav.label}</button>
-              <ChevronDown />
-            </div>
-            <ul className="group-hover:block hidden absolute">
-              {nav.children.map(child => 
-                <li key={child.label}>
-                  <Link href={child.href} className="hover-effect">{child.label}</Link>
-                </li>
-                )
-              }
-            </ul>
-          </div>
-        )
+        {nav.children ? <DesktopNavDropdown navItem={nav} />
       : <Link href={nav.href!} className="hover-effect">{nav.label}</Link>}
       </li>
     )
