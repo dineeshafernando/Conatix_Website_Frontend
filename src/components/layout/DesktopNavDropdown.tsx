@@ -2,7 +2,7 @@
 
 
 import Link from "next/link"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { NavSection, NavItem } from "@/lib/navigation"
 
 interface DesktopNavDropdownProps {
@@ -16,7 +16,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
     <div className="relative group">
       <button className="hover-effect flex">
         {label}
-        <ChevronDown className="pointer-events-none" />
+        <ChevronDown className="nav-chevron-animation" />
       </button>
       <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max hidden bg-grey shadow-md rounded-xl p-4 z-50 group-hover:block">
         {children?.map(({label, href}:NavItem) => {
