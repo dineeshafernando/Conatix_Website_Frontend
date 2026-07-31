@@ -13,8 +13,6 @@ export default async function BlogPage({params}:BlogPageProps) {
     return <p className="text-center text-xl">Blog not found!</p>
   }
 
-  console.log(blog.references)
-
   return (
     <main className="flex flex-col gap-4 mx-auto mt-5 px-5 max-w-[800px] text-center">
       <Link href="/blogs" className="static md:fixed md:top-28 md:left-10 hover-effect hover:underline text-xl flex items-center"><ChevronLeft/>Blogs</Link>
@@ -35,7 +33,7 @@ export default async function BlogPage({params}:BlogPageProps) {
       <div className="text-left">
         <h4 className="italic">References</h4>
         <ul>
-          {blog.references.map((ref:referenceData, index) => <li key={index} className="list-disc list-outside ml-4 text-left text-khaki-gold hover:underline hover-effect text-lg"><a href={ref.url} target="_blank">{ref.label}</a></li>)}
+          {blog.references.map((ref:referenceData, index) => <li key={index} className="list-disc list-outside ml-4 text-left text-electric-blue hover:underline hover-effect text-lg"><a href={ref.url} target="_blank">{ref.label}</a></li>)}
         </ul>
       </div>
     </main>
