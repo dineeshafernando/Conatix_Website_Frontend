@@ -5,36 +5,27 @@ import {useState} from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { navigation } from "@/lib/navigation"
-import {ChevronDown, Menu, X} from "lucide-react"
+import {Menu, X} from "lucide-react"
+import MobileNavDropdown from "./MobileNavDropdown"
 
 export default function MobileNav() {
 
-  const [isHamburger, setIsHamburger] = useState(true)
+  const [isHamburger, setIsHamburger] = useState<boolean>(true)
+  const [activeDropdown, setAciveDropdown] = useState<string | null>(null)
 
   function toggleHamburger() {
     setIsHamburger(prev => !prev)
+    setAciveDropdown(null)
+  }
+
+  function toggleNavSelector(activeNav:string | null) {
+    setAciveDropdown(activeNav)
   }
 
   const navigations = navigation.map((nav) => {
     return (
-      <li key={nav.label}>
-        {nav.children? (
-          <div className="group text-center">
-            <div className="relative flex items-center justify-center hover-effect">
-              <button>{nav.label}</button>
-              <ChevronDown className="absolute right-0" />
-            </div>
-            <ul className="group-hover:block hidden">
-              {nav.children.map(child => 
-                <li key={child.label}>
-                  <Link href={child.href} className="hover-effect">{child.label}</Link>
-                </li>
-                )
-              }
-            </ul>
-          </div>
-        )
-      : <Link href={nav.href!} className="hover-effect">{nav.label}</Link>}
+      <li key={nav.label} className="mb-4 border-transparent hover:border-electric-blue">
+        {nav.children? <MobileNavDropdown navItem={nav} activeNav={activeDropdown} toggleNav={toggleNavSelector}  /> : <Link href={nav.href!} className="hover-effect">{nav.label}</Link>}
       </li>
     )
   })
@@ -46,8 +37,8 @@ export default function MobileNav() {
       </Link>
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
-      <div className="bg-grey z-1000 p-5 pt-0 absolute text-xl top-full left-0 w-full text-center">
-        <ul className="flex-col">{navigations}</ul>
+      <div className="bg-grey opacity-90 z-1000 p-5 pt-0 absolute text-xl top-full left-0 w-full text-center">
+        <ul className="">{navigations}</ul>
       </div>
       }
     </nav>
