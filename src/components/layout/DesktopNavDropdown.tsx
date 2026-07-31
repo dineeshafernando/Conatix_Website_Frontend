@@ -1,6 +1,5 @@
 "use client"
 
-
 import Link from "next/link"
 import { ChevronDown } from "lucide-react"
 import { NavSection, NavItem } from "@/lib/navigation"
@@ -24,7 +23,11 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
       <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max mt-2 hidden bg-grey shadow-md rounded-xl p-4 z-50 group-hover:block">
         {children?.map(({label, href}:NavItem) => {
           return (
-            <li key={label}><Link href={href} className="hover-effect">{label}</Link></li>
+            <li key={label}>
+              <Link href={href} className="hover-effect hover:text-electric-blue">
+                {label}
+              </Link>
+            </li>
           )
         })}
       </ul>
