@@ -30,7 +30,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
     params.set("pageSize", activePageSize);
 
     // Push the final URL to the router
-    router.push(`/blogs?${params.toString()}`);
+    router.push(`/news?${params.toString()}`);
   };
 
     // Form's onSubmit (search bar)

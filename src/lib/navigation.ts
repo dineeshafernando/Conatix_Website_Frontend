@@ -11,21 +11,17 @@ export interface NavSection {
 
 export const navigation: NavSection[] = [
   { label: "Home", href: "/" },
+  { label: "Solutions", href: "/solutions"},
+  { label: "Tech", href: "/tech"},
+  { label: "Cyberomics", href: "/cyberomics"},
   {
-    label: "Company",
-    children: [
-      { label: "Team", href: "/company/team" },
-      { label: "Customer Stories", href: "/company/customer-stories" },
-      { label: "Contact", href: "/company/contact" },
-    ],
+    label: "Company", href: "/company",
+    // children: [
+    //   { label: "Team", href: "/company/team" },
+    //   { label: "Customer Stories", href: "/company/customer-stories" },
+    //   { label: "Contact", href: "/company/contact" },
+    // ],
   },
-  {
-    label: "Services",
-    children: [
-      { label: "Cysana", href: "/services/cysana" },
-      { label: "Insider Fraud", href: "/services/insider-fraud" },
-    ],
-  },
+  { label: "News", href: "/news" },
   { label: "Shop", href: "/shop" },
-  { label: "Blogs", href: "/blogs" },
 ];

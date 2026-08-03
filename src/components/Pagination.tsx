@@ -15,7 +15,7 @@ export default function Pagination({pageCount}:PaginationProps) {
   const handlePageSizeChange = (newPageSize: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set('pageSize', newPageSize)
-    router.push(`/blogs?${params.toString()}`);
+    router.push(`/news?${params.toString()}`);
   }
 
   const choices: string[] = ["5", "10", "15", "20", "All"];
@@ -36,14 +36,14 @@ export default function Pagination({pageCount}:PaginationProps) {
     // if (currentPage <= 1) return;
     // updates the current URL parameter page to be currentPage-1
     params.set("page", (currentPage-1).toString())
-    router.push(`/blogs?${params.toString()}`)
+    router.push(`/news?${params.toString()}`)
   }
 
   const handleNextPage = () => {
     const params = new URLSearchParams(searchParams.toString())
     // if (currentPage >= pageCount) return;
     params.set("page", (currentPage+1).toString())
-    router.push(`/blogs?${params.toString()}`)
+    router.push(`/news?${params.toString()}`)
   }
 
   return (
