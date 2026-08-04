@@ -30,7 +30,7 @@ export interface MediaItemAttributes {
   size: number;
   /* Strapi automatically generates smaller, optimized image versions */
   formats: { 
-    thumbnail: ImageFormat;
+    thumbnail?: ImageFormat;
     small: ImageFormat;
     medium: ImageFormat;
     large: ImageFormat;
@@ -86,10 +86,10 @@ export interface BlogAttributes {
 export interface FlatBlogPost extends BlogAttributes {
   id: number;
   image: {
-    small: string,
-    medium: string,
-    large: string,
-    thumbnail: string,
+    small: string | undefined,
+    medium: string | undefined,
+    large: string | undefined,
+    thumbnail: string | undefined,
   }
   altImgText: string,
   articleCategories: string[],
@@ -114,10 +114,10 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
     id: blog.id,
     ...blog.attributes,
     image : {
-      small: imgFormats.small.url,
-      medium: imgFormats.medium.url,
-      large: imgFormats.large.url,
-      thumbnail: imgFormats.thumbnail.url,
+      small: imgFormats.small?.url,
+      medium: imgFormats.medium?.url,
+      large: imgFormats.large?.url,
+      thumbnail: imgFormats.thumbnail?.url,
     },
     altImgText: altImgText,
     references: references,
