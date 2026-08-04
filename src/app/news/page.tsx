@@ -43,7 +43,7 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
   
 
   return (
-    <main className="px-6">
+    <main>
       <h1 className="font-denson-bold text-center mb-5 text-khaki-gold">News</h1>
       <div className="max-w-5xl mx-auto">
         <div className="mb-2">
