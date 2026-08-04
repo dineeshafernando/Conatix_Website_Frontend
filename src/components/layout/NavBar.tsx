@@ -18,7 +18,7 @@ export default function NavBar() {
   })
 
   return (
-    <nav className="bg-grey flex justify-between p-5 mb-5 font-denson-bold sticky top-0">
+    <nav className="bg-grey flex justify-between p-5 font-denson-bold sticky top-0">
       <Link href="/">
         <Image src="/logo-2.png" alt="company logo" width={100} height={100} />
       </Link>
