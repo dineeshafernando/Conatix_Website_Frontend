@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { fetchBlog, BlogPageProps, referenceData } from "@/lib/strapi"
+import { fetchBlog, BlogPageProps, referenceData } from "@/lib/strapi/blog"
 import { formatDate } from "@/lib/util"
 import StrapiBlocksRenderer from "@/components/StrapiBlocksRenderer"
 import {ChevronLeft} from "lucide-react"

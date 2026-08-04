@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import FilterBar from "@/components/BlogsFilterBar"
 import Pagination from "@/components/Pagination"
-import {getAllBlogs, getAllBlogCategories, FlatBlogPost} from "@/lib/strapi"
+import {getAllBlogs, getAllBlogCategories, FlatBlogPost} from "@/lib/strapi/blog"
 import {formatDate} from "@/lib/util"
 
 type BlogsPageProps = {
