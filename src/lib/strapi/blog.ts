@@ -31,9 +31,9 @@ export interface MediaItemAttributes {
   /* Strapi automatically generates smaller, optimized image versions */
   formats: { 
     thumbnail?: ImageFormat;
-    small: ImageFormat;
-    medium: ImageFormat;
-    large: ImageFormat;
+    small?: ImageFormat;
+    medium?: ImageFormat;
+    large?: ImageFormat;
   }; 
 }
 
