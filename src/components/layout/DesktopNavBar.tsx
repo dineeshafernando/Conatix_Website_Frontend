@@ -22,7 +22,7 @@ export default function NavBar() {
       <Link href="/">
         <Image src="/logo-2.png" alt="company logo" width={100} height={100} />
       </Link>
-      <ul className="flex items-center gap-6">
+      <ul className="flex items-center gap-6 text-xl">
         {navigations}
       </ul>
     </nav>
