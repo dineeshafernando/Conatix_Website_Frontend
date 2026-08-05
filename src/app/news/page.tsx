@@ -27,7 +27,7 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
           <h3 className="font-bungee-reg">{blog.title}</h3>
           <p className="font-bungee-reg text-2xl">{formatDate(blog.date)}</p>
           <p className="text-xl">{blog.summary}</p>
-          <Link href={`/blogs/${blog.slug}`} className="text-electric-blue text-xl hover-effect hover:underline">Read More</Link>
+          <Link href={`/news/${blog.slug}`} className="text-electric-blue text-xl hover-effect hover:underline">Read More</Link>
         </div>
         <Image src={`${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}`} height={300} width={300} alt={blog.altImgText} unoptimized/>
       </section>
@@ -44,13 +44,13 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
 
   return (
     <main>
-      <h1 className="font-denson-bold text-center mb-5 text-khaki-gold">News</h1>
+      <h1 className="h1 mb-5">News</h1>
       <div className="max-w-5xl mx-auto">
         <div className="mb-2">
           <FilterBar categories={blogCategories} />
           <span className="ml-2 text-xl">{startRange} - {endRange} of {totalBlogs} results</span>
         </div>
-        <div className="flex flex-col gap-4 mb-5">
+        <div className="flex flex-col min-h-[50vh] gap-4 mb-5">
           {blogsEntry.length == 0 ? <h2 className="text-center">No blogs found</h2> : blogsEntry}
         </div>
         <Pagination pageCount={metaBlogs.pageCount} />
