@@ -11,7 +11,9 @@ interface MemberAttributes {
   role: string,
   slug: string,
   media: {
-    attributes: MediaItemAttributes
+    data: {
+      attributes: MediaItemAttributes
+    }
   }
   team_category: {
     data?: {
@@ -37,13 +39,13 @@ export interface FlatMember {
 }
 
 function flattenMember({attributes}:Member):FlatMember {
-  const imgFormats = attributes.media.attributes.formats
-  const alternativeText = attributes.media.attributes.alternativeText
+  const imgFormats = attributes.media.data.attributes.formats
+  const alternativeText = attributes.media.data.attributes.alternativeText
   
   return {
     name: attributes.name,
     role: attributes.role,
-    teamCategory: attributes.team_category.data?.attributes.label,
+    teamCategory: attributes.team_category.data?.attributes.label.toLowerCase(),
     slug: attributes.slug,
     image: {
       thumbnail: imgFormats.thumbnail?.url,
@@ -60,4 +62,23 @@ export async function getAllMembers() {
   const jsonResponse = await membersPromise.json()
   const members = jsonResponse.data.map(flattenMember)
   return members
+}
+
+
+interface TeamCategoryItem {
+  attributes: {
+    label: string,
+  }
+}
+
+interface TeamCategoriesData {
+  data: TeamCategoryItem[]
+}
+
+export async function getAllTeamCategories() {
+  const categoriesPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/team-categories`)
+  const jsonResponse: TeamCategoriesData = await categoriesPromise.json()
+  console.log(jsonResponse)
+  const categories: string[] = jsonResponse.data.map((item:TeamCategoryItem) => item.attributes.label.toLowerCase())
+  return categories
 }
