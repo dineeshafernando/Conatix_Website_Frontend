@@ -1,4 +1,4 @@
-export default function TechPage() {
+export default function DemoPage() {
   return (
     <main>
       <h1>Tech Page</h1>
