@@ -12,7 +12,7 @@ export interface NavSection {
 export const navigation: NavSection[] = [
   { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions"},
-  { label: "Tech", href: "/tech"},
+  { label: "Demo", href: "/demo"},
   { label: "Cyberomics", href: "/cyberomics"},
   {
     label: "Company", href: "/company",
