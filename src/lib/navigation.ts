@@ -5,7 +5,7 @@ export interface NavItem {
 
 export interface NavSection {
   label: string;
-  href?: string; // no href = dropdown only, not clickable itself
+  href: string;
   children?: NavItem[];
 }
 
