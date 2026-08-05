@@ -19,7 +19,7 @@ export default function MobileNav() {
   }
 
   function toggleNavSelector(activeNav:string | null) {
-    setAciveDropdown(activeNav)
+    setAciveDropdown((prevActive) => (prevActive === activeNav ? null : activeNav))
   }
 
   const navigations = navigation.map((nav) => {
