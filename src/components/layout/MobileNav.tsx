@@ -24,8 +24,10 @@ export default function MobileNav() {
 
   const navigations = navigation.map((nav) => {
     return (
-      <li key={nav.label} className="mb-4 border-transparent hover:border-electric-blue">
-        {nav.children? <MobileNavDropdown navItem={nav} activeNav={activeDropdown} toggleNav={toggleNavSelector}  /> : <Link href={nav.href!} className="hover-effect">{nav.label}</Link>}
+      <li key={nav.label} className="mb-4">
+        {nav.children? 
+          <MobileNavDropdown navItem={nav} activeNav={activeDropdown} toggleNav={toggleNavSelector}  /> : 
+          <Link href={nav.href!} className="hover-effect relative group">{nav.label}<span className="nav-hover-animation"></span></Link>}
       </li>
     )
   })
@@ -38,7 +40,7 @@ export default function MobileNav() {
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
       <div className="bg-grey opacity-90 z-1000 p-5 pt-0 absolute text-xl top-full left-0 w-full text-center">
-        <ul className="">{navigations}</ul>
+        <ul>{navigations}</ul>
       </div>
       }
     </nav>
