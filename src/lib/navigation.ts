@@ -11,7 +11,15 @@ export interface NavSection {
 
 export const navigation: NavSection[] = [
   { label: "Home", href: "/" },
-  { label: "Solutions", href: "/solutions"},
+  { label: "Solutions",
+    href: "/solutions",
+    children: [
+      {label: "Malware", href: "solutions/malware"},
+      {label: "Ransomware", href: "solutions/ransomware"},
+      {label: "Insider Fraud", href: "solutions/insider-fraud"},
+      {label: "Supplier/Third Party", href: "solutions/supplier-third-party"},
+    ]
+  },
   { label: "Demo", href: "/demo"},
   { label: "Cyberomics", href: "/cyberomics"},
   {
