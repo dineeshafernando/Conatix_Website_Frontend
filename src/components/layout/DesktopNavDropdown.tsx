@@ -13,7 +13,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
 
   return (
     <div className="relative group">
-      <button className="flex hover-effect">
+      <button className="flex hover-effect items-center">
         <Link href={href} className="relative">
           {label}
           <span className="nav-hover-animation"></span>
