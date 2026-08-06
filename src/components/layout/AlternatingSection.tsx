@@ -1,8 +1,8 @@
 import Image from "next/image"
-import { malewarePageDataProps } from "@/lib/solutions"
+import { malewarePageDataProps, ransomwarePageDataProps } from "@/lib/solutions"
 
 interface AlternationSectionProps {
-  data: malewarePageDataProps[] 
+  data: malewarePageDataProps[] | ransomwarePageDataProps[]
 }
 
 export default function AlternatingSection({data}:AlternationSectionProps) {
