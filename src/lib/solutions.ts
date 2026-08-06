@@ -8,8 +8,8 @@ export interface malewarePageDataProps {
 
 export const malewarePageData: malewarePageDataProps[] = [
   {
-    imageUrl: "/images/benign.png",
-    altText: "benign cartoon image",
+    imageUrl: "/images/colored_pixel.png",
+    altText: "colored pixel image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
   {
