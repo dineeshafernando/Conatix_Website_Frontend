@@ -13,18 +13,37 @@ export const malewarePageData: malewarePageDataProps[] = [
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
   {
-    imageUrl: "/images/benign.png",
+    imageUrl: "/images/cartoon_benign.png",
     altText: "benign cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
   {
-    imageUrl: "/images/malicious.png",
+    imageUrl: "/images/cartoon_malicious.png",
     altText: "malicious cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
   {
-    imageUrl: "/images/obfuscated.png",
+    imageUrl: "/images/cartoon_obfuscated.png",
     altText: "obfuscated cartoon image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+]
+
+export interface ransomwarePageDataProps {
+  imageUrl: string,
+  altText: string,
+  description: string,
+}
+
+export const ransomwarePageData: ransomwarePageDataProps[] = [
+  {
+    imageUrl: "/images/cartoon_benign.png",
+    altText: "cartoon benign image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+  {
+    imageUrl: "/images/cartoon_ransomware.png",
+    altText: "cartoon ransomware image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
 ]
