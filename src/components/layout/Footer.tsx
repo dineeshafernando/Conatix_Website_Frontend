@@ -58,7 +58,7 @@ export default function Footer() {
   })
 
   return (
-    <footer className="bg-grey h-50 p-5 flex gap-4 text-xl">
+    <footer className="bg-grey h-50 p-5 gap-4 text-xl flex justify-center">
       <div className=" flex flex-col gap-4">
         <Link href="/"><Image src="/logo-2.png" width={100} height={100} alt="company logo"></Image></Link>
         <p>© Conatix. All rights reserved.</p>
