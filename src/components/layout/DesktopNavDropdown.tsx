@@ -23,7 +23,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
       <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max mt-1 hidden bg-grey shadow-md rounded-xl p-4 z-50 group-hover:block">
         {children?.map(({label, href}:NavItem) => {
           return (
-            <li key={label}>
+            <li key={label} className="mb-2">
               <Link href={href} className="hover-effect hover:text-electric-blue">
                 {label}
               </Link>
