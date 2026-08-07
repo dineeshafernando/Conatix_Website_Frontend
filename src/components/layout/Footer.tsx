@@ -51,14 +51,14 @@ export default function Footer() {
 
     return (
       <div key={label} className="flex flex-col items-start gap-2">
-        {href ? <Link href={href} className="text-electric-blue footer-nav">{label}</Link> : <button className="text-electric-blue">{label}</button>}
+        <Link href={href} className="text-electric-blue footer-nav">{label}</Link>
         {childNavs}
       </div>
     )
   })
 
   return (
-    <footer className="bg-grey h-50 p-5 gap-4 text-xl flex justify-center">
+    <footer className="bg-grey p-5 gap-4 text-xl flex justify-center">
       <div className=" flex flex-col gap-4">
         <Link href="/"><Image src="/logo-2.png" width={100} height={100} alt="company logo"></Image></Link>
         <p>© Conatix. All rights reserved.</p>
