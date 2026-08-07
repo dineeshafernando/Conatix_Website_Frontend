@@ -1,12 +1,38 @@
 import Image from "next/image"
 
+interface InsiderFraudData {
+  description: string,
+  imgUrl: string,
+}
+
+const insiderfraudData: InsiderFraudData[] = [
+  {
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    imgUrl: "/insider-fraud/insider-fraud-1.gif"
+  }, {
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    imgUrl: "/insider-fraud/insider-fraud-2.gif"
+  }
+
+]
 export default function InsiderFraudPage() {
+
+  const visualizationEntries = insiderfraudData.map(({description, imgUrl}:InsiderFraudData, i) => {
+    return (
+      <div key={i} className="max-w-[800px]">
+        <p className="mb-5 text-xl">{description}</p>
+        <Image src={imgUrl} width={800} height={800} alt="insider fraud visualizations" />
+      </div>
+    )
+  })
+
+
   return (
     <main>
-      <div className="flex justify-center flex-wrap gap-10">
-        <Image src="/animations/insider-fraud-1.gif" height={800} width={800} alt="insider fraud demo gif"></Image>
-        <Image src="/animations/insider-fraud-2.gif" height={800} width={800} alt="insider fraud demo gif"></Image>
-      </div> 
+      <h1 className="h1">Insider Fraud</h1>
+      <div className="flex flex-col items-center gap-16">
+        {visualizationEntries}
+      </div>
     </main>
   )
 }
