@@ -23,12 +23,17 @@ export const navigation: NavSection[] = [
   { label: "Demo", href: "/demo"},
   { label: "Cyberomics", href: "/cyberomics"},
   {
-    label: "Company", href: "/company",
-    // children: [
-    //   { label: "Team", href: "/company/team" },
-    //   { label: "Customer Stories", href: "/company/customer-stories" },
-    //   { label: "Contact", href: "/company/contact" },
-    // ],
+    label: "Company", 
+    href: "/company",
+    children: [
+      { label: "About", href: "/company/about" },
+      { label: "Team", href: "/company/team" },
+      { label: "Partners", href: "/company/partners" },
+      { label: "Awards", href: "/company/awards" },
+      { label: "Career", href: "/company/career" },
+      { label: "Locations", href: "/company/locations" },
+      { label: "Contact", href: "/company/contact" },
+    ],
   },
   { label: "News", href: "/news" },
   { label: "Shop", href: "/shop" },
