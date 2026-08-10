@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { Bungee } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css";
-
 
 import NavBar from "@/components/layout/DesktopNavBar"
 import MobileNav from "@/components/layout/MobileNav"
@@ -15,9 +15,15 @@ export const metadata: Metadata = {
   }
 };
 
-const bungee = localFont({
-  src: '../../public/fonts/BungeeHairline-Regular.ttf',
-  variable: '--font-bungee-reg',
+const bungeeStandard = Bungee({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-bungee-reg' // creates a variable to be used in globals.css
+})
+
+const bungeeHairline = localFont({
+  src: '../../public/fonts/BungeeHairline.ttf',
+  variable: '--font-bungee-hairline',
 })
 
 const densonBold = localFont({
@@ -40,7 +46,7 @@ const catamaran = localFont({
     variable: '--font-catamaran',
 })
 
-const fonts = `${catamaran.variable} ${bungee.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
+const fonts = `${catamaran.variable} ${bungeeStandard.variable} ${bungeeHairline.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
 
 export default function RootLayout({
   children,
@@ -49,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fonts}>
-      <body className="min-h-screen flex flex-col bg-dark-grey text-white font-catamaran">
+      <body className="min-h-screen flex flex-col bg-dark-grey font-catamaran text-white">
         {/*navbar conditional rendering using tailwind styling */}
         <div className="hidden md:block">
           <NavBar />
