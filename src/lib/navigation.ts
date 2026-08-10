@@ -14,19 +14,19 @@ export const navigation: NavSection[] = [
   { label: "Use Cases",
     href: "/use-cases",
     children: [
-      {label: "Malware", href: "use-cases/malware"},
-      {label: "Ransomware", href: "use-cases/ransomware"},
-      {label: "Insider Fraud", href: "use-cases/insider-fraud"},
-      {label: "Supplier/Third Party", href: "use-cases/supplier-third-party"},
+      {label: "Malware", href: "/use-cases/malware"},
+      {label: "Ransomware", href: "/use-cases/ransomware"},
+      {label: "Insider Fraud", href: "/use-cases/insider-fraud"},
+      {label: "Supplier/Third Party", href: "/use-cases/supplier-third-party"},
     ]
   },
   { label: "Solutions",
     href: "/solutions",
     children: [
-      {label: "Malware", href: "solutions/malware"},
-      {label: "Ransomware", href: "solutions/ransomware"},
-      {label: "Insider Fraud", href: "solutions/insider-fraud"},
-      {label: "Supplier/Third Party", href: "solutions/supplier-third-party"},
+      {label: "Malware", href: "/solutions/malware"},
+      {label: "Ransomware", href: "/solutions/ransomware"},
+      {label: "Insider Fraud", href: "/solutions/insider-fraud"},
+      {label: "Supplier/Third Party", href: "/solutions/supplier-third-party"},
     ]
   },
   { label: "Demo", href: "/demo"},
