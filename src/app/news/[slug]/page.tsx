@@ -15,7 +15,7 @@ export default async function BlogPage({params}:BlogPageProps) {
 
   return (
     <main className="flex flex-col gap-4 mx-auto mt-5 px-5 max-w-[800px] text-center">
-      <Link href="/blogs" className="static md:fixed md:top-28 md:left-10 hover-effect hover:underline text-xl flex items-center"><ChevronLeft/>Blogs</Link>
+      <Link href="/news" className="static md:fixed md:top-28 md:left-10 hover-effect hover:underline text-xl flex items-center"><ChevronLeft/>News</Link>
       <h2 className="font-bungee-reg font-bold text-khaki-gold leading-10">{blog.title}</h2>
       <div className="font-bungee-reg text-2xl font-bold flex justify-center gap-2">
         <p>Author: {blog.author} |</p>
