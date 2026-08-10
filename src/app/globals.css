@@ -1,35 +1,38 @@
 @import "tailwindcss";
 
-/* custom tailwind in-line styling with colors and fonts */
+/* custom tailwind colors */
 @theme {
-  /* colors */
   --color-dark-grey: rgb(30, 31, 30); /* main background */
   --color-grey: rgb(51, 52, 52); /* secondary background / footer, nav containers */
   --color-electric-blue: rgb(49, 194, 241); /* CTA buttons, hover states, links */
   --color-khaki-gold: rgb(145, 136, 81); /* accent — sparingly, e.g. icons or small highlights */
   --color-white: rgb(246, 246, 246); /* text */
+}
 
-  /* fonts */
+/* custom tailwind fonts */
+@theme {
   --font-catamaran: var(--font-catamaran);
   --font-bungee-reg: var(--font-bungee-reg);
+  --font-bungee-hairline: var(--font-bungee-hairline);
   --font-denson-bold: var(--font-denson-bold);
 }
+
 /* Order of specificity:
 1. Base (lowest)
 2. Component
 3. Utilities (highest) - in-line styling like className="text-center"
-
 */
+
 /* base styles for certain HTML elements */
 @layer base {
   h1 {
-    @apply text-6xl
+    @apply text-6xl mb-5
   }
   h2 {
     @apply text-5xl
   }
   h3 {
-    @apply text-2xl
+    @apply text-4xl
   }
   h4 {
     @apply text-xl
@@ -41,18 +44,54 @@ custom in-line class styling using grouped Tailwind class styles (done with @app
 Note: @layer components - used so that in-line styling can still override these styles created in @layer components.
  */
 @layer components {
-  .hover-effect {
+  .h1 {
+    font-family: var(--font-denson-bold);
+    color: var(--color-khaki-gold);
+    text-align: center;
+  }
+  .hover-effect { /* links */
     @apply hover:opacity-70 transition duration-200 cursor-pointer
+  }
+  .nav-hover-animation { /* nav border bottom animation */
+    @apply absolute -bottom-1 left-0 w-full border-2 border-electric-blue scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
   .blogs-filter-border {
     @apply border-grey border-4 rounded-lg
   }
-  .center-chevron-icon {
+  .center-chevron-icon { /* chevron on the blogs homepage */
    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
+  }
+  .nav-chevron-animation {
+    @apply transition-transform duration-300 group-hover:rotate-180 pointer-events-none
+  }
+  .footer-icon {
+    @apply w-8 h-8
+  }
+  .footer-nav {
+    @apply hover:opacity-70 transition duration-200 cursor-pointer hover:underline 
   }
 }
 
+  /* .animation-run {
+    width: fit-content;
+    animation: animate-run 8s linear infinite;
+  } */
 
-
-
-
+/* Animations (keyframes) */
+/* @keyframes animate-run {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  45% {
+    transform: translateX(calc(100vw - var(--cat-width))) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw - var(--cat-width))) scaleX(-1);
+  }
+  95% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+} */
