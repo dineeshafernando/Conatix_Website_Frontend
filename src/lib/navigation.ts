@@ -41,10 +41,10 @@ export const navigation: NavSection[] = [
       { label: "Awards", href: "/company/awards" },
       { label: "Career", href: "/company/career" },
       { label: "Locations", href: "/company/locations" },
-      { label: "Contact", href: "/company/contact" },
     ],
   },
   { label: "News", href: "/news" },
   { label: "Shop", href: "/shop" },
   { label: "Privacy", href: "/privacy" },
+  { label: "Contact", href: "/contact" }
 ];
