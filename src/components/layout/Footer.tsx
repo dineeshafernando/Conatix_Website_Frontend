@@ -51,7 +51,7 @@ export default function Footer() {
 
     return (
       <div key={label} className="flex flex-col items-start gap-2">
-        <Link href={href} className="footer-nav">{label}</Link>
+        <Link href={href} className="footer-nav text-electric-blue [-webkit-text-stroke:3px_currentColor]">{label}</Link>
         {childNavs}
       </div>
     )
@@ -61,13 +61,13 @@ export default function Footer() {
     <footer className="bg-grey p-5 gap-4 text-xl flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/logo-2.png" width={100} height={100} alt="company logo"></Image></Link>
-        <p>Copyright © 2026 Cysana</p>
-        <p>All rights reserved.</p>
+        <p className="opacity-80">Copyright © 2026 Cysana</p>
+        <p className="opacity-80">All rights reserved.</p>
         <div className="flex gap-4">
           {socialLinkElements}
         </div>
       </div>
-      <div className="flex gap-4 text-left text-electric-blue">
+      <div className="flex gap-4 text-left">
         {navigationElements}
       </div>
     </footer>
