@@ -12,6 +12,7 @@ export default async function BlogPage({params}:BlogPageProps) {
   if (!blog) {
     return <p className="text-center text-xl">Blog not found!</p>
   }
+    const imgUrl = (blog.image && blog.image.medium) ?  `${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` : `${process.env.NEXT_PUBLIC_API_URL}${blog.origImg}`
 
   return (
     <main className="flex flex-col gap-4 mx-auto mt-5 px-5 max-w-[800px] text-center">
@@ -23,7 +24,7 @@ export default async function BlogPage({params}:BlogPageProps) {
       </div>
       <p className="text-xl">Summary: {blog.summary}</p>
       <div className="flex flex-col justify-center">
-        <Image src={`${process.env.NEXT_PUBLIC_API_URL}${blog.image.medium}`} alt="blog image" width={750} height={625} className="mt-3 rounded-xl" unoptimized />
+        <Image src={imgUrl} alt="blog image" width={750} height={625} className="mt-3 rounded-xl" unoptimized />
         <p className="italic">Source: {blog.source}</p>
       </div>
       <h3 className="text-left font-catamaran font-bold">{blog.subtitle}</h3>
