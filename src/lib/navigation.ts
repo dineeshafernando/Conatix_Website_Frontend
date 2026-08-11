@@ -11,13 +11,13 @@ export interface NavSection {
 
 export const navigation: NavSection[] = [
   { label: "Home", href: "/" },
-  { label: "Use Cases",
-    href: "/use-cases",
+  { label: "Threats",
+    href: "/threats",
     children: [
-      {label: "Malware", href: "/use-cases/malware"},
-      {label: "Ransomware", href: "/use-cases/ransomware"},
-      {label: "Insider Fraud", href: "/use-cases/insider-fraud"},
-      {label: "Supplier/Third Party", href: "/use-cases/supplier-third-party"},
+      {label: "Malware", href: "/threats/malware"},
+      {label: "Ransomware", href: "/threats/ransomware"},
+      {label: "Insider Fraud", href: "/threats/insider-fraud"},
+      {label: "Supplier", href: "/threats/supplier"},
     ]
   },
   { label: "Solutions",
@@ -26,7 +26,7 @@ export const navigation: NavSection[] = [
       {label: "Malware", href: "/solutions/malware"},
       {label: "Ransomware", href: "/solutions/ransomware"},
       {label: "Insider Fraud", href: "/solutions/insider-fraud"},
-      {label: "Supplier/Third Party", href: "/solutions/supplier-third-party"},
+      {label: "Supplier", href: "/solutions/supplier"},
     ]
   },
   { label: "Demo", href: "/demo"},
