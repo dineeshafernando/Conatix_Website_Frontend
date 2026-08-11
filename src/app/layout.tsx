@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Conatix Website",
   description: "Conatix central website",
   icons: {
-    icon: '/favicon.ico' // points to public/fav-icon.ico
+    icon: '/images/logos/favicon.ico' // points to public/fav-icon.ico
   }
 };
 
