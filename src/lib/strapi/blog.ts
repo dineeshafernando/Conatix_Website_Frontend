@@ -141,7 +141,11 @@ export async function getAllBlogs(searchTerm?: string, category?:string, sort?:s
   if (searchTerm) url += `&filters[title][$containsi]=${searchTerm}`;
   // Condition B: User filtered by category
   if (category) url += `&filters[categories][label][$eq]=${category}`;
-  const blogsPromise = await fetch(url);
+  const blogsPromise = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
+    }
+  });
   const jsonResponse = await blogsPromise.json()
   const blogs: FlatBlogPost[] = jsonResponse.data.map(flattenBlog)
   const metaBlogs = jsonResponse.meta.pagination
@@ -156,13 +160,21 @@ export interface BlogPageProps {
 
 // Fetches and returns a single blog (for the single blog page)
 export async function fetchBlog(slug: string) {
-  const blogsPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`)
+  const blogsPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${slug}&populate=*`, {
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
+    }
+  })
   const jsonResponse = await blogsPromise.json()
   return flattenBlog(jsonResponse.data[0])
 }
 
 export async function getAllBlogCategories() {
-  const categoryPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`)
+  const categoryPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`, {
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
+    }
+  })
   const jsonResponse = await categoryPromise.json()
   return jsonResponse.data.map((category:categoryData) => category.attributes.label)
 }
