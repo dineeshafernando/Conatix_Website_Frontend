@@ -58,7 +58,11 @@ function flattenMember({attributes}:Member):FlatMember {
 }
 
 export async function getAllMembers() {
-  const membersPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/team-members?&populate=*`)
+  const membersPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/team-members?&populate=*`, {
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
+    }
+  })
   const jsonResponse = await membersPromise.json()
   const members = jsonResponse.data.map(flattenMember)
   return members
@@ -76,7 +80,11 @@ interface TeamCategoriesData {
 }
 
 export async function getAllTeamCategories() {
-  const categoriesPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/team-categories`)
+  const categoriesPromise = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/team-categories`, {
+    headers: {
+      Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
+    }
+  })
   const jsonResponse: TeamCategoriesData = await categoriesPromise.json()
   console.log(jsonResponse)
   const categories: string[] = jsonResponse.data.map((item:TeamCategoryItem) => item.attributes.label.toLowerCase())
