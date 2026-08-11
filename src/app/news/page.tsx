@@ -28,8 +28,8 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
     return (
       <section key={blog.id} className="w-full flex flex-col-reverse items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
         <div className="flex-1 flex flex-col gap-2">
-          <h3 className="font-bungee-reg">{blog.title}</h3>
-          <p className="font-bungee-reg text-2xl">{formatDate(blog.date)}</p>
+          <h3 className="font-bungee-hairline [-webkit-text-stroke:2px_currentColor] text-electric-blue">{blog.title}</h3>
+          <p className="font-bungee-hairline text-xl">{formatDate(blog.date)}</p>
           <p className="text-xl">{blog.summary}</p>
           <Link href={`/news/${blog.slug}`} className="text-electric-blue text-xl hover-effect hover:underline">Read More</Link>
         </div>
