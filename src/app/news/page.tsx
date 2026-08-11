@@ -22,7 +22,7 @@ export default async function Blogs({searchParams}:BlogsPageProps) {
   const {blogs, metaBlogs} = await getAllBlogs(searchTerms, category, sort, page, pageSize)
   const blogsEntry = blogs.map((blog:FlatBlogPost) => {
 
-    const imgUrl = `process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` ?  `process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` : blog.origImg
+    const imgUrl = `${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` ?  `${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` : blog.origImg
 
     return (
       <section key={blog.id} className="w-full flex flex-col-reverse items-center justify-between gap-8 text-center border-b-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
