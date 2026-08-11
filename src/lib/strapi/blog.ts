@@ -42,9 +42,9 @@ export interface MediaData {
   attributes: MediaItemAttributes;
 }
 
-export interface MediaAttributes {
-  data: MediaData[];
-}
+// export interface MediaAttributes {
+//   data: MediaData[];
+// }
 
 export interface referenceData {
   id: number,
@@ -75,7 +75,9 @@ export interface BlogAttributes {
   publishedAt: string;
   slug: string;
   mainTexts: BlocksContent;
-  media: MediaAttributes;
+  media: {
+    data: MediaData[];
+  };
   references: referenceData[];
   categories: {
     data: categoryData[];
@@ -90,7 +92,8 @@ export interface FlatBlogPost extends BlogAttributes {
     medium: string | undefined,
     large: string | undefined,
     thumbnail: string | undefined,
-  }
+  } | null,
+  origImg: string,
   altImgText: string,
   articleCategories: string[],
 }
@@ -105,7 +108,8 @@ export interface Pagination {
 // helper function to flatten the blog post (this is the blog data object that gets passed into the blogs page and individual blog page)
 function flattenBlog(blog: BlogPost):FlatBlogPost {
   const mediaData = blog.attributes.media.data[0]
-  const imgFormats = mediaData.attributes.formats
+  const imgFormats = mediaData.attributes.formats ? mediaData.attributes.formats : null
+  const origImg = mediaData.attributes.url
   const altImgText = mediaData.attributes.alternativeText ? mediaData.attributes.alternativeText : blog.attributes.title
   const references = blog.attributes.references
   const articleCategories = blog.attributes.categories.data.map(category => category.attributes.label)
@@ -113,12 +117,13 @@ function flattenBlog(blog: BlogPost):FlatBlogPost {
   return {
     id: blog.id,
     ...blog.attributes,
-    image : {
-      small: imgFormats.small?.url,
-      medium: imgFormats.medium?.url,
-      large: imgFormats.large?.url,
-      thumbnail: imgFormats.thumbnail?.url,
-    },
+    image : imgFormats ? {
+      small: imgFormats?.small?.url,
+      medium: imgFormats?.medium?.url,
+      large: imgFormats?.large?.url,
+      thumbnail: imgFormats?.thumbnail?.url,
+    } : null,
+    origImg: origImg,
     altImgText: altImgText,
     references: references,
     articleCategories: articleCategories,
@@ -136,8 +141,7 @@ export async function getAllBlogs(searchTerm?: string, category?:string, sort?:s
   if (searchTerm) url += `&filters[title][$containsi]=${searchTerm}`;
   // Condition B: User filtered by category
   if (category) url += `&filters[categories][label][$eq]=${category}`;
-
-  const blogsPromise = await fetch(url)
+  const blogsPromise = await fetch(url);
   const jsonResponse = await blogsPromise.json()
   const blogs: FlatBlogPost[] = jsonResponse.data.map(flattenBlog)
   const metaBlogs = jsonResponse.meta.pagination
