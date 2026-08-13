@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import {MapPin} from "lucide-react"
 
 interface OfficeLocationData {
   title: string;
@@ -16,7 +15,7 @@ interface OfficeLocationData {
 
 const officeLocations: OfficeLocationData[] = [
   {
-    title: "WASHINGTO",
+    title: "WASHINGTON",
     region: "(BELTWAY)",
     company: "Conatix Corp.",
     addressLines: [
@@ -56,7 +55,7 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.3533979592703!2d-73.5839064591384!3d45.523093529627346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bd1ee3d5bed%3A0xb5c13725e30f53c1!2s4388%20R.%20Saint-Denis%20200%20550%2C%20Montr%C3%A9al%2C%20QC%20H2J%202L1%2C%20Canada!5e0!3m2!1sen!2sus!4v1786112484617!5m2!1sen!2sus",
   },
   {
-    title: "LONDON (SHOREDITCH)",
+    title: "LONDON",
     region: "(SHOREDITCH)",
     company: "Conatix UK Ltd",
     addressLines: [
@@ -71,7 +70,7 @@ const officeLocations: OfficeLocationData[] = [
   },
   {
     title: "BERLIN",
-    region: "(MITTE",
+    region: "(MITTE)",
     company: "Cysana Berlin UG",
     addressLines: [
       "Rheinsberger Str. 76/77",
@@ -96,12 +95,9 @@ export default function Map() {
 
     return (
       <li key={office.title} className="text-xl">
-        <div className="flex gap-1">
-          <MapPin />
-          <h4 className="font-bold">{office.title}</h4>
-        </div>
+        <h4 className="font-bold">{office.title}</h4>
+        <h4 className="font-bold">{office.region}</h4>
         <p>{office.company}</p>
-        <p>{office.region}</p>
         <ul>
           {office.addressLines.map((line) => (
             <li key={line}>{line}</li>
@@ -133,7 +129,7 @@ export default function Map() {
           referrerPolicy="strict-origin-when-cross-origin"
         />
       </div>
-      <ul className="flex flex-wrap justify-center gap-10 mt-10">
+      <ul className="flex flex-wrap justify-items-start gap-10 mt-10">
         {locations}
       </ul>
     </section>
