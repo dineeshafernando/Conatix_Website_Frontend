@@ -2,10 +2,12 @@
 
 /* custom tailwind colors */
 @theme {
-  --color-dark-grey: hsl(120, 2%, 14%); /* main background */
-  --color-grey: rgb(51, 52, 52); /* secondary background / footer, nav containers */
-  --color-electric-blue: rgb(49, 194, 241); /* CTA buttons, hover states, links */
-  --color-khaki-gold: rgb(145, 136, 81); /* accent — sparingly, e.g. icons or small highlights */
+  /* --color-dark-grey: hsl(120, 2%, 20%); /* main background */
+  --color-grey: rgb(51, 52, 52); /* main background */
+  --color-dark-grey: rgb(30, 31, 30); /* secondary background: footer, nav containers */
+  --color-electric-blue: rgb(49, 194, 241); /* links */
+  --color-khaki-gold: rgb(145, 136, 81); /* accent - headers */
+  --color-khaki-gold-bright: hsl(52, 75%, 55%); /* navigation hover color */
   --color-white: rgb(246, 246, 246); /* text */
 }
 
@@ -52,18 +54,25 @@ Note: @layer components - used so that in-line styling can still override these 
   .hover-effect { /* links */
     @apply hover:opacity-70 transition duration-200 cursor-pointer
   }
+
+
   .nav-hover-animation { /* nav border bottom animation */
-    @apply absolute -bottom-1 left-0 w-full border-2 border-electric-blue scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
+    @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
+
   .blogs-filter-border {
     @apply border-grey border-4 rounded-lg
   }
+
+
   .center-chevron-icon { /* chevron on the blogs homepage */
    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
   }
   .nav-chevron-animation {
     @apply transition-transform duration-300 group-hover:rotate-180 pointer-events-none
   }
+
+
   .footer-icon {
     @apply w-8 h-8
   }
@@ -71,27 +80,3 @@ Note: @layer components - used so that in-line styling can still override these 
     @apply hover:opacity-70 transition duration-200 cursor-pointer hover:underline hover:decoration-white underline-offset-4
   }
 }
-
-  /* .animation-run {
-    width: fit-content;
-    animation: animate-run 8s linear infinite;
-  } */
-
-/* Animations (keyframes) */
-/* @keyframes animate-run {
-  0% {
-    transform: translateX(0) scaleX(1);
-  }
-  45% {
-    transform: translateX(calc(100vw - var(--cat-width))) scaleX(1);
-  }
-  50% {
-    transform: translateX(calc(100vw - var(--cat-width))) scaleX(-1);
-  }
-  95% {
-    transform: translateX(0) scaleX(-1);
-  }
-  100% {
-    transform: translateX(0) scaleX(1);
-  }
-} */
