@@ -25,7 +25,6 @@ export default async function Teams() {
 
   return (
     <section>
-      <h1 className="h1 text-center">TEAM</h1>
       {categories.map((category:string) => {
         // grab team members with this category
         const categoryTeamMembers = members.filter((member:FlatMember) => member.teamCategory === category)
