@@ -20,7 +20,7 @@ export default function NavBar() {
   return (
     <nav className="bg-grey flex justify-between p-5 font-denson-bold sticky top-0">
       <Link href="/">
-        <Image src="/logo-2.png" alt="company logo" width={100} height={100} />
+        <Image src="/images/logos/conatix.png" alt="company logo" width={150} height={150} />
       </Link>
       <ul className="flex items-center gap-6 text-xl">
         {navigations}
