@@ -123,7 +123,7 @@ export default function Map() {
 
   return (
     <section>
-      <div className="invert-[90%] hue-rotate-180 my-10">
+      <div className="invert-[90%] hue-rotate-180">
         <iframe 
           title={`Map showing location of ${location.company} - ${location.title}`}
           src={location.iframeSrc}
