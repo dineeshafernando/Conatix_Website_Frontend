@@ -2,7 +2,7 @@
 
 /* custom tailwind colors */
 @theme {
-  --color-dark-grey: rgb(30, 31, 30); /* main background */
+  --color-dark-grey: hsl(120, 2%, 14%); /* main background */
   --color-grey: rgb(51, 52, 52); /* secondary background / footer, nav containers */
   --color-electric-blue: rgb(49, 194, 241); /* CTA buttons, hover states, links */
   --color-khaki-gold: rgb(145, 136, 81); /* accent — sparingly, e.g. icons or small highlights */
