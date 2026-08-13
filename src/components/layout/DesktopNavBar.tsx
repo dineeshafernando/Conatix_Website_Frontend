@@ -18,7 +18,7 @@ export default function NavBar() {
   })
 
   return (
-    <nav className="bg-grey flex justify-between p-5 font-denson-bold sticky top-0 z-50">
+    <nav className="bg-dark-grey flex justify-between p-5 font-denson-bold sticky top-0 z-50">
       <Link href="/">
         <Image src="/images/logos/conatix.png" alt="company logo" width={150} height={150} />
       </Link>

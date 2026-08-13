@@ -58,7 +58,7 @@ export default function Footer() {
   })
 
   return (
-    <footer className="bg-grey p-5 gap-4 text-xl flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
+    <footer className="bg-dark-grey p-5 gap-4 text-xl flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/images/logos/conatix.png" width={100} height={100} alt="company logo"></Image></Link>
         <p className="opacity-80">Copyright © 2026 Cysana</p>
