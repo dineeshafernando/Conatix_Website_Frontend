@@ -46,12 +46,12 @@ export default function Footer() {
   const navigationElements = navigation.slice(1).map(({label, href, children}:NavSection) => {
 
     const childNavs = children ? children.map(({label, href}:NavSection) => {
-      return <Link key={label} href={href!} className="footer-nav">{label}</Link>
+      return <Link key={label} href={href!} className="footer-nav text-base">{label}</Link>
     }) : null
 
     return (
-      <div key={label} className="flex flex-col items-start gap-2">
-        <Link href={href} className="footer-nav text-electric-blue [-webkit-text-stroke:3px_currentColor]">{label}</Link>
+      <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
+        <Link href={href} className="footer-nav text-white [-webkit-text-stroke:2px_currentColor]">{label}</Link>
         {childNavs}
       </div>
     )
@@ -61,8 +61,8 @@ export default function Footer() {
     <footer className="bg-dark-grey p-5 gap-4 text-xl flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/images/logos/conatix.png" width={100} height={100} alt="company logo"></Image></Link>
-        <p className="opacity-80">Copyright © 2026 Cysana</p>
-        <p className="opacity-80">All rights reserved.</p>
+        <p className="opacity-80 text-electric-blue">Copyright © 2026 Conatix</p>
+        <p className="opacity-80 text-electric-blue">All rights reserved.</p>
         <div className="flex gap-4">
           {socialLinkElements}
         </div>
