@@ -20,7 +20,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
         </Link>
         <ChevronDown className="nav-chevron-animation" />
       </button>
-      <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max mt-1 hidden bg-grey shadow-md rounded-xl p-4 z-50 group-hover:block">
+      <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max mt-1 hidden bg-dark-grey shadow-md rounded-xl p-4 z-50 group-hover:block">
         {children?.map(({label, href}:NavItem) => {
           return (
             <li key={label} className="mb-2">
