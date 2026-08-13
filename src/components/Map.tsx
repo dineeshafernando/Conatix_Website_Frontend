@@ -5,6 +5,7 @@ import {MapPin} from "lucide-react"
 
 interface OfficeLocationData {
   title: string;
+  region: string,
   company: string;
   addressLines: string[];
   phone: string;
@@ -15,7 +16,8 @@ interface OfficeLocationData {
 
 const officeLocations: OfficeLocationData[] = [
   {
-    title: "WASHINGTON (BELTWAY)",
+    title: "WASHINGTO",
+    region: "(BELTWAY)",
     company: "Conatix Corp.",
     addressLines: [
       "46175 Westlake Drive",
@@ -28,7 +30,8 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.170656653787!2d-77.40562535941535!3d39.03422823873642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b639949e19cb47%3A0xadf98206def7b5f1!2s46175%20Westlake%20Dr%20%23320%2C%20Potomac%20Falls%2C%20VA%2020165!5e0!3m2!1sen!2sus!4v1786112695651!5m2!1sen!2sus",
   },
   {
-    title: "NEW YORK (NOMAD)",
+    title: "NEW YORK",
+    region: "(NOMAD",
     company: "Cysana Inc.",
     addressLines: [
       "1178 Broadway",
@@ -40,7 +43,8 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.7630402015125!2d-73.99076075934622!3d40.74523933569889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a60fc4b4af%3A0x761778219aea7e87!2s1178%20Broadway%203rd%20Floor%20%23659%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1786112552886!5m2!1sen!2sus",
   },
   {
-    title: "MONTREAL (MILE END)",
+    title: "MONTREAL",
+    region: "(MILE END)",
     company: "Conatix du Nord Inc.",
     addressLines: [
       "4388 Rue Saint-Denis",
@@ -53,6 +57,7 @@ const officeLocations: OfficeLocationData[] = [
   },
   {
     title: "LONDON (SHOREDITCH)",
+    region: "(SHOREDITCH)",
     company: "Conatix UK Ltd",
     addressLines: [
       "66 Paul Street",
@@ -65,7 +70,8 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3539857973096!2d-0.08642025884904901!3d51.525066909529656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761caf8cf433b1%3A0xe5a7ea0b9af52390!2s66%20Paul%20St%2C%20London%20EC2A%204NA%2C%20UK!5e0!3m2!1sen!2sus!4v1786112294865!5m2!1sen!2sus",
   },
   {
-    title: "BERLIN (MITTE)",
+    title: "BERLIN",
+    region: "(MITTE",
     company: "Cysana Berlin UG",
     addressLines: [
       "Rheinsberger Str. 76/77",
@@ -78,7 +84,7 @@ const officeLocations: OfficeLocationData[] = [
 ];
 
 export default function Map() {
-  const berlinLocation = officeLocations[4] // default location stored in location, which is what's rendered when user visits the location page
+  const berlinLocation = officeLocations[0] // default location stored in location, which is what's rendered when user visits the location page
   const [location, setLocation] = useState(berlinLocation)
 
   const handleLocation = (selectedLocation:OfficeLocationData) => {
@@ -95,6 +101,7 @@ export default function Map() {
           <h4 className="font-bold">{office.title}</h4>
         </div>
         <p>{office.company}</p>
+        <p>{office.region}</p>
         <ul>
           {office.addressLines.map((line) => (
             <li key={line}>{line}</li>
@@ -116,7 +123,6 @@ export default function Map() {
 
   return (
     <section>
-      <h1 className="h1">Location: {location.title}</h1>
       <div className="invert-[90%] hue-rotate-180 my-10">
         <iframe 
           title={`Map showing location of ${location.company} - ${location.title}`}
