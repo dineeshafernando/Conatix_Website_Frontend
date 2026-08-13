@@ -6,7 +6,7 @@ export default function Home() {
     <header className="flex flex-col lg:flex-row items-center justify-center gap-2">
       <div className="flex flex-col items-center">
         <Image src="/images/cat.png" width={800} height={800} alt="cat image" className="min-w-xl" />
-        <span className="italic">The caracal is a wild cat in the jungle known for its oversized ears for detecting and its ruthlessness in pursuing its prey. </span>
+        <span className="italic">The caracal is a wild cat in the jungle known for its oversized ears for detecting <br /> and its ruthlessness in pursuing its prey. </span>
       </div>
       <div className="flex flex-col gap-2 text-xl max-w-3xl">
         <h1 className="h1 text-left">Skilled in detection and prevention</h1>
