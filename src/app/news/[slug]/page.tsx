@@ -1,9 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
-import { fetchBlog, BlogPageProps, referenceData } from "@/lib/strapi/blog"
+import { getAllBlogs, fetchBlog, BlogPageProps, referenceData } from "@/lib/strapi/blog"
 import { formatDate } from "@/lib/util"
 import StrapiBlocksRenderer from "@/components/StrapiBlocksRenderer"
 import {ChevronLeft} from "lucide-react"
+
+// generateStaticParams has nothing to do with this component. 
+// It is just used so that we can use npm run build to create a .out 
+export async function generateStaticParams() {
+  const { blogs } = await getAllBlogs();
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
 
 export default async function BlogPage({params}:BlogPageProps) {
   const {slug} = await params;
