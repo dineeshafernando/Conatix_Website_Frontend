@@ -30,7 +30,7 @@ const officeLocations: OfficeLocationData[] = [
   },
   {
     title: "NEW YORK",
-    region: "(NOMAD",
+    region: "(NOMAD)",
     company: "Cysana Inc.",
     addressLines: [
       "1178 Broadway",
