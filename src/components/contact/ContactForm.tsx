@@ -1,3 +1,5 @@
+"use client"
+
 import InputField from "@/components/contact/InputField"
 
 const inquiryOptions = [
@@ -18,9 +20,14 @@ export default function ContactForm() {
         <div className="flex flex-col md:flex-row gap-4">
           <InputField type="text" name="Company" id="company" placeholder="Company" />
           <InputField isSelect={true} options={inquiryOptions} name="Type of Inquiry" id="inquiry-type" />
+          {/* <div className="flex-1"></div> */}
         </div>
         <div>
           <InputField isTextArea={true} name="Message" id="message" placeholder="Message" />
+        </div>
+        <div className="flex justify-between mx-5">
+          <InputField isDemo={true} type="checkbox" name="Arrange Demo" id="demo" />
+          <button className="bg-dark-grey text-xl px-10 py-3 border-1 rounded-lg cursor-pointer hover:bg-grey">Send</button>
         </div>
       </form>
     </section>
