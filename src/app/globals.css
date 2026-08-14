@@ -60,7 +60,7 @@ Note: @layer components - used so that in-line styling can still override these 
   }
 
   .blogs-filter-border {
-    @apply border-grey border-4 rounded-lg
+    @apply border-dark-grey border-4 rounded-lg
   }
 
 
