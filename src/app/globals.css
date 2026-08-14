@@ -55,7 +55,6 @@ Note: @layer components - used so that in-line styling can still override these 
     @apply hover:opacity-70 transition duration-200 cursor-pointer
   }
 
-
   .nav-hover-animation { /* nav border bottom animation */
     @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
@@ -72,6 +71,9 @@ Note: @layer components - used so that in-line styling can still override these 
     @apply transition-transform duration-300 group-hover:rotate-180 pointer-events-none
   }
 
+  .contact-input {
+    @apply bg-dark-grey p-3 border-1 border-white rounded-md h-12
+  }
 
   .footer-icon {
     @apply w-8 h-8
