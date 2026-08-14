@@ -1,5 +1,5 @@
 import AlternatingSection from "@/components/layout/AlternatingSection"
-import { ransomwarePageData } from "@/lib/solutions"
+import { ransomwarePageData } from "@/lib/threats"
 
 export default function RansomwarePage() {
   return (

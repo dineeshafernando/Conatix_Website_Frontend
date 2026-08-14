@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { malewarePageDataProps, ransomwarePageDataProps } from "@/lib/solutions"
+import { malewarePageDataProps, ransomwarePageDataProps } from "@/lib/threats"
 
 interface AlternationSectionProps {
   data: malewarePageDataProps[] | ransomwarePageDataProps[]
