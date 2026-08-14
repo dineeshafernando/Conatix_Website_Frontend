@@ -34,8 +34,8 @@ export default function MobileNav() {
 
   return (
     <nav className="bg-dark-grey relative flex justify-between p-5 mb-5 font-denson-bold sticky top-0">
-      <Link href="/">
-        <Image src="/logo-2.png" alt="company logo" width={100} height={100} />
+      <Link href="/" className="flex items-center justify-center">
+        <Image src="/images/logos/conatix.png" alt="company logo" width={100} height={100} />
       </Link>
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
