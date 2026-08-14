@@ -64,7 +64,7 @@ conatix-website/
 │       └── privacy/               # Privacy page graphics and assets
 │
 ├── src/                            # Main application source code
-│   ├── app/                        # Next.js file-based routing for pages and layouts
+│   ├── app/                        # Next.js app routing for pages and layouts
 │   │   ├── globals.css             # Global style rules and theme variables
 │   │   ├── layout.tsx              # Root layout, global metadata, fonts, nav, footer
 │   │   ├── page.tsx                # Homepage
@@ -155,7 +155,7 @@ conatix-website/
 
 ## Notes
 
-- This project uses the Next.js file-based routing.
+- This project uses the Next.js app routing.
 - Global styles are managed in `src/app/globals.css`.
 - Shared layout and metadata are defined in `src/app/layout.tsx`.
 - Static assets such as fonts and images are stored in `public/`.
