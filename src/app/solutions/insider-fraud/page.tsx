@@ -6,6 +6,13 @@ interface InsiderFraudData {
 }
 
 const insiderfraudData: InsiderFraudData[] = [
+    {
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    imgUrl: "/insider-fraud/contextual_2.gif"
+  }, {
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    imgUrl: "/insider-fraud/isolated_2.gif"
+  },
   {
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
     imgUrl: "/insider-fraud/insider-fraud-1.gif"
@@ -13,8 +20,8 @@ const insiderfraudData: InsiderFraudData[] = [
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
     imgUrl: "/insider-fraud/insider-fraud-2.gif"
   }
-
 ]
+
 export default function InsiderFraudPage() {
 
   const visualizationEntries = insiderfraudData.map(({description, imgUrl}:InsiderFraudData, i) => {
