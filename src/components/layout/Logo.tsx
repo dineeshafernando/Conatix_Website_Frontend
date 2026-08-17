@@ -15,10 +15,10 @@ interface LogoDict {
 
 // logo data stored in a dictionary 
 const logoDict: LogoDict = {
-  "/threats/malware": { src: "/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
-  "/threats/ransomware": { src: "/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
-  "/threats/insider-fraud": { src: "/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
-  "/threats/suppliers": { src: "/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
+  "/threats/malware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
+  "/threats/ransomware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
+  "/threats/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
+  "/threats/suppliers": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 };
 
 export default function Logo() {
@@ -26,7 +26,7 @@ export default function Logo() {
 
   // Pick matching logo based on current URL or fall back to default Conatix logo
   const logo = logoDict[pathname] || {
-    src: "/logos/conatix.png",
+    src: "/images/logos/conatix.png",
     alt: "Conatix logo",
   };
 
@@ -35,9 +35,9 @@ export default function Logo() {
       <Image
         src={logo.src}
         alt={logo.alt}
-        width={150}
-        height={150}
-        priority
+        width={125}
+        height={125}
+        // className="w-[125px] h-[50px] object-contain" <-- use if we want the image box to always maintain a certain size despite image height
       />
     </Link>
   );
