@@ -67,7 +67,7 @@ export default function Footer() {
           {socialLinkElements}
         </div>
       </div>
-      <div className="flex gap-4 text-left">
+      <div className="flex gap-3 text-left">
         {navigationElements}
       </div>
     </footer>
