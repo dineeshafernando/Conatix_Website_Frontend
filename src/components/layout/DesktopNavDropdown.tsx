@@ -13,8 +13,8 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
 
   return (
     <div className="relative group">
-      <button className="flex hover-effect items-center">
-        <Link href={href} className="relative">
+      <button className="flex items-center">
+        <Link href={href} className="relative nav-hover-text">
           {label}
           <span className="nav-hover-animation"></span>
         </Link>
@@ -24,7 +24,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
         {children?.map(({label, href}:NavItem) => {
           return (
             <li key={label} className="mb-2">
-              <Link href={href} className="hover-effect hover:text-electric-blue">
+              <Link href={href} className="nav-hover-text">
                 {label}
               </Link>
             </li>

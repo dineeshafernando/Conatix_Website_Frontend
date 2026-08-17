@@ -47,15 +47,24 @@
 /* 
 custom in-line class styling using grouped Tailwind class styles (done with @apply)
 Note: @layer components - used so that in-line styling can still override these styles created in @layer components.
+
+Note: some of these styles can be in the components themselves to keep modularity, but they can also be used anywhere else on the website. If so, change the style name and fix the associated names in the components. 
  */
+
 @layer components {
   .h1 {
     font-family: var(--font-denson-bold);
     color: var(--color-khaki-gold);
     text-align: center;
   }
+
   .hover-effect { /* links */
     @apply hover:opacity-70 transition duration-200 cursor-pointer
+  }
+
+  /* navigations styling */
+  .nav-hover-text {
+    @apply hover:text-white transition duration-200 cursor-pointer
   }
 
   .nav-hover-animation { /* nav border bottom animation */

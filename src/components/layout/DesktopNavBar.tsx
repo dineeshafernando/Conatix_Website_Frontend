@@ -9,7 +9,7 @@ export default function NavBar() {
     return (
       <li key={nav.label}>
         {nav.children ? <DesktopNavDropdown navItem={nav} />
-      : <Link href={nav.href!} className="hover-effect relative group">
+      : <Link href={nav.href!} className="relative group nav-hover-effect">
           {nav.label}
           <span className="nav-hover-animation"></span>
         </Link>}
@@ -18,7 +18,7 @@ export default function NavBar() {
   })
 
   return (
-    <nav className="bg-dark-grey flex justify-between p-5 font-denson-bold sticky top-0 z-50">
+    <nav className="bg-dark-grey text-nav-grey flex justify-between p-5 font-denson-bold sticky top-0 z-50">
       <Link href="/">
         <Image src="/images/logos/conatix.png" alt="company logo" width={150} height={150} />
       </Link>
