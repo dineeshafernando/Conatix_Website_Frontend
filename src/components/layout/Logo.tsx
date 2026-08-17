@@ -19,13 +19,13 @@ const logoDict: LogoDict = {
   "/threats/malware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
   "/threats/ransomware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
   "/threats/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
-  "/threats/suppliers": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
+  "/threats/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 
   // Solutions Routes
   "/solutions/malware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
   "/solutions/ransomware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
   "/solutions/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
-  "/solutions/suppliers": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
+  "/solutions/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 };
 
 export default function Logo() {
