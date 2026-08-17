@@ -9,12 +9,12 @@ export default function Home() {
           <Image src="/images/cat.png" width={800} height={800} alt="cat image" />
           <span className="italic text-sm">The caracal is a wild cat in the jungle known for its oversized ears for detecting and its ruthlessness in pursuing its prey. </span>
         </div>
-        <p>Conatix protects againt the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware ad insider fraud.</p>
+        <p>Conatix protects against the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware and insider fraud.</p>
         <div>
-          <p>We catch them in real time or we stop them before they start. </p>
-          <p>Better.  Faster.  Earlier.  Zero Trust and Zero Day. </p>
+          <p>We catch malicious files and suspicious events in real time or stop them before they start.</p>
+          <p>Better. Faster. Earlier. Zero Trust. Zero Day.</p>
         </div>
-        <p>Conatix brings together multiple frontier technologies for cybersecurity – deep learning and gen AI, dynamic 3D network visualization, and our own patented anti-encryption technology. </p>
+        <p>Conatix pioneered applying and combining multiple frontier technologies for cybersecurity monitoring, detection and prevention: our own patented anti-encryption technology; dynamic 3D network visualization; and deep learning, machine learning, and gen AI. Even before it was cool.</p>
       </header>
    </main>
   );
