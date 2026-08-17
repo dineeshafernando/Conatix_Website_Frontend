@@ -46,19 +46,26 @@ export default function Footer() {
   const navigationElements = navigation.slice(1).map(({label, href, children}:NavSection) => {
 
     const childNavs = children ? children.map(({label, href}:NavSection) => {
-      return <Link key={label} href={href!} className="footer-nav tracking-tight">{label}</Link>
+      return (
+        <Link key={label} href={href!} className="relative group tracking-tight opacity-70 hover:opacity-100">
+          {label}
+          <span className="nav-hover-animation"></span>
+        </Link>)
     }) : null
 
     return (
       <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
-        <Link href={href} className="footer-nav text-white [-webkit-text-stroke:2px_currentColor]">{label}</Link>
+        <Link href={href} className="relative group nav-hover-text [-webkit-text-stroke:2px_currentColor]">
+          {label}
+          <span className="nav-hover-animation"></span>
+        </Link>
         {childNavs}
       </div>
     )
   })
 
   return (
-    <footer className="bg-dark-grey p-5 gap-4 text-sm flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:1px_currentColor]">
+    <footer className="bg-dark-grey p-5 gap-4 text-sm flex justify-center font-bungee-hairline [-webkit-text-stroke:1px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/images/logos/conatix.png" width={100} height={100} alt="company logo"></Image></Link>
         <p className="opacity-80 text-electric-blue text-xs">Copyright © 2026 Conatix</p>
