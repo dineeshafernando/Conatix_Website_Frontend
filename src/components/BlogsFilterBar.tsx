@@ -64,7 +64,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
       {/* Search Bar */}
       <form 
         onSubmit={handleSearchSubmit} 
-        className="flex items-center md:w-lg blogs-filter-border">
+        className="flex items-center md:w-lg border-dark-grey border-4 rounded-lg">
         <input 
           type="text" 
           placeholder="Search for news..." 
@@ -77,7 +77,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
       {/* Filter: category */}
       <div className="relative">
         <select 
-          className="w-full md:w-[180px] blogs-filter-border p-5 appearance-none focus:outline-none"
+          className="w-full md:w-[180px] border-dark-grey border-4 rounded-lg p-5 appearance-none focus:outline-none"
           value={category}
           onChange={(e) => handleCategoryChange(e)}
         >
@@ -91,7 +91,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
       {/* Filter: sort */}
       <div className="relative">
         <select 
-          className="w-full md:w-[130px] blogs-filter-border p-5 appearance-none focus:outline-none"
+          className="w-full md:w-[130px] border-dark-grey border-4 rounded-lg p-5 appearance-none focus:outline-none"
           value={sort}
           onChange={(e) => handleSortChange(e)}
         >
