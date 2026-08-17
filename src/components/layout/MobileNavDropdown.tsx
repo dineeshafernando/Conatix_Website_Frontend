@@ -32,7 +32,7 @@ export default function MobileNavDropdown({navItem, activeNav, toggleNav}:Mobile
         {newNavChildren!.map(({label, href}:NavItem) => {
           return (
             <li className="mb-2">
-              <Link href={href} className="relative group hover-effect">{label}
+              <Link href={href} className="relative group nav-hover-text">{label}
                 <span className="nav-hover-animation"></span>
               </Link>
             </li>

@@ -27,13 +27,13 @@ export default function MobileNav() {
       <li key={nav.label} className="mb-4">
         {nav.children? 
           <MobileNavDropdown navItem={nav} activeNav={activeDropdown} toggleNav={toggleNavSelector}  /> : 
-          <Link href={nav.href!} className="hover-effect relative group">{nav.label}<span className="nav-hover-animation"></span></Link>}
+          <Link href={nav.href!} className="relative group nav-hover-text">{nav.label}<span className="nav-hover-animation"></span></Link>}
       </li>
     )
   })
 
   return (
-    <nav className="bg-dark-grey relative flex justify-between p-5 mb-5 font-denson-bold sticky top-0">
+    <nav className="bg-dark-grey text-nav-grey relative flex justify-between p-5 mb-5 font-denson-bold sticky top-0">
       <Link href="/" className="flex items-center justify-center">
         <Image src="/images/logos/conatix.png" alt="company logo" width={100} height={100} />
       </Link>
