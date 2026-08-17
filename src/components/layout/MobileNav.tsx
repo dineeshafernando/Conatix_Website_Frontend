@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { navigation } from "@/lib/navigation"
 import {Menu, X} from "lucide-react"
+import Logo from "@/components/layout/Logo"
 import MobileNavDropdown from "./MobileNavDropdown"
 
 export default function MobileNav() {
@@ -33,10 +34,8 @@ export default function MobileNav() {
   })
 
   return (
-    <nav className="bg-dark-grey text-nav-grey relative flex justify-between p-5 mb-5 font-denson-bold sticky top-0">
-      <Link href="/" className="flex items-center justify-center">
-        <Image src="/images/logos/conatix.png" alt="company logo" width={100} height={100} />
-      </Link>
+    <nav className="bg-dark-grey text-nav-grey relative flex justify-between items-center p-5 mb-5 font-denson-bold sticky top-0">
+      <Logo />
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
       <div className="bg-dark-grey opacity-90 z-1000 p-5 pt-0 absolute text-md top-full left-0 w-full text-center">
