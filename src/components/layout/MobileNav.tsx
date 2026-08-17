@@ -39,7 +39,7 @@ export default function MobileNav() {
       </Link>
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
-      <div className="bg-dark-grey opacity-90 z-1000 p-5 pt-0 absolute text-xl top-full left-0 w-full text-center">
+      <div className="bg-dark-grey opacity-90 z-1000 p-5 pt-0 absolute text-md top-full left-0 w-full text-center">
         <ul>{navigations}</ul>
       </div>
       }

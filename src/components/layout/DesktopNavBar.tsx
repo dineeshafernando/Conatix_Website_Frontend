@@ -22,7 +22,7 @@ export default function NavBar() {
       <Link href="/">
         <Image src="/images/logos/conatix.png" alt="company logo" width={150} height={150} />
       </Link>
-      <ul className="flex items-center gap-6 text-xl">
+      <ul className="flex items-center gap-6 text-md">
         {navigations}
       </ul>
     </nav>
