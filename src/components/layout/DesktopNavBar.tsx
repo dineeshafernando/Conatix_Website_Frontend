@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import Logo from "@/components/layout/Logo"
 import DesktopNavDropdown from "@/components/layout/DesktopNavDropdown"
 import { navigation, NavSection } from "@/lib/navigation"
 
@@ -19,9 +19,7 @@ export default function NavBar() {
 
   return (
     <nav className="bg-dark-grey text-nav-grey flex justify-between p-5 font-denson-bold sticky top-0 z-50">
-      <Link href="/">
-        <Image src="/images/logos/conatix.png" alt="company logo" width={150} height={150} />
-      </Link>
+      <Logo />
       <ul className="flex items-center gap-6 text-md">
         {navigations}
       </ul>
