@@ -2,12 +2,15 @@
 
 /* custom tailwind colors */
 @theme {
-  /* --color-dark-grey: hsl(120, 2%, 20%); /* main background */
+  /* background */
   --color-grey: rgb(51, 52, 52); /* main background */
   --color-dark-grey: rgb(30, 31, 30); /* secondary background: footer, nav containers */
+
+  /* text colors */
   --color-electric-blue: rgb(49, 194, 241); /* links */
   --color-khaki-gold: rgb(145, 136, 81); /* accent - headers */
   --color-khaki-gold-bright: hsl(52, 75%, 55%); /* navigation hover color */
+  --color-nav-grey: rgb(160, 160, 160); /* muted text gray for inactive state */
   --color-white: rgb(246, 246, 246); /* text */
 }
 
@@ -59,11 +62,12 @@ Note: @layer components - used so that in-line styling can still override these 
     @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
 
-  .center-chevron-icon { /* chevron on the blogs homepage */
-   @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
-  }
   .nav-chevron-animation {
     @apply transition-transform duration-300 group-hover:rotate-180 pointer-events-none
+  }
+
+  .center-chevron-icon { /* chevron on the blogs homepage */
+   @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
   }
 
   .contact-input {
