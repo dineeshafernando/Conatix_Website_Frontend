@@ -64,7 +64,7 @@ Note: some of these styles can be in the components themselves to keep modularit
 
   /* navigations styling */
   .nav-hover-text {
-    @apply hover:text-white transition duration-200 cursor-pointer
+    @apply text-nav-grey hover:text-white transition duration-200 cursor-pointer
   }
 
   .nav-hover-animation { /* nav border bottom animation */
