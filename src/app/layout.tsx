@@ -57,10 +57,10 @@ export default function RootLayout({
     <html lang="en" className={fonts}>
       <body className="min-h-screen flex flex-col bg-grey font-catamaran text-white">
         {/*navbar conditional rendering using tailwind styling */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <NavBar />
         </div>
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <MobileNav />
         </div>
         <main className="flex-1 mx-6 my-10">{children}</main>
