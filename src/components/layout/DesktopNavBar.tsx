@@ -9,7 +9,7 @@ export default function NavBar() {
     return (
       <li key={nav.label}>
         {nav.children ? <DesktopNavDropdown navItem={nav} />
-      : <Link href={nav.href!} className="relative group nav-hover-effect">
+      : <Link href={nav.href!} className="relative group nav-hover-text">
           {nav.label}
           <span className="nav-hover-animation"></span>
         </Link>}
