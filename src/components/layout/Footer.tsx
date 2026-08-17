@@ -46,7 +46,7 @@ export default function Footer() {
   const navigationElements = navigation.slice(1).map(({label, href, children}:NavSection) => {
 
     const childNavs = children ? children.map(({label, href}:NavSection) => {
-      return <Link key={label} href={href!} className="footer-nav text-base">{label}</Link>
+      return <Link key={label} href={href!} className="footer-nav tracking-tight">{label}</Link>
     }) : null
 
     return (
@@ -58,11 +58,11 @@ export default function Footer() {
   })
 
   return (
-    <footer className="bg-dark-grey p-5 gap-4 text-xl flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:1px_currentColor]">
+    <footer className="bg-dark-grey p-5 gap-4 text-sm flex justify-center text-white font-bungee-hairline [-webkit-text-stroke:1px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/images/logos/conatix.png" width={100} height={100} alt="company logo"></Image></Link>
-        <p className="opacity-80 text-electric-blue">Copyright © 2026 Conatix</p>
-        <p className="opacity-80 text-electric-blue">All rights reserved.</p>
+        <p className="opacity-80 text-electric-blue text-xs">Copyright © 2026 Conatix</p>
+        <p className="opacity-80 text-electric-blue text-xs">All rights reserved.</p>
         <div className="flex gap-4">
           {socialLinkElements}
         </div>
