@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 interface OfficeLocationData {
-  title: string;
+  city: string;
   region: string,
   company: string;
   addressLines: string[];
@@ -15,7 +15,7 @@ interface OfficeLocationData {
 
 const officeLocations: OfficeLocationData[] = [
   {
-    title: "WASHINGTON",
+    city: "WASHINGTON",
     region: "(BELTWAY)",
     company: "Conatix Corp.",
     addressLines: [
@@ -29,7 +29,7 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3099.170656653787!2d-77.40562535941535!3d39.03422823873642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b639949e19cb47%3A0xadf98206def7b5f1!2s46175%20Westlake%20Dr%20%23320%2C%20Potomac%20Falls%2C%20VA%2020165!5e0!3m2!1sen!2sus!4v1786112695651!5m2!1sen!2sus",
   },
   {
-    title: "NEW YORK",
+    city: "NEW YORK",
     region: "(NOMAD)",
     company: "Cysana Inc.",
     addressLines: [
@@ -42,7 +42,7 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.7630402015125!2d-73.99076075934622!3d40.74523933569889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a60fc4b4af%3A0x761778219aea7e87!2s1178%20Broadway%203rd%20Floor%20%23659%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1786112552886!5m2!1sen!2sus",
   },
   {
-    title: "MONTREAL",
+    city: "MONTREAL",
     region: "(MILE END)",
     company: "Conatix du Nord Inc.",
     addressLines: [
@@ -55,7 +55,7 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.3533979592703!2d-73.5839064591384!3d45.523093529627346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bd1ee3d5bed%3A0xb5c13725e30f53c1!2s4388%20R.%20Saint-Denis%20200%20550%2C%20Montr%C3%A9al%2C%20QC%20H2J%202L1%2C%20Canada!5e0!3m2!1sen!2sus!4v1786112484617!5m2!1sen!2sus",
   },
   {
-    title: "LONDON",
+    city: "LONDON",
     region: "(SHOREDITCH)",
     company: "Conatix UK Ltd",
     addressLines: [
@@ -69,7 +69,7 @@ const officeLocations: OfficeLocationData[] = [
     iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3539857973096!2d-0.08642025884904901!3d51.525066909529656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761caf8cf433b1%3A0xe5a7ea0b9af52390!2s66%20Paul%20St%2C%20London%20EC2A%204NA%2C%20UK!5e0!3m2!1sen!2sus!4v1786112294865!5m2!1sen!2sus",
   },
   {
-    title: "BERLIN",
+    city: "BERLIN",
     region: "(MITTE)",
     company: "Cysana Berlin UG",
     addressLines: [
@@ -87,15 +87,15 @@ export default function Map() {
   const [location, setLocation] = useState(berlinLocation)
 
   const handleLocation = (selectedLocation:OfficeLocationData) => {
-    if (location.title != selectedLocation.title) setLocation(selectedLocation);
+    if (location.city != selectedLocation.city) setLocation(selectedLocation);
   }
 
   const locations = officeLocations.map((office:OfficeLocationData) => {
-    const currentMapLocation: boolean = location.title == office.title
+    const currentMapLocation: boolean = location.city == office.city
 
     return (
-      <li key={office.title} className="text-xl">
-        <h4 className="font-bold">{office.title}</h4>
+      <li key={office.city} className="text-xl">
+        <h4 className="font-bold">{office.city}</h4>
         <h4 className="font-bold">{office.region}</h4>
         <p>{office.company}</p>
         <ul>
@@ -108,7 +108,7 @@ export default function Map() {
         {office.fax && <p>Fax: {office.fax}</p>}
         <button 
           onClick={() => handleLocation(office)} 
-          className={location.title == office.title ? "" : "hover-effect hover:underline text-electric-blue"}
+          className={location.city == office.city ? "" : "hover-effect hover:underline text-electric-blue"}
           disabled={currentMapLocation}
           >
             {currentMapLocation ? "Current location" : "Switch map to this location"}
@@ -121,7 +121,7 @@ export default function Map() {
     <section>
       <div className="invert-[90%] hue-rotate-180">
         <iframe 
-          title={`Map showing location of ${location.company} - ${location.title}`}
+          title={`Map showing location of ${location.company} - ${location.city}`}
           src={location.iframeSrc}
           className="w-full h-[450px] "
           allowFullScreen
