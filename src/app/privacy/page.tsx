@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           
           // Section Headers (## Background, ## 1. What personal info...)
           h2: ({ node, ...props }) => (
-            <h2 className="font-bold text-4xl mb-4" {...props} />
+            <h2 className="text-electric-blue font-bungee-hairline mb-4 [-webkit-text-stroke:2px_currentColor]" {...props} />
           ),
           
           // Standard Text (Paragraphs and your UPPERCASE sub-headers)
