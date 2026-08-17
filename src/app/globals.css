@@ -59,11 +59,6 @@ Note: @layer components - used so that in-line styling can still override these 
     @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
 
-  .blogs-filter-border {
-    @apply border-dark-grey border-4 rounded-lg
-  }
-
-
   .center-chevron-icon { /* chevron on the blogs homepage */
    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
   }
