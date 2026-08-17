@@ -1,5 +1,6 @@
 "use client"
 
+import { off } from "process";
 import { useState } from "react"
 
 interface OfficeLocationData {
@@ -94,9 +95,17 @@ export default function Map() {
     const currentMapLocation: boolean = location.city == office.city
 
     return (
-      <li key={office.city} className="text-xl">
-        <h4 className="font-bold">{office.city}</h4>
-        <h4 className="font-bold">{office.region}</h4>
+      <li key={office.city} className="text-base md:text-lg lg:text-xl">
+        <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:3px_currentColor]">
+          <button 
+            onClick={() => handleLocation(office)}
+            className={`w-full text-left hover-effect ${currentMapLocation ? "" : "opacity-70"}`}
+            disabled={currentMapLocation}
+          >
+            {office.city} <br />
+            {office.region}
+          </button>
+        </div>
         <p>{office.company}</p>
         <ul>
           {office.addressLines.map((line) => (
@@ -106,13 +115,6 @@ export default function Map() {
         <p>Tel: {office.phone}</p>
         {office.mobile && <p>Mob: {office.mobile}</p>}
         {office.fax && <p>Fax: {office.fax}</p>}
-        <button 
-          onClick={() => handleLocation(office)} 
-          className={location.city == office.city ? "" : "hover-effect hover:underline text-electric-blue"}
-          disabled={currentMapLocation}
-          >
-            {currentMapLocation ? "Current location" : "Switch map to this location"}
-        </button>
       </li>
     )
   })
@@ -129,7 +131,7 @@ export default function Map() {
           referrerPolicy="strict-origin-when-cross-origin"
         />
       </div>
-      <ul className="flex flex-wrap justify-items-start gap-10 mt-10">
+      <ul className="flex flex-wrap justify-start max-w-6xl mx-auto gap-10 mt-10">
         {locations}
       </ul>
     </section>
