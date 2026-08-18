@@ -74,3 +74,38 @@ export const ransomwarePageData: ransomwarePageDataProps[] = [
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
 ]
+
+export interface insiderFraudPageData {
+  imageUrl: string,
+  altText: string,
+  description: string,
+}
+
+
+export const insiderFraudPageData: insiderFraudPageData[] = [
+  {
+    imageUrl: "/images/threats/insider_careless.png",
+    altText: "insider careless image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+  {
+    imageUrl: "/images/threats/insider_malicious.png",
+    altText: "insider malicious image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+  {
+    imageUrl: "/images/threats/insider_deepfake.png",
+    altText: "insider deepfake image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+  {
+    imageUrl: "/images/threats/insider_smart.png",
+    altText: "insider deepfake image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+  {
+    imageUrl: "/images/threats/insider_agent.png",
+    altText: "insider agent image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+];
