@@ -39,7 +39,7 @@ export default function Footer() {
 
   const socialLinkElements = socialLinksData.map(({href, icon:Icon, label}:SocialLinkProps) => {
     return (
-      <a key={label} href={href} target="_blank"><Icon className="footer-icon hover-effect" /></a>
+      <a key={label} href={href} target="_blank"><Icon className="w-5 h-5 hover-effect" /></a>
     )
   })
 
@@ -47,7 +47,7 @@ export default function Footer() {
 
     const childNavs = children ? children.map(({label, href}:NavSection) => {
       return (
-        <Link key={label} href={href!} className="relative group tracking-tight opacity-70 hover:opacity-100">
+        <Link key={label} href={href!} className="relative group tracking-tight hover:text-white transition-colors">
           {label}
           <span className="nav-hover-animation"></span>
         </Link>)
