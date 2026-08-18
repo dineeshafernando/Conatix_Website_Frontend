@@ -18,3 +18,23 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
     altText: "Cysana intervene table image",
   },
 ];
+
+export interface malewarePageDataProps {
+  imageUrl: string,
+  altText: string,
+}
+
+export const malwarePageData: malewarePageDataProps[] = [
+  {
+    imageUrl: "/images/solutions/binary_types.png",
+    altText: "Binary types image",
+  },
+  {
+    imageUrl: "/images/solutions/binary_code.png",
+    altText: "Binary code image",
+  },
+  {
+    imageUrl: "/images/threats/colored_pixel.png",
+    altText: "Colored pixel image",
+  },
+];
