@@ -7,7 +7,7 @@ export interface ThreatsPageDataProps {
   altText: string,
 }
 
-export const insiderFraudThreatsData: ThreatsPageDataProps[] = [
+export const ThreatsPageData: ThreatsPageDataProps[] = [
   {
     description: "Insider fraud can threaten your enterprise IT network",
     imageUrl: "/images/threats/bank_building.png",
