@@ -82,8 +82,4 @@ Note: some of these styles can be in the components themselves to keep modularit
   .contact-input {
     @apply bg-dark-grey p-3 border-1 border-white rounded-md h-12
   }
-
-  .footer-icon {
-    @apply w-8 h-8
-  }
 }
