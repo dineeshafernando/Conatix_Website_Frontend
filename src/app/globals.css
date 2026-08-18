@@ -14,13 +14,17 @@
   --color-white: rgb(246, 246, 246); /* text */
 }
 
-/* custom tailwind fonts */
+/* custom tailwind fonts
+Note: for the catamaran, there are different font weights, to apply a selected catamaran font in a component, write: className="font-catamaran font-light" (font-catamaran itself is the regular one)
+See other font weight styling here: https://tailwindcss.com/docs/font-weight.
+*/
 @theme {
   --font-catamaran: var(--font-catamaran);
   --font-bungee-reg: var(--font-bungee-reg);
   --font-bungee-hairline: var(--font-bungee-hairline);
   --font-denson-bold: var(--font-denson-bold);
 }
+
 
 /* Order of specificity:
 1. Base (lowest)
