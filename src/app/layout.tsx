@@ -34,17 +34,53 @@ const densonBold = localFont({
 const catamaran = localFont({
   src: [
     {
-      path: '../../public/fonts/Catamaran-Regular.ttf',
+      path: '../../public/fonts/catamaran/Catamaran-Thin.ttf',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-ExtraLight.ttf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/Catamaran-Bold.ttf',
+      path: '../../public/fonts/catamaran/Catamaran-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-Bold.ttf',
       weight: '700',
       style: 'normal',
-    }],
-    variable: '--font-catamaran',
-})
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/catamaran/Catamaran-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-catamaran',
+});
 
 const fonts = `${catamaran.variable} ${bungeeStandard.variable} ${bungeeHairline.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
 
