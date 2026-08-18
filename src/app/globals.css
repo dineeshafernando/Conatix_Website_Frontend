@@ -86,7 +86,4 @@ Note: some of these styles can be in the components themselves to keep modularit
   .footer-icon {
     @apply w-8 h-8
   }
-  .footer-nav {
-    @apply hover:opacity-70 transition duration-200 cursor-pointer hover:underline hover:decoration-white underline-offset-4
-  }
 }
