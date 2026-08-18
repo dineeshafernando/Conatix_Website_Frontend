@@ -15,12 +15,12 @@ export const insiderFraudThreatsData: ThreatsPageDataProps[] = [
   },
   {
     description: "Insider fraud can threaten your IoT, field, or critical infrastructure network",
-    imageUrl: "/images/threats/ambulance-side.jpg",
+    imageUrl: "/images/threats/van-side.png",
     altText: "Side view of an ambulance image",
   },
   {
     description: "Any connected vehicle that receives software update from the manufacturer is susceptible to insider fraud",
-    imageUrl: "/images/threats/ambulance-top.jpg",
+    imageUrl: "/images/threats/van-top.png",
     altText: "Top view of an ambulance image",
   },
 ];
