@@ -1,7 +1,11 @@
+import { insiderFraudThreatsData } from "@/lib/threats"
+import OneColumnLayout from "@/components/layout/OneColumnLayout"
+
 export default function ThreatsPage() {
   return (
-    <main>
-      
+    <main className="text-xl">
+      <h1 className="h1">Threats</h1>
+      <OneColumnLayout data={insiderFraudThreatsData} />
     </main>
   )
 }
