@@ -74,4 +74,9 @@ export const companyAwards: Award[] = [
     logo: "/images/awards/products_awards_2026.png", 
     description: "Most innovative and game-changing products shaping the future",
   },
+  {
+    company: "UK Research and Innovation",
+    logo: "/images/awards/ukri.png", 
+    description: "Transformative technologies grant",
+  },
 ];
