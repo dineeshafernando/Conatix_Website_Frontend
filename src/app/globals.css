@@ -10,7 +10,7 @@
   --color-electric-blue: rgb(49, 194, 241); /* links */
   --color-khaki-gold: rgb(145, 136, 81); /* accent - headers */
   --color-khaki-gold-bright: hsl(52, 75%, 55%); /* navigation hover color */
-  --color-grey-text: rgb(190, 190, 190); /* used for nav word, location addresses */
+  --color-light-grey: rgb(190, 190, 190); /* used for nav word, location addresses */
   --color-white: rgb(246, 246, 246); /* text */
 }
 
@@ -68,7 +68,7 @@ Note: some of these styles can be in the components themselves to keep modularit
 
   /* navigations styling */
   .nav-hover-text {
-    @apply text-grey-text hover:text-white transition duration-200 cursor-pointer
+    @apply text-light-grey hover:text-white transition duration-200 cursor-pointer
   }
 
   .nav-hover-animation { /* nav border bottom animation */
