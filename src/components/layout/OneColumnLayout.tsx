@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { ThreatsPageDataProps } from "@/lib/threats"
+import { ThreatsPageDataProps, supplierPageDataProps } from "@/lib/threats"
 
 interface OneColData {
-  data: ThreatsPageDataProps[]
+  data: ThreatsPageDataProps[] | supplierPageDataProps[]
 }
 
 export default function OneColumnLayout({data}:OneColData) {
 
-  const dataRows = data.map(({description, imageUrl, altText}:ThreatsPageDataProps, i) => {
+  const dataRows = data.map(({description, imageUrl, altText}:ThreatsPageDataProps | supplierPageDataProps, i) => {
     return (
       <div key={i} className="max-w-[800px]">
         <p className="mb-5 text-xl">{description}</p>

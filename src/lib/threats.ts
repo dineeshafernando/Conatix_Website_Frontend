@@ -109,3 +109,18 @@ export const insiderFraudPageData: insiderFraudPageData[] = [
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
 ];
+
+export interface supplierPageDataProps {
+  imageUrl: string,
+  altText: string,
+  description: string,
+}
+
+export const supplierPageData: supplierPageDataProps[] = [
+  {
+    imageUrl: "/images/threats/supplier.png",
+    altText: "supplier image",
+    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+  },
+];
+
