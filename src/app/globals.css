@@ -10,7 +10,7 @@
   --color-electric-blue: rgb(49, 194, 241); /* links */
   --color-khaki-gold: rgb(145, 136, 81); /* accent - headers */
   --color-khaki-gold-bright: hsl(52, 75%, 55%); /* navigation hover color */
-  --color-nav-grey: rgb(160, 160, 160); /* muted text gray for inactive state */
+  --color-grey-text: rgb(190, 190, 190);
   --color-white: rgb(246, 246, 246); /* text */
 }
 
