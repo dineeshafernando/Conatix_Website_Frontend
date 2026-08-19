@@ -75,10 +75,6 @@ Note: some of these styles can be in the components themselves to keep modularit
     @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
 
-  .nav-chevron-animation {
-    @apply transition-transform duration-300 group-hover:rotate-180 pointer-events-none
-  }
-
   .center-chevron-icon { /* chevron on the blogs homepage */
    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none
   }
