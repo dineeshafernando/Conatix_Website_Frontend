@@ -39,6 +39,6 @@ export const malwarePageData: malewarePageDataProps[] = [
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "Colored pixel image",
     width: 200,
-    height: 200,
+    height: 150,
   },
 ];
