@@ -37,8 +37,8 @@ export const navigation: NavSection[] = [
       {label: "Conatix TPRM Suite", href: "/products/conatix-tprm-suite"},
     ]
   },
-  { label: "Cyberomics", href: "/cyberomics"},
   { label: "Demos", href: "/demos"},
+  { label: "Cyberomics", href: "/cyberomics"},
   {
     label: "Company", 
     href: "/company",
