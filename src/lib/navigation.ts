@@ -10,7 +10,6 @@ export interface NavSection {
 }
 
 export const navigation: NavSection[] = [
-  { label: "Home", href: "/" },
   { label: "Threats",
     href: "/threats",
     children: [
@@ -29,8 +28,17 @@ export const navigation: NavSection[] = [
       {label: "Supplier", href: "/solutions/supplier"},
     ]
   },
+  { label: "Products",
+    href: "/products",
+    children: [
+      {label: "Cysana", href: "/products/cysana"},
+      {label: "Omniskia Enterprise", href: "/products/omniskia-enterprise"},
+      {label: "Omniskia Plus VSDN", href: "/products/omniskia-plus-vsdn"},
+      {label: "Conatix TPRM Suite", href: "/products/conatix-tprm-suite"},
+    ]
+  },
   { label: "Cyberomics", href: "/cyberomics"},
-  { label: "Demo", href: "/demo"},
+  { label: "Demos", href: "/demos"},
   {
     label: "Company", 
     href: "/company",

@@ -43,7 +43,7 @@ export default function Footer() {
     )
   })
 
-  const navigationElements = navigation.slice(1).map(({label, href, children}:NavSection) => {
+  const navigationElements = navigation.map(({label, href, children}:NavSection) => {
 
     const childNavs = children ? children.map(({label, href}:NavSection) => {
       return (
