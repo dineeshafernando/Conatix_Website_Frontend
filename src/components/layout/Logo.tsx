@@ -22,8 +22,8 @@ const logoDict: LogoDict = {
   "/threats/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 
   // Solutions Routes
-  "/solutions/malware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
-  "/solutions/ransomware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
+  "/solutions/malware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana orange logo" },
+  "/solutions/ransomware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana orange logo" },
   "/solutions/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
   "/solutions/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 };
