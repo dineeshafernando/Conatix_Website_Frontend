@@ -68,8 +68,8 @@ export default function Footer() {
     <footer className="bg-dark-grey p-5 gap-4 text-xs flex justify-center font-bungee-hairline [-webkit-text-stroke:1px_currentColor]">
       <div className=" flex flex-col gap-2">
         <Link href="/"><Image src="/images/logos/conatix.png" width={100} height={100} alt="company logo"></Image></Link>
-        <p className="opacity-80 text-electric-blue">Copyright © 2026 Conatix</p>
-        <p className="opacity-80 text-electric-blue">All rights reserved.</p>
+        <p className="text-electric-blue">Copyright © 2026 Conatix</p>
+        <p className="text-electric-blue">All rights reserved.</p>
         <div className="flex gap-4">
           {socialLinkElements}
         </div>
