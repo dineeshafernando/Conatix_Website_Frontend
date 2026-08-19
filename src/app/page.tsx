@@ -6,7 +6,7 @@ export default function Home() {
       <header className="flex flex-col gap-6 text-2xl max-w-5xl mx-auto">
         <h1 className="h1">Skilled in detection and prevention</h1>
         <div className="flex flex-col items-center">
-          <Image src="/images/cat.png" width={800} height={800} alt="cat image" />
+          <Image src="/images/cat_blue_network.png" width={800} height={800} alt="cat image" />
           <span className="italic text-sm">The caracal is a wild cat in the jungle known for its oversized ears for detecting and its ruthlessness in pursuing its prey. </span>
         </div>
         <p>Conatix protects against the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware and insider fraud.</p>
