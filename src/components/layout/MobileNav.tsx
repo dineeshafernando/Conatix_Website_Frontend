@@ -34,7 +34,7 @@ export default function MobileNav() {
   })
 
   return (
-    <nav className="bg-dark-grey text-nav-grey relative flex justify-between items-center p-5 mb-5 font-denson-bold sticky top-0">
+    <nav className="bg-dark-grey text-nav-grey relative flex justify-between items-center py-5 px-2 mb-5 font-denson-bold sticky top-0">
       <Logo />
       <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
       {isHamburger ? null : 
