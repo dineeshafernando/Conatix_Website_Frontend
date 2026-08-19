@@ -22,6 +22,8 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
 export interface malewarePageDataProps {
   imageUrl: string,
   altText: string,
+  width?: number,
+  height?: number,
 }
 
 export const malwarePageData: malewarePageDataProps[] = [
@@ -36,5 +38,7 @@ export const malwarePageData: malewarePageDataProps[] = [
   {
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "Colored pixel image",
+    width: 200,
+    height: 200,
   },
 ];
