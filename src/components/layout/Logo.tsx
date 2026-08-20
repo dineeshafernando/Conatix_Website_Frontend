@@ -16,8 +16,8 @@ interface LogoDict {
 // logo data stored in a dictionary 
 const logoDict: LogoDict = {
   // Threats Routes
-  "/threats/malware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
-  "/threats/ransomware": { src: "/images/logos/conatix-cysana.png", alt: "Conatix Cysana logo" },
+  "/threats/malware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana logo" },
+  "/threats/ransomware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana logo" },
   "/threats/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo" },
   "/threats/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo" },
 
