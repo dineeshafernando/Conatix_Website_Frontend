@@ -20,6 +20,8 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
 ];
 
 export interface malewarePageDataProps {
+  dataId: string, // this dataId field will be used to group array elements that are supposed to be used together in our website pages
+  description?: string,
   imageUrl: string,
   altText: string,
   width?: number,
@@ -28,17 +30,26 @@ export interface malewarePageDataProps {
 
 export const malwarePageData: malewarePageDataProps[] = [
   {
+    dataId: "malware-dataflow",
     imageUrl: "/images/solutions/binary_types.png",
     altText: "Binary types image",
   },
   {
+    dataId: "malware-dataflow",
     imageUrl: "/images/solutions/binary_code.png",
     altText: "Binary code image",
   },
   {
+    dataId: "malware-dataflow",
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "Colored pixel image",
     width: 200,
     height: 150,
+  },
+  {
+    dataId: "malware-detector",
+    description: "Malware Detector",
+    imageUrl: "/animations/malware/Malware Detector.gif",
+    altText: "Malware detector animation",
   },
 ];
