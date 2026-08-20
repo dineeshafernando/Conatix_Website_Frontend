@@ -8,17 +8,17 @@ interface InsiderFraudData {
 const insiderfraudData: InsiderFraudData[] = [
     {
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    imgUrl: "/insider-fraud/contextual_2.gif"
+    imgUrl: "/animations/insider-fraud/contextual_2.gif"
   }, {
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    imgUrl: "/insider-fraud/isolated_2.gif"
+    imgUrl: "/animations/insider-fraud/isolated_2.gif"
   },
   {
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    imgUrl: "/insider-fraud/insider-fraud-1.gif"
+    imgUrl: "/animations/insider-fraud/insider-fraud-1.gif"
   }, {
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    imgUrl: "/insider-fraud/insider-fraud-2.gif"
+    imgUrl: "/animations/insider-fraud/insider-fraud-2.gif"
   }
 ]
 
