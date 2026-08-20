@@ -1,10 +1,10 @@
-import AlternatingSection from "@/components/layout/AlternatingSection"
-import { ransomwarePageData } from "@/lib/threats"
+import OneColumnLayout from "@/components/layout/OneColumnLayout"
+import { ransomwarePageData } from "@/lib/solutions"
 
 export default function RansomwarePage() {
   return (
     <main>
-      <AlternatingSection data={ransomwarePageData} />
+      <OneColumnLayout data={ransomwarePageData} />
     </main>
   )
 }

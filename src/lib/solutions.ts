@@ -53,3 +53,17 @@ export const malwarePageData: malewarePageDataProps[] = [
     altText: "Malware detector animation",
   },
 ];
+
+export interface ransomwarePageDataProps {
+  description: string,
+  imageUrl: string,
+  altText: string,
+}
+
+export const ransomwarePageData: ransomwarePageDataProps[] = [
+  {
+    description: "Ransomware Detector",
+    imageUrl: "/animations/ransomware/Ransomware Detector.gif",
+    altText: "Ransomware detector animation",
+  },
+];
