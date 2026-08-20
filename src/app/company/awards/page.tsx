@@ -3,14 +3,24 @@ import Image from "next/image"
 
 export default function AwardsPage() {
   // Award cards
-  const awards = companyAwards.map(({company, logo, description}:Award) => {
+  const awards = companyAwards.map(({company, logo, description, max_width}:Award) => {
     return (
-      <div key={description} className="w-[350px] bg-dark-grey text-xl p-5 rounded-lg">
-        <div className="flex justify-around items-center mb-2">
-          <p>{company}</p>
-          <Image src={logo} width={125} height={125} alt={`${description} image`} className="w-[125px] h-[125px] object-contain" /> 
+      <div key={company} className="w-[350px] bg-dark-grey text-xl p-5 rounded-lg">
+        <div className="flex justify-center items-center gap-4 mb-2">
+          {logo.map((logoPath) => (
+            <Image
+              key={logoPath}
+              src={logoPath}
+              width={125}
+              height={125}
+              alt={`${company} image`}
+              className={`w-auto h-[125px] max-w-[${max_width ? max_width : 50}%] object-contain`}
+            />
+          ))}
         </div>
-        <p className="text-center">{description}</p>
+        <div className="text-electric-blue">
+          {description.map((text) => (<p key={text}>{text}</p>))}
+        </div>
       </div>
     )
   })
