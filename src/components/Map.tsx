@@ -95,11 +95,11 @@ export default function Map() {
     const currentMapLocation: boolean = location.city == office.city
 
     return (
-      <li key={office.city} className="text-base md:text-lg lg:text-xl">
-        <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:3px_currentColor]">
+      <li key={office.city} className="text-sm">
+        <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
           <button 
             onClick={() => handleLocation(office)}
-            className={`w-full text-left hover-effect ${currentMapLocation ? "" : "opacity-70"}`}
+            className={`w-full text-left hover-effect ${currentMapLocation ? "text-white" : ""}`}
             disabled={currentMapLocation}
           >
             {office.city} <br />
@@ -120,7 +120,7 @@ export default function Map() {
   })
 
   return (
-    <section>
+    <section className="font-light text-lg text-light-grey">
       <div className="invert-[90%] hue-rotate-180">
         <iframe 
           title={`Map showing location of ${location.company} - ${location.city}`}
@@ -131,7 +131,7 @@ export default function Map() {
           referrerPolicy="strict-origin-when-cross-origin"
         />
       </div>
-      <ul className="flex flex-wrap justify-start max-w-6xl mx-auto gap-10 mt-10">
+      <ul className="grid grid-cols-2 md:grid-cols-5 max-w-6xl mx-auto gap-y-5 mt-10 px-4">
         {locations}
       </ul>
     </section>
