@@ -19,7 +19,7 @@ export default function PrivacyPage() {
   const fileContent = fs.readFileSync(filePath, 'utf8');
 
   return (
-    <main className="[&_ul_ul]:list-[circle] max-w-[980px] mx-auto text-xl">
+    <main className="[&_ul_ul]:list-[circle] max-w-[980px] mx-auto text-sm font-light">
       {/* 4. RENDER THE MARKDOWN */}
       <ReactMarkdown
         components={{
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           
           // Section Headers (## Background, ## 1. What personal info...)
           h2: ({ node, ...props }) => (
-            <h2 className="text-electric-blue font-bungee-hairline mb-4 [-webkit-text-stroke:2px_currentColor]" {...props} />
+            <h2 className="text-xl text-electric-blue font-bungee-hairline mb-4 [-webkit-text-stroke:2px_currentColor]" {...props} />
           ),
           
           // Standard Text (Paragraphs and your UPPERCASE sub-headers)
