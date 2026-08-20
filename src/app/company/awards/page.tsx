@@ -5,7 +5,7 @@ export default function AwardsPage() {
   // Award cards
   const awards = companyAwards.map(({company, logo, description, max_width}:Award) => {
     return (
-      <div key={company} className="w-[350px] bg-dark-grey text-xl p-5 rounded-lg">
+      <div key={company} className="w-full bg-dark-grey text-xl p-5 rounded-lg">
         <div className="flex justify-center items-center gap-4 mb-2">
           {logo.map((logoPath) => (
             <Image
@@ -28,7 +28,7 @@ export default function AwardsPage() {
   return (
     <main>
       <h1 className="h1">Awards</h1>
-      <div className="flex flex-wrap gap-5 max-w-[1100px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto">
         {awards}
       </div>
     </main>
