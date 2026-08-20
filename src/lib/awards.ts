@@ -72,13 +72,13 @@ export const companyAwards: Award[] = [
     description: ["ISV Partners National Summit Germany", "First Prize Business Innovation"],
   },
   {
-    company: "Products That Count",
-    logo: ["/images/awards/products_awards_2024.png", "/images/awards/products_awards_2026.png"], 
-    description: ["Most Innovative Product","AI and Software Category Winner"],
-  },
-  {
     company: "TD Canada Trust",
     logo: ["/images/awards/td_canada.png"], 
     description: ["First Prize Startup Elevator Pitch"],
+  },
+  {
+    company: "Products That Count",
+    logo: ["/images/awards/products_awards_2024.png", "/images/awards/products_awards_2026.png"], 
+    description: ["Most Innovative Product","AI and Software Category Winner"],
   },
 ];
