@@ -7,14 +7,14 @@ interface AlternationSectionProps {
 
 export default function AlternatingSection({data}:AlternationSectionProps) {
 
-  const dataRows = data.map(({imageUrl, width, height, altText, description, textBelowImage}:malewarePageDataProps | ransomwarePageDataProps, i) => {
+  const dataRows = data.map(({imageUrl, imgWidth, imgHeight, altText, description, textBelowImage}:malewarePageDataProps | ransomwarePageDataProps, i) => {
     return (
       <div key={i} className={`flex flex-col items-center md:justify-center gap-4 ${i % 2 != 0 ? "md:flex-row-reverse" : "md:flex-row"}`}>
         <div className="flex flex-col items-center gap-2">
         <Image 
             src={imageUrl} 
-            width={width ?? 500} 
-            height={height ?? 500} 
+            width={imgWidth ?? 500} 
+            height={imgHeight ?? 500} 
             alt={altText} 
             className="object-contain" 
           />

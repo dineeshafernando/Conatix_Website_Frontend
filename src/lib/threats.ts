@@ -5,6 +5,9 @@ export interface ThreatsPageDataProps {
   description: string,
   imageUrl: string,
   altText: string,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const ThreatsPageData: ThreatsPageDataProps[] = [
@@ -31,8 +34,9 @@ export interface malewarePageDataProps {
   altText: string,
   description: string,
   textBelowImage?: string,
-  width?: number,
-  height?: number,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const malewarePageData: malewarePageDataProps[] = [
@@ -40,29 +44,29 @@ export const malewarePageData: malewarePageDataProps[] = [
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "colored pixel image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 300,
-    height: 300,
+    imgWidth: 300,
+    imgHeight: 300,
   },
   {
     imageUrl: "/images/threats/cartoon_benign.png",
     altText: "benign cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 650,
-    height: 400,
+    imgWidth: 650,
+    imgHeight: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_malicious.png",
     altText: "malicious cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 650,
-    height: 400,
+    imgWidth: 650,
+    imgHeight: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_obfuscated.png",
     altText: "obfuscated cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 650,
-    height: 400,
+    imgWidth: 650,
+    imgHeight: 400,
   },
 ]
 
@@ -72,8 +76,9 @@ export interface ransomwarePageDataProps {
   altText: string,
   description: string,
   textBelowImage?: string,
-  width?: number,
-  height?: number,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [
@@ -81,15 +86,15 @@ export const ransomwarePageData: ransomwarePageDataProps[] = [
     imageUrl: "/images/threats/cartoon_benign.png",
     altText: "cartoon benign image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 650,
-    height: 400,
+    imgWidth: 650,
+    imgHeight: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_ransomware.png",
     altText: "cartoon ransomware image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    width: 650,
-    height: 400,
+    imgWidth: 650,
+    imgHeight: 400,
   },
 ]
 
@@ -98,6 +103,9 @@ export interface insiderFraudPageData {
   altText: string,
   description: string,
   textBelowImage?: string,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 
@@ -138,6 +146,9 @@ export interface supplierPageDataProps {
   imageUrl: string,
   altText: string,
   description: string,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const supplierPageData: supplierPageDataProps[] = [

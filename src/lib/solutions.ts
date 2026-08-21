@@ -4,6 +4,9 @@ export interface SolutionsPageDataProps {
   description: string,
   imageUrl: string,
   altText: string,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const SolutionsPageData: SolutionsPageDataProps[] = [
@@ -16,6 +19,7 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
     description: "When do we intervene?",
     imageUrl: "/images/solutions/cysana_intervene_table.png",
     altText: "Cysana intervene table image",
+    maxWidth: 1100,
   },
 ];
 
@@ -24,8 +28,9 @@ export interface malewarePageDataProps {
   description?: string,
   imageUrl: string,
   altText: string,
-  width?: number,
-  height?: number,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const malwarePageData: malewarePageDataProps[] = [
@@ -43,8 +48,8 @@ export const malwarePageData: malewarePageDataProps[] = [
     dataId: "malware-dataflow",
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "Colored pixel image",
-    width: 200,
-    height: 150,
+    imgWidth: 200,
+    imgHeight: 150,
   },
   {
     dataId: "malware-detector",
@@ -58,6 +63,9 @@ export interface ransomwarePageDataProps {
   description: string,
   imageUrl: string,
   altText: string,
+  imgWidth?: number,
+  imgHeight?: number,
+  maxWidth?: number,
 }
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [

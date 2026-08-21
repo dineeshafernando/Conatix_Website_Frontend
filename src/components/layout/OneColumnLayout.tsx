@@ -8,11 +8,11 @@ interface OneColData {
 
 export default function OneColumnLayout({data}:OneColData) {
 
-  const dataRows = data.map(({description, imageUrl, altText}:ThreatsPageDataProps | supplierPageDataProps | SolutionsPageDataProps | malewarePageDataProps | ransomwarePageDataProps, i) => {
+  const dataRows = data.map(({description, imageUrl, imgWidth, imgHeight, maxWidth, altText}:ThreatsPageDataProps | supplierPageDataProps | SolutionsPageDataProps | malewarePageDataProps | ransomwarePageDataProps, i) => {
     return (
-      <div key={i} className="max-w-[800px]">
+      <div key={i} className="w-full" style={{ maxWidth: maxWidth ?? 800 }}>
         {description && <p className="mb-5 text-xl">{description}</p>}
-        <Image src={imageUrl} width={800} height={800} alt={altText} />
+        <Image src={imageUrl} width={imgWidth ?? 800} height={imgHeight ?? 800} alt={altText} className="w-full h-auto" />
       </div>
     )
   })
