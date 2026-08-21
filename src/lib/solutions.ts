@@ -53,7 +53,7 @@ export const malwarePageData: malewarePageDataProps[] = [
   },
   {
     dataId: "malware-detector",
-    description: "Malware Detector",
+    description: "Cysana Malware Detector",
     imageUrl: "/animations/malware/Malware Detector.gif",
     altText: "Malware detector animation",
   },
