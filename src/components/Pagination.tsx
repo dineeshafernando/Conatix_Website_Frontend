@@ -23,7 +23,7 @@ export default function Pagination({pageCount}:PaginationProps) {
     return (
       <button 
         key={choice} 
-        className="bg-khaki-gold flex justify-center items-center p-6 w-[40px] h-[40px] rounded-md hover-effect"
+        className="bg-khaki flex justify-center items-center p-6 w-[40px] h-[40px] rounded-md hover-effect"
         onClick={() => handlePageSizeChange(choice)}>
         {choice}
       </button>
