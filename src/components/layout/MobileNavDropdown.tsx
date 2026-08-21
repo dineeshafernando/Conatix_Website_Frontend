@@ -23,16 +23,18 @@ export default function MobileNavDropdown({navItem, activeNav, toggleNav}:Mobile
   ]
 
   return (
-    <div className="relative flex flex-col items-center gap-2">
-      <button onClick={() => toggleNav(label)} className="flex items-center gap-1 hover-effect">
+    <div className="flex flex-col items-center gap-2">
+      <button onClick={() => toggleNav(label)} className="relative group nav-hover-text">
         {label}
-        {label == activeNav ? <ChevronUp /> : <ChevronDown />}
+        {label == activeNav ? <ChevronUp className="nav-chevron-absolute" /> : <ChevronDown className="nav-chevron-absolute" />}
+        <span className="nav-hover-animation"></span>
       </button>
       {label == activeNav && <ul>
         {newNavChildren!.map(({label, href}:NavItem) => {
           return (
             <li className="mb-2" key={label}>
-              <Link href={href} className="relative group nav-hover-text">{label}
+              <Link href={href} className="relative group nav-hover-text">
+                {label}
                 <span className="nav-hover-animation"></span>
               </Link>
             </li>
