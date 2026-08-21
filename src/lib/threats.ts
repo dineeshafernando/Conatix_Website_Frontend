@@ -31,6 +31,8 @@ export interface malewarePageDataProps {
   altText: string,
   description: string,
   textBelowImage?: string,
+  width?: number,
+  height?: number,
 }
 
 export const malewarePageData: malewarePageDataProps[] = [
@@ -38,21 +40,29 @@ export const malewarePageData: malewarePageDataProps[] = [
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "colored pixel image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 300,
+    height: 300,
   },
   {
     imageUrl: "/images/threats/cartoon_benign.png",
     altText: "benign cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 650,
+    height: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_malicious.png",
     altText: "malicious cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 650,
+    height: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_obfuscated.png",
     altText: "obfuscated cartoon image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 650,
+    height: 400,
   },
 ]
 
@@ -62,6 +72,8 @@ export interface ransomwarePageDataProps {
   altText: string,
   description: string,
   textBelowImage?: string,
+  width?: number,
+  height?: number,
 }
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [
@@ -69,11 +81,15 @@ export const ransomwarePageData: ransomwarePageDataProps[] = [
     imageUrl: "/images/threats/cartoon_benign.png",
     altText: "cartoon benign image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 650,
+    height: 400,
   },
   {
     imageUrl: "/images/threats/cartoon_ransomware.png",
     altText: "cartoon ransomware image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    width: 650,
+    height: 400,
   },
 ]
 
