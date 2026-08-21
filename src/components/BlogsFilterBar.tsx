@@ -84,7 +84,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
           <option value="">All Categories</option>
           {categories.map((category:string, index) => <option key={index}>{category}</option>)}
         </select>
-        <div className="center-chevron-icon">
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
           <ChevronDown />
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function BlogsFilterBar({categories}:BlogsFilterBarProps){
           <option value="date:asc">Oldest</option>
           <option value="title:asc">A-Z</option>
         </select>
-        <div className="center-chevron-icon">
+        <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
           <ChevronDown />
         </div>
       </div>
