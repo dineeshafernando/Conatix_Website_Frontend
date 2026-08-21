@@ -13,7 +13,7 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
     altText: "Security cycle image",
   },
   {
-    description: "Why do we intervene?",
+    description: "When do we intervene?",
     imageUrl: "/images/solutions/cysana_intervene_table.png",
     altText: "Cysana intervene table image",
   },
