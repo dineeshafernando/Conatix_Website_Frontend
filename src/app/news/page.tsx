@@ -35,7 +35,7 @@ export default async function Blogs() {
     const imgUrl = (blog.image && blog.image.small) ?  `${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` : `${process.env.NEXT_PUBLIC_API_URL}${blog.origImg}`
 
     return (
-      <section key={blog.id} className="w-full flex flex-col-reverse items-center justify-between gap-8 text-center border-b-dark-grey border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
+      <section key={blog.id} className="w-full flex flex-col-reverse items-center justify-between gap-8 text-center border-b-khaki-gold border-b-2 md:flex-row md:text-left pb-3 md:pb-5">
         <div className="flex-1 flex flex-col gap-2">
           <h3 className="font-bungee-hairline [-webkit-text-stroke:2px_currentColor] text-electric-blue">{blog.title}</h3>
           <p className="font-bungee-hairline text-xl">{formatDate(blog.date)}</p>
