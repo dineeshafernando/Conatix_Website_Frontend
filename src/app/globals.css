@@ -7,11 +7,11 @@
   --color-dark-grey: rgb(30, 31, 30); /* secondary background: footer, nav containers */
 
   /* text colors */
-  --color-electric-blue: rgb(49, 194, 241); /* links */
-  --color-khaki-gold: rgb(145, 136, 81); /* accent - headers */
-  --color-khaki-gold-bright: hsl(52, 75%, 55%); /* navigation hover color */
+  --color-electric-blue: rgb(47, 196, 243); /* links */
+  --color-khaki: rgb(145, 137, 82); /* accent - headers */
+  --color-khaki-bright: hsl(52, 75%, 55%); /* navigation hover color */
   --color-light-grey: rgb(190, 190, 190); /* used for nav word, location addresses */
-  --color-white: rgb(246, 246, 246); /* text */
+  --color-white: rgb(255, 255, 255); /* text */
 }
 
 /* custom tailwind fonts
@@ -58,7 +58,7 @@ Note: some of these styles can be in the components themselves to keep modularit
 @layer components {
   .h1 {
     font-family: var(--font-denson-bold);
-    color: var(--color-khaki-gold);
+    color: var(--color-khaki);
     text-align: center;
   }
 
@@ -71,7 +71,7 @@ Note: some of these styles can be in the components themselves to keep modularit
   }
 
   .nav-hover-animation { /* nav border bottom animation */
-    @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-gold-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
+    @apply absolute -bottom-1 left-0 w-full border-2 border-khaki-bright scale-x-0 group-hover:scale-x-100 transition duration-300 ease-in-out
   }
 
   .nav-chevron-absolute { /* positions chevron absolutely relative to the navigation words so it doesn't take up any space */
