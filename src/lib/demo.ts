@@ -19,16 +19,4 @@ export const demoData: DemoDataProps[] = [
     src: "",
     alt: "Insider fraud demo video",
   },
-  {
-    id: "cysana",
-    description: "Cysana Demo",
-    src: "",
-    alt: "Cysana demo video",
-  },
-  {
-    id: "omniskia",
-    description: "Omniskia Demo",
-    src: "",
-    alt: "Omniskia demo video",
-  },
 ];
