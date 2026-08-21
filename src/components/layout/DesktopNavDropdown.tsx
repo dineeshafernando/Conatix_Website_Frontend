@@ -18,7 +18,7 @@ export default function DesktopNavDropdown({navItem}:DesktopNavDropdownProps){
           {label}
           <span className="nav-hover-animation group-hover/nav:scale-x-100"></span>
         </span>
-        <ChevronDown className="absolute left-[98%] top-1/2 -translate-y-1/2 transition-transform duration-300 group-hover/nav:rotate-180 pointer-events-none" />
+        <ChevronDown className="nav-chevron-absolute" />
       </Link>
       <ul className="absolute top-full left-1/2 -translate-x-1/2 w-max mt-1 hidden bg-dark-grey shadow-md rounded-xl p-4 z-50 group-hover/nav:block">
         {children?.map(({label, href}:NavItem) => {
