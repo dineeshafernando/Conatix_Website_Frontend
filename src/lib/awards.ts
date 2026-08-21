@@ -13,12 +13,12 @@ export const companyAwards: Award[] = [
   {
     company: "NYTechWeek",
     logo: ["/images/awards/demo_nyc_night.png"],
-    description: ["Most Innovative Startups"],
+    description: ["Named one of the 15 most innovative startups in NYC for NYTech week demo night"],
   },
   {
     company: "UK Dept. for Culture, Media & Sport",
     logo: ["/images/awards/dep_culture_media_sport.png"], 
-    description: ["Two years in a row"],
+    description: ["Named one of the most cybersecurity startups in the UK, 2 years in a row"],
   },
   {
     company: "City of London / Microsoft",
@@ -69,7 +69,7 @@ export const companyAwards: Award[] = [
   {
     company: "IBM",
     logo: ["/images/awards/ibm.png"],
-    description: ["ISV Partners National Summit Germany", "First Prize Business Innovation"],
+    description: ["ISV Partners National Summit Germany, first prize business innovation"],
   },
   {
     company: "TD Canada Trust",
