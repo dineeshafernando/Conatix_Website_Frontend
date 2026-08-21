@@ -1,5 +1,9 @@
+import CatamaranFontPreview from "@/components/FontPreview"
+
 export default function ContactPage() {
   return (
-    <main></main>
+    <main>
+      <CatamaranFontPreview />
+    </main>
   )
 }
