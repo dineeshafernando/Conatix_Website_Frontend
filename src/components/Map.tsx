@@ -1,6 +1,5 @@
 "use client"
 
-import { off } from "process";
 import { useState } from "react"
 
 interface OfficeLocationData {
@@ -74,12 +73,12 @@ const officeLocations: OfficeLocationData[] = [
     region: "(MITTE)",
     company: "Cysana Berlin UG",
     addressLines: [
-      "Rheinsberger Str. 76/77",
-      "D-10115 Berlin",
+      "Torstraße 105",
+      "D-10119 Berlin",
       "GERMANY",
     ],
     phone: "+49 (30) 4669 0239",
-    iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9707.20278894336!2d13.384279534114413!3d52.53704005655498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851f1197344db%3A0x823f64799865f4d3!2sRheinsberger%20Str.%2076%2F77%2C%2010115%20Berlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1786035701532!5m2!1sen!2sus",
+    iframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.1831049664775!2d13.403432800000001!3d52.530121199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8511cd42ce94b%3A0xa0a807fc30e16318!2sVirtual%20Office%20Berlin%20-%20Gesch%C3%A4ftsadresse%20mieten%20%7C%20MANA!5e0!3m2!1sen!2sus!4v1787330666414!5m2!1sen!2sus",
   },
 ];
 
