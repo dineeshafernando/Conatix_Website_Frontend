@@ -30,7 +30,7 @@ export default async function Blogs() {
   // creates the blogs array
   const {blogs, metaBlogs} = await getAllBlogs(searchTerms, category, sort, page, pageSize)
   console.log(blogs)
-  const blogsEntry = blogs.map((blog:FlatBlogPost) => {
+  const blogsEntry = blogs.map((blog:FlatBlogPost, index: number) => {
 
     const imgUrl = (blog.image && blog.image.small) ?  `${process.env.NEXT_PUBLIC_API_URL}${blog.image.small}` : `${process.env.NEXT_PUBLIC_API_URL}${blog.origImg}`
 
@@ -47,7 +47,7 @@ export default async function Blogs() {
           height={300} 
           width={300} 
           alt={blog.altImgText} 
-          unoptimized
+          priority={index === 0}
           />
       </section>
     )

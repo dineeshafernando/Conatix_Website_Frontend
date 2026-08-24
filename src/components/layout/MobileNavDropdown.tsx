@@ -26,7 +26,7 @@ export default function MobileNavDropdown({navItem, activeNav, toggleNav}:Mobile
     <div className="flex flex-col items-center gap-2">
       <button onClick={() => toggleNav(label)} className="relative group nav-hover-text">
         {label}
-        {label == activeNav ? <ChevronUp className="nav-chevron-absolute" /> : <ChevronDown className="nav-chevron-absolute" />}
+        {label == activeNav ? <ChevronUp className="nav-chevron-inline" /> : <ChevronDown className="nav-chevron-inline" />}
         <span className="nav-hover-animation"></span>
       </button>
       {label == activeNav && <ul>

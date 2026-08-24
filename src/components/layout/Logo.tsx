@@ -38,7 +38,7 @@ export default function Logo() {
   };
 
   return (
-    <Link href="/">
+    <Link href="/" className="-ml-[2px]">
       <Image
         src={logo.src}
         alt={logo.alt}

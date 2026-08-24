@@ -33,7 +33,7 @@ export default async function BlogPage({params}:BlogPageProps) {
       </div>
       <p className="text-xl">Summary: {blog.summary}</p>
       <div className="flex flex-col justify-center">
-        <Image src={imgUrl} alt="blog image" width={750} height={625} className="mt-3 rounded-xl" unoptimized />
+        <Image src={imgUrl} alt="blog image" width={750} height={625} className="mt-3 rounded-xl" priority />
         <p className="italic">Source: {blog.source}</p>
       </div>
       <h3 className="text-left font-catamaran font-bold">{blog.subtitle}</h3>

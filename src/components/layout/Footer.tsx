@@ -44,21 +44,25 @@ export default function Footer() {
   })
 
   const navigationElements = navigation.map(({label, href, children}:NavSection) => {
+    if (!children) return null;
 
-    const childNavs = children ? children.map(({label, href}:NavSection) => {
+    const childNavs = children.map(({label, href}:NavSection) => {
+      let displayLabel = label;
+      if (label === "Cysana MSP/MSSP") displayLabel = "CYSANA MSP";
+      else if (label === "Cysana Enterprise") displayLabel = "CYSANA FNT";
+      else if (label === "Omniskia Enterprise") displayLabel = "OMNISKIA ENT";
+      else if (label === "Omniskia VSDN") displayLabel = "OMNISKIA VSDN";
+      else if (label === "TPRM Suite") displayLabel = "TPRM SUITE";
+
       return (
         <Link key={label} href={href!} className="relative group tracking-tight hover:text-white transition-colors">
-          {label}
+          {displayLabel}
           <span className="nav-hover-animation"></span>
         </Link>)
-    }) : null
+    })
 
     return (
       <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
-        <Link href={href} className="relative group nav-hover-text [-webkit-text-stroke:2px_currentColor]">
-          {label}
-          <span className="nav-hover-animation"></span>
-        </Link>
         {childNavs}
       </div>
     )

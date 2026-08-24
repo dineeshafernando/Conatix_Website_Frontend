@@ -20,7 +20,7 @@ export default function NavBar() {
   return (
     <nav className="bg-dark-grey text-light-grey flex justify-between p-5 pr-7 font-denson-bold">
       <Logo />
-      <ul className="flex items-center gap-8 text-md">
+      <ul className="flex items-center gap-3 text-lg">
         {navigations}
       </ul>
     </nav>

@@ -31,13 +31,15 @@ export const navigation: NavSection[] = [
   { label: "Products",
     href: "/products",
     children: [
-      {label: "Cysana", href: "/products/cysana"},
+      {label: "Cysana MSP/MSSP", href: "/products/cysana-msp-mssp"},
+      {label: "Cysana Enterprise", href: "/products/cysana-enterprise"},
       {label: "Omniskia Enterprise", href: "/products/omniskia-enterprise"},
-      {label: "Omniskia Plus VSDN", href: "/products/omniskia-plus-vsdn"},
-      {label: "Conatix TPRM Suite", href: "/products/conatix-tprm-suite"},
+      {label: "Omniskia VSDN", href: "/products/omniskia-plus-vsdn"},
+      {label: "TPRM Suite", href: "/products/conatix-tprm-suite"},
     ]
   },
   { label: "Demos", href: "/demos"},
+  { label: "Resources", href: "/resources"},
   { label: "Cyberomics", href: "/cyberomics"},
   {
     label: "Company", 
