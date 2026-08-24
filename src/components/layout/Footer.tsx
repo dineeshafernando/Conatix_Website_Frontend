@@ -49,7 +49,7 @@ export default function Footer() {
     const childNavs = children.map(({label, href}:NavSection) => {
       let displayLabel = label;
       if (label === "Cysana MSP/MSSP") displayLabel = "CYSANA MSP";
-      else if (label === "Cysana Enterprise") displayLabel = "CYSANA FNT";
+      else if (label === "Cysana Enterprise") displayLabel = "CYSANA ENT";
       else if (label === "Omniskia Enterprise") displayLabel = "OMNISKIA ENT";
       else if (label === "Omniskia VSDN") displayLabel = "OMNISKIA VSDN";
       else if (label === "TPRM Suite") displayLabel = "TPRM SUITE";
@@ -63,6 +63,10 @@ export default function Footer() {
 
     return (
       <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
+        <Link href={href} className="relative group nav-hover-text [-webkit-text-stroke:2px_currentColor]">
+          {label}
+          <span className="nav-hover-animation"></span>
+        </Link>
         {childNavs}
       </div>
     )
