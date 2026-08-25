@@ -60,7 +60,7 @@ export default function Footer() {
     })
 
     return (
-      <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
+      <div key={label} className="flex flex-col items-start gap-2 text-electric-blue min-w-[120px]">
         <Link href={href} className="relative group nav-hover-text [-webkit-text-stroke:2px_currentColor]">
           {label}
           <span className="nav-hover-animation"></span>

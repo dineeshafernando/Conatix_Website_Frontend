@@ -13,7 +13,7 @@ export interface ThreatsPageDataProps {
 export const ThreatsPageData: ThreatsPageDataProps[] = [
   {
     description: "Insider fraud can threaten your enterprise IT network",
-    imageUrl: "/images/threats/bank_building_v6.jpeg",
+    imageUrl: "/images/threats/bank_building_v9.png",
     altText: "Bank build image",
   },
   {
