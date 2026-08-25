@@ -53,7 +53,12 @@ export const navigation: NavSection[] = [
     ],
   },
   { label: "News", href: "/news" },
-  { label: "Shop", href: "/shop" },
+  { label: "Shop",
+    href: "/shop",
+    children: [
+      { label: "Style Guide", href: "/style-guide" },
+    ]
+  },
   { label: "Privacy", href: "/privacy" },
   { label: "Contact", 
     href: "/contact",

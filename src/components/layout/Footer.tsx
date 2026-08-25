@@ -44,9 +44,7 @@ export default function Footer() {
   })
 
   const navigationElements = navigation.map(({label, href, children}:NavSection) => {
-    if (!children) return null;
-
-    const childNavs = children.map(({label, href}:NavSection) => {
+    const childNavs = children?.map(({label, href}:NavSection) => {
       let displayLabel = label;
       if (label === "Cysana MSP/MSSP") displayLabel = "CYSANA MSP";
       else if (label === "Cysana Enterprise") displayLabel = "CYSANA ENT";

@@ -12,7 +12,7 @@ export interface SolutionsPageDataProps {
 export const SolutionsPageData: SolutionsPageDataProps[] = [
   {
     description: "Conatix cybersecurity software can monitor all of your endpoints and your entire network – giving you unprecedented visibility, security and control",
-    imageUrl: "/images/solutions/security_cycle.png",
+    imageUrl: "/images/solutions/security_cycle_v2.png",
     altText: "Security cycle image",
   },
   {
@@ -38,18 +38,22 @@ export const malwarePageData: malewarePageDataProps[] = [
     dataId: "malware-dataflow",
     imageUrl: "/images/solutions/binary_types.png",
     altText: "Binary types image",
+    imgWidth: 460,
+    imgHeight: 220,
   },
   {
     dataId: "malware-dataflow",
     imageUrl: "/images/solutions/binary_code.png",
     altText: "Binary code image",
+    imgWidth: 391,
+    imgHeight: 220,
   },
   {
     dataId: "malware-dataflow",
     imageUrl: "/images/threats/colored_pixel.png",
     altText: "Colored pixel image",
-    imgWidth: 200,
-    imgHeight: 150,
+    imgWidth: 226,
+    imgHeight: 220,
   },
   {
     dataId: "malware-detector",
