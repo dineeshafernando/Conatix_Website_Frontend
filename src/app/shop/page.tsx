@@ -68,9 +68,9 @@ export default function ShopPage() {
               className="flex flex-col gap-3 group cursor-pointer"
             >
               {/* Square image card container */}
-              <div className="aspect-square bg-white border border-white/15 flex items-center justify-center p-2 rounded hover:opacity-95 transition-opacity duration-200">
+              <div className="aspect-square border border-white/15 flex items-center justify-center p-2 rounded hover:opacity-95 transition-opacity duration-200">
                 <Image
-                  src="/images/logos/cysana-cat-head.png"
+                  src="/images/logos/cysana-cat-head-v2.png"
                   width={280}
                   height={280}
                   alt="Cysana Logo"

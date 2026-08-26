@@ -15,7 +15,7 @@ export const navigation: NavSection[] = [
     children: [
       {label: "Malware", href: "/threats/malware"},
       {label: "Ransomware", href: "/threats/ransomware"},
-      {label: "Insider Fraud", href: "/threats/insider-fraud"},
+      {label: "Insider", href: "/threats/insider-fraud"},
       {label: "Supplier", href: "/threats/supplier"},
     ]
   },
@@ -24,7 +24,7 @@ export const navigation: NavSection[] = [
     children: [
       {label: "Malware", href: "/solutions/malware"},
       {label: "Ransomware", href: "/solutions/ransomware"},
-      {label: "Insider Fraud", href: "/solutions/insider-fraud"},
+      {label: "Insider", href: "/solutions/insider-fraud"},
       {label: "Supplier", href: "/solutions/supplier"},
     ]
   },
@@ -38,7 +38,7 @@ export const navigation: NavSection[] = [
       {label: "TPRM Suite", href: "/products/conatix-tprm-suite"},
     ]
   },
-  { label: "Demos", href: "/demos"},
+  { label: "Demo", href: "/demos"},
   { label: "Resources", href: "/resources"},
   { label: "Cyberomics", href: "/cyberomics"},
   {

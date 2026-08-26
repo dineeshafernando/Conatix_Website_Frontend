@@ -17,9 +17,9 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
   },
   {
     description: "When do we intervene?",
-    imageUrl: "/images/solutions/cysana_intervene_table.png",
+    imageUrl: "/images/solutions/cysana_intervene_table_v2.png",
     altText: "Cysana intervene table image",
-    maxWidth: 1100,
+    maxWidth: 1350,
   },
 ];
 

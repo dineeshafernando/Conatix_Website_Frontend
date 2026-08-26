@@ -44,7 +44,7 @@ export default function Footer() {
   })
 
   const navigationElements = navigation.map(({label, href, children}:NavSection) => {
-    const childNavs = children?.map(({label, href}:NavSection) => {
+    const childNavs = children?.filter(({label}:NavSection) => label !== "Style Guide").map(({label, href}:NavSection) => {
       let displayLabel = label;
       if (label === "Cysana MSP/MSSP") displayLabel = "CYSANA MSP";
       else if (label === "Cysana Enterprise") displayLabel = "CYSANA ENT";
@@ -60,7 +60,7 @@ export default function Footer() {
     })
 
     return (
-      <div key={label} className="flex flex-col items-start gap-2 text-electric-blue min-w-[120px]">
+      <div key={label} className="flex flex-col items-start gap-2 text-electric-blue">
         <Link href={href} className="relative group nav-hover-text [-webkit-text-stroke:2px_currentColor]">
           {label}
           <span className="nav-hover-animation"></span>
@@ -80,7 +80,7 @@ export default function Footer() {
           {socialLinkElements}
         </div>
       </div>
-      <div className="flex gap-3 text-left">
+      <div className="flex flex-1 justify-between text-left">
         {navigationElements}
       </div>
     </footer>

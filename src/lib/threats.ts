@@ -23,7 +23,7 @@ export const ThreatsPageData: ThreatsPageDataProps[] = [
   },
   {
     description: "Any connected vehicle that receives software update from the manufacturer is susceptible to insider fraud",
-    imageUrl: "/images/threats/van-top-v3.png",
+    imageUrl: "/images/threats/van-top-v4.png",
     altText: "Top view of an ambulance image",
   },
 ];

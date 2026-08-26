@@ -3,6 +3,7 @@ export interface Award {
   logo: string[];
   description: string[];
   max_width?: number,
+  whiteBg?: boolean, // set true for dark-colored logos that need a light backdrop to be visible on this page's dark cards
 }
 export const companyAwards: Award[] = [
   {
@@ -78,7 +79,25 @@ export const companyAwards: Award[] = [
   },
   {
     company: "Products That Count",
-    logo: ["/images/awards/products_awards_2024.png", "/images/awards/products_awards_2026.png"], 
+    logo: ["/images/awards/products_awards_2024.png", "/images/awards/products_awards_2026.png"],
     description: ["Most Innovative Product","AI and Software Category Winner"],
+  },
+  {
+    company: "FCA",
+    logo: ["/images/awards/fca.svg"],
+    description: ["UK Financial Conduct Authority"],
+    whiteBg: true,
+  },
+  {
+    company: "CISPA",
+    logo: ["/images/awards/cispa.svg"],
+    description: ["CISPA Saarbrücken, Germany"],
+    whiteBg: true,
+  },
+  {
+    company: "Accenture",
+    logo: ["/images/awards/accenture.png"],
+    description: ["Profiled and cited in multiple reports to F500 CEOs on AI for business by the Chief Economist and CTO"],
+    whiteBg: true,
   },
 ];
