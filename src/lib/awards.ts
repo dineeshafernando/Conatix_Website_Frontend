@@ -74,7 +74,7 @@ export const companyAwards: Award[] = [
   },
   {
     company: "TD Canada Trust",
-    logo: ["/images/awards/td_canada.png"], 
+    logo: ["/images/awards/td-canada-trust.svg"], 
     description: ["First Prize Startup Elevator Pitch"],
   },
   {

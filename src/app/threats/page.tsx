@@ -8,13 +8,13 @@ export default function ThreatsPage() {
       <h1 className="h1">Threats</h1>
 
       <section className="flex flex-col gap-3 items-center justify-center mb-15">
-        <p>Ransomware, still one of the most pervasive and costly cyber threats.</p>
+        <p className="w-full max-w-[1000px] mx-auto text-left text-xl font-light text-light-grey">Ransomware, like malware still one of the most pervasive and costly cyber threats.</p>
         <div className="w-full flex items-center justify-center gap-2">
-          <Image src="/images/threats/ransomware_table_v1.png" height={500} width={500} className="w-[70%] max-w-[600px]" alt="ransomware data table image" />
-          <Image src="/images/threats/ransomeware_cost_v1.png" height={150} width={150}
+          <Image src="/images/threats/ransomware_table_v3.png" height={500} width={500} className="w-[70%] max-w-[600px]" alt="ransomware data table image" />
+          <Image src="/images/threats/ransomeware_cost_v3.png" height={150} width={150}
           className="w-[28%] max-w-[145px]" alt="ransomware data table image" />
         </div>
-        <p>Ransomware is now present in nearly half of all breaches.</p>
+        <p className="text-xl font-light text-light-grey">Ransomware is now present in nearly half of all breaches.</p>
       </section>
 
       <OneColumnLayout data={ThreatsPageData} />

@@ -13,18 +13,21 @@ export interface ThreatsPageDataProps {
 export const ThreatsPageData: ThreatsPageDataProps[] = [
   {
     description: "Insider fraud can threaten your enterprise IT network",
-    imageUrl: "/images/threats/bank_building_v9.png",
+    imageUrl: "/images/threats/bank_building_v13.png",
     altText: "Bank build image",
+    maxWidth: 1000,
   },
   {
     description: "Insider fraud can threaten your IoT, field, or critical infrastructure network",
     imageUrl: "/images/threats/van-side-v3.png",
     altText: "Side view of an ambulance image",
+    maxWidth: 1000,
   },
   {
     description: "Any connected vehicle that receives software update from the manufacturer is susceptible to insider fraud",
     imageUrl: "/images/threats/van-top-v4.png",
     altText: "Top view of an ambulance image",
+    maxWidth: 1000,
   },
 ];
 
@@ -111,7 +114,7 @@ export interface insiderFraudPageData {
 
 export const insiderFraudPageData: insiderFraudPageData[] = [
   {
-    imageUrl: "/images/threats/insider_careless.png",
+    imageUrl: "/images/threats/insider_careless_v1.png",
     altText: "insider careless image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
     textBelowImage: "Careless Insider"
@@ -123,7 +126,7 @@ export const insiderFraudPageData: insiderFraudPageData[] = [
     textBelowImage: "Malicious Insider"
   },
   {
-    imageUrl: "/images/threats/insider_deepfake_v3.png",
+    imageUrl: "/images/threats/insider_deepfake_v5.png",
     altText: "insider deepfake image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
     textBelowImage: "Deepfake Employee"

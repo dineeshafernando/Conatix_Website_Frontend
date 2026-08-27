@@ -39,16 +39,56 @@ export const resourcesList: ResourceItem[] = [
   },
   {
     title: "The Security Solution for VSDNs",
-    description: "How Conatix secures Vehicle Software Defined Networks against insider and remote threats.",
+    description: "How Conatix secures Virtual Software Defined Networks against insider and remote threats.",
     fileSize: "0.6 MB",
     pdfUrl: "/resources/pdfs/security-solution-vsdns.pdf",
     thumbnailUrl: "/resources/thumbnails/security-solution-vsdns.png",
   },
   {
     title: "Partner: iQuila",
-    description: "Overview of the Conatix and iQuila partnership for secure network connectivity.",
+    description: "Overview of the Conatix and iQuila Virtual partnership for secure network connectivity.",
     fileSize: "0.8 MB",
     pdfUrl: "/resources/pdfs/partner-iquila.pdf",
     thumbnailUrl: "/resources/thumbnails/partner-iquila.png",
+  },
+];
+
+export interface PressItem {
+  source: string,
+  date: string,
+  title: string,
+  url: string,
+}
+
+export const pressList: PressItem[] = [
+  {
+    source: "UK Financial Conduct Authority",
+    date: "September 2024",
+    title: "Market Abuse Surveillance TechSprint",
+    url: "https://www.fca.org.uk/publications/techsprints/market-abuse-surveillance",
+  },
+  {
+    source: "CSO Magazine",
+    date: "April 2024",
+    title: "Top cybersecurity product news of the week: security orchestration, automation, and response",
+    url: "#", // TODO: get real link from David/Steven
+  },
+  {
+    source: "EurekAlert, American Association for the Advancement of Science (AAAS)",
+    date: "April 2024",
+    title: "Stopping ransomware in its tracks: New enterprise app integrates AI & University research",
+    url: "#", // TODO: get real link from David/Steven
+  },
+  {
+    source: "Le Devoir (Quebec)",
+    date: "September 2023",
+    title: "Le Québec, un précurseur en cybersécurité grâce à son expertise en...",
+    url: "#", // TODO: get real link from David/Steven
+  },
+  {
+    source: "City of London Cyber Innovation Challenge",
+    date: "2022",
+    title: "Cyber Innovation Challenge 2022 and 2023",
+    url: "#", // TODO: get real link from David/Steven
   },
 ];
