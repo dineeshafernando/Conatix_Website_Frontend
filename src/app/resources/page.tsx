@@ -10,7 +10,7 @@ export default function ResourcesPage() {
         Download our latest white papers, technical briefs, and partner documentation to learn more about our cybersecurity suites.
       </p>
 
-      <h2 className="text-2xl font-bold text-white mb-6">Downloads</h2>
+      <h2 className="text-2xl font-bold font-catamaran text-white mb-6">Downloads</h2>
 
       {/* Grid List of Resources */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -20,7 +20,7 @@ export default function ResourcesPage() {
             className="bg-dark-grey border border-white/10 rounded-xl overflow-hidden flex flex-col hover:border-electric-blue/40 transition duration-200"
           >
             <div className="p-6 pb-4">
-              <h2 className="text-xl font-bold font-catamaran text-electric-blue leading-snug">
+              <h2 className="text-xl font-bold font-catamaran text-electric-blue leading-snug min-h-[3.5rem] flex items-center">
                 {resource.title}
               </h2>
             </div>
@@ -57,7 +57,7 @@ export default function ResourcesPage() {
         ))}
       </div>
 
-      <h2 className="text-2xl font-bold text-white mb-6">Press</h2>
+      <h2 className="text-2xl font-bold font-catamaran text-white mb-6">Press</h2>
 
       <div className="flex flex-col gap-4">
         {pressList.map((item) => (
@@ -71,7 +71,7 @@ export default function ResourcesPage() {
             <span className="text-xs text-electric-blue font-bold tracking-wider uppercase font-mono">
               {item.source} • {item.date}
             </span>
-            <span className="flex items-center gap-2 text-lg font-bold text-white group-hover:text-electric-blue transition-colors">
+            <span className="flex items-center gap-2 text-lg font-bold font-catamaran text-white group-hover:text-electric-blue transition-colors">
               {item.title}
               <ExternalLink className="w-4 h-4 shrink-0" />
             </span>

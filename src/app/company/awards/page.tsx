@@ -3,22 +3,22 @@ import Image from "next/image"
 
 export default function AwardsPage() {
   // Award cards
-  const awards = companyAwards.map(({company, logo, description, max_width, whiteBg}:Award) => {
+  const awards = companyAwards.map(({company, logo, description, max_width, whiteBg, softGrayscale}:Award) => {
     return (
       <div key={company} className="w-full bg-dark-grey text-xl p-5 rounded-lg">
         <div className="flex justify-center items-center gap-4 mb-2">
           {logo.map((logoPath) => (
-            <Image
-              key={logoPath}
-              src={logoPath}
-              width={125}
-              height={125}
-              alt={`${company} image`}
-              className={`w-auto h-[125px] max-w-[${max_width ? max_width : 50}%] object-contain ${whiteBg ? "bg-white rounded p-2" : ""}`}
-            />
+            <div key={logoPath} className="relative w-[130px] h-[95px]">
+              <Image
+                src={logoPath}
+                fill
+                alt={`${company} image`}
+                className={`object-contain ${softGrayscale ? "grayscale" : "grayscale brightness-0 invert"} ${whiteBg ? "bg-white rounded p-2" : ""}`}
+              />
+            </div>
           ))}
         </div>
-        <div className="text-electric-blue">
+        <div className="text-electric-blue font-catamaran">
           {description.map((text) => (<p key={text}>{text}</p>))}
         </div>
       </div>

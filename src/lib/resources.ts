@@ -38,7 +38,7 @@ export const resourcesList: ResourceItem[] = [
     thumbnailUrl: "/resources/thumbnails/partner-flockfire.png",
   },
   {
-    title: "The Security Solution for VSDNs",
+    title: "Network Solution for VSDNs",
     description: "How Conatix secures Virtual Software Defined Networks against insider and remote threats.",
     fileSize: "0.6 MB",
     pdfUrl: "/resources/pdfs/security-solution-vsdns.pdf",
