@@ -9,9 +9,9 @@ interface MemberCardProps {
 // MemberCard Component
 function MemberCard({member}: MemberCardProps) {
   return (
-    <div>
+    <div className="flex flex-col items-center w-[200px]">
       <Image src={`${process.env.NEXT_PUBLIC_API_URL}${member.image.thumbnail!}`} height={200} width={200} alt={member.alternativeText ? member.alternativeText : "team member profile picture"} unoptimized className="w-[200px] h-[200px] object-contain"></Image>
-      <div className="text-center mt-4">
+      <div className="text-center mt-4 w-full">
         <p>{member.name}</p>
         <p>{member.role}</p>
       </div>
@@ -25,7 +25,8 @@ export default async function Teams() {
 
   return (
     <section>
-      {categories.map((category:string) => {
+      {/* "advisor" and "core" excluded: rendered separately from src/lib/advisors.ts and src/lib/core.ts, not Strapi */}
+      {categories.filter((category:string) => category !== "advisor" && category !== "core").map((category:string) => {
         // grab team members with this category
         const categoryTeamMembers = members.filter((member:FlatMember) => member.teamCategory === category)
         // hide empty categories 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Bungee } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css";
 
@@ -14,12 +13,6 @@ export const metadata: Metadata = {
     icon: '/images/logos/favicon.ico' // points to public/fav-icon.ico
   }
 };
-
-const bungeeStandard = Bungee({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-bungee-reg' // creates a variable to be used in globals.css
-})
 
 const bungeeHairline = localFont({
   src: '../../public/fonts/BungeeHairline.ttf',
@@ -82,7 +75,7 @@ const catamaran = localFont({
   variable: '--font-catamaran',
 });
 
-const fonts = `${catamaran.variable} ${bungeeStandard.variable} ${bungeeHairline.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
+const fonts = `${catamaran.variable} ${bungeeHairline.variable} ${densonBold.variable}` // this allows us to style our fonts using Tailwind class method as define in globals.css
 
 export default function RootLayout({
   children,

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Download, ExternalLink } from "lucide-react";
-import { resourcesList, pressList } from "@/lib/resources";
+import { Download } from "lucide-react";
+import { resourcesList } from "@/lib/resources";
 
 export default function ResourcesPage() {
   return (
@@ -13,7 +13,7 @@ export default function ResourcesPage() {
       <h2 className="text-2xl font-bold font-catamaran text-white mb-6">Downloads</h2>
 
       {/* Grid List of Resources */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {resourcesList.map((resource) => (
           <div
             key={resource.pdfUrl}
@@ -54,28 +54,6 @@ export default function ResourcesPage() {
               </a>
             </div>
           </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold font-catamaran text-white mb-6">Press</h2>
-
-      <div className="flex flex-col gap-4">
-        {pressList.map((item) => (
-          <a
-            key={item.title}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-dark-grey border border-white/10 rounded-xl p-6 flex flex-col gap-1 hover:border-electric-blue/40 transition duration-200"
-          >
-            <span className="text-xs text-electric-blue font-bold tracking-wider uppercase font-mono">
-              {item.source} • {item.date}
-            </span>
-            <span className="flex items-center gap-2 text-lg font-bold font-catamaran text-white group-hover:text-electric-blue transition-colors">
-              {item.title}
-              <ExternalLink className="w-4 h-4 shrink-0" />
-            </span>
-          </a>
         ))}
       </div>
     </main>

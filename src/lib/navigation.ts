@@ -39,7 +39,12 @@ export const navigation: NavSection[] = [
     ]
   },
   { label: "Demo", href: "/demos"},
-  { label: "Resources", href: "/resources"},
+  { label: "Resources",
+    href: "/resources",
+    children: [
+      { label: "Press", href: "/resources/press" },
+    ]
+  },
   { label: "Cyberomics", href: "/cyberomics"},
   {
     label: "Company", 
