@@ -14,7 +14,7 @@ export default function Home() {
           <p>We catch malicious files and suspicious events in real time or stop them before they start.</p>
           <p>Better. Faster. Earlier. Zero Trust. Zero Day.</p>
         </div>
-        <p>Conatix pioneered applying and combining multiple frontier technologies for cybersecurity monitoring, detection and prevention: our own patented anti-encryption technology; dynamic 3D network visualization; deep learning, machine learning, and gen AI. Even <span className="text-khaki-bright font-bold">before</span> it was cool.</p>
+        <p>Conatix pioneered applying and combining multiple frontier technologies for cybersecurity monitoring, detection and prevention: our own patented anti-encryption technology; dynamic 3D network visualization; deep learning, machine learning, and gen AI. Even <span className="text-khaki-bright font-medium">before</span> it was cool.</p>
       </header>
    </main>
   );

@@ -19,17 +19,17 @@ export const advisors: Advisor[] = [
   },
   {
     name: "Ian Wugalter",
-    role: "Sales Canada",
+    role: "Sales\nCanada",
     image: "/images/team/advisor-ian-wugalter.jpg",
   },
   {
     name: "Tony DeGonia",
-    role: "Sales USA",
-    image: "/images/team/advisor-tony-degonia.jpg",
+    role: "Sales\nUSA",
+    image: "/images/team/advisor-tony-degonia-v3.png",
   },
   {
     name: "John Cassidy",
-    role: "Sales UK & EU",
+    role: "Sales\nUK & EU",
     image: "/images/team/advisor-john-cassidy.jpg",
   },
   {

@@ -23,7 +23,7 @@ export default function TeamPage() {
               <Image src={member.image} height={200} width={200} alt={`${member.name} profile picture`} className="w-[200px] h-[200px] object-cover grayscale" />
               <div className="text-center mt-4 w-full">
                 <p>{member.name}</p>
-                {member.role && <p className="text-electric-blue">{member.role}</p>}
+                {member.role && <p className="text-electric-blue whitespace-pre-line">{member.role}</p>}
               </div>
             </div>
           ))}
@@ -41,7 +41,7 @@ export default function TeamPage() {
               <Image src={advisor.image} height={200} width={200} alt={`${advisor.name} profile picture`} className="w-[200px] h-[200px] object-cover grayscale" />
               <div className="text-center mt-4 w-full">
                 <p>{advisor.name}</p>
-                <p className="text-electric-blue">{advisor.role}</p>
+                <p className="text-electric-blue whitespace-pre-line">{advisor.role}</p>
               </div>
             </div>
           ))}

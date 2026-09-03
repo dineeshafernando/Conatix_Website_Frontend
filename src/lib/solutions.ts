@@ -15,12 +15,6 @@ export const SolutionsPageData: SolutionsPageDataProps[] = [
     imageUrl: "/images/solutions/security_cycle_v4.png",
     altText: "Security cycle image",
   },
-  {
-    description: "When do we intervene?",
-    imageUrl: "/images/solutions/cysana_intervene_table_v5.png",
-    altText: "Cysana intervene table image",
-    maxWidth: 1350,
-  },
 ];
 
 export interface malewarePageDataProps {

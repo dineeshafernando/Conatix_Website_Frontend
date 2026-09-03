@@ -13,14 +13,9 @@ export const coreTeam: CoreMember[] = [
     image: "/images/team/core-david-lehrer.png",
   },
   {
-    name: "Santhosh Parampottupadam",
+    name: "Santhosh",
     role: "Generative AI",
     image: "/images/team/core-santhosh-parampottupadam.png",
-  },
-  {
-    name: "Olha Chala",
-    role: "Deep Learning",
-    image: "/images/team/core-olha-chala.png",
   },
   {
     name: "Doreen Duoduaah",
@@ -30,21 +25,16 @@ export const coreTeam: CoreMember[] = [
   {
     name: "Dineesha Fernando",
     role: "Data Science",
-    image: "/images/team/core-dineesha-fernando.jpg",
-  },
-  {
-    name: "Cara Chandramohan",
-    role: "Data Visualization",
-    image: "/images/team/core-cara-chandramohan.png",
-  },
-  {
-    name: "Rashed Hasan",
-    role: "Scrum Master",
-    image: "/images/team/core-rashed-hasan.png",
+    image: "/images/team/core-dineesha-fernando-v2.png",
   },
   {
     name: "Anirudh",
     role: "AI",
     image: "/images/team/core-anirudh.jpg",
+  },
+  {
+    name: "Prathamesh",
+    role: "Database",
+    image: "/images/team/core-prathamesh-v2.png",
   },
 ];

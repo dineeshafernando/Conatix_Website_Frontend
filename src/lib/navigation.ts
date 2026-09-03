@@ -42,6 +42,7 @@ export const navigation: NavSection[] = [
   { label: "Resources",
     href: "/resources",
     children: [
+      { label: "PDFs", href: "/resources/pdfs" },
       { label: "Press", href: "/resources/press" },
     ]
   },
