@@ -18,7 +18,7 @@ export default function NavBar() {
   })
 
   return (
-    <nav className="bg-dark-grey text-light-grey flex justify-start items-center gap-8 p-5 pr-7 font-denson-bold">
+    <nav className="bg-dark-grey text-light-grey flex justify-start items-center gap-8 h-[76px] px-6 font-denson-bold">
       <Logo />
       <ul className="flex-1 flex items-center justify-between text-lg">
         {navigations}
