@@ -30,11 +30,16 @@ export const coreTeam: CoreMember[] = [
   {
     name: "Anirudh",
     role: "AI",
-    image: "/images/team/core-anirudh.jpg",
+    image: "/images/team/core-anirudh-v3.png",
   },
   {
     name: "Prathamesh",
     role: "Database",
     image: "/images/team/core-prathamesh-v2.png",
+  },
+  {
+    name: "Bhranti",
+    role: "",
+    image: "", // pending photo
   },
 ];

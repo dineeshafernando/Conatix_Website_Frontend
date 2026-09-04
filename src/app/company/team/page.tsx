@@ -17,13 +17,19 @@ export default function TeamPage() {
         <p className="text-light-grey font-light font-catamaran text-xl mb-8 max-w-3xl mx-auto">
           Plus multiple active cooperation agreements with leading universities in our fields
         </p>
-        <div className="flex flex-wrap justify-center gap-16 text-2xl font-catamaran mb-16">
+        <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran mb-16">
           {coreTeam.map((member) => (
-            <div key={member.name} className="flex flex-col items-center w-[200px]">
-              <Image src={member.image} height={200} width={200} alt={`${member.name} profile picture`} className="w-[200px] h-[200px] object-cover grayscale" />
+            <div key={member.name} className="flex flex-col items-center flex-1 min-w-0 max-w-[170px]">
+              <div className="relative w-full aspect-square">
+                {member.image ? (
+                  <Image src={member.image} fill alt={`${member.name} profile picture`} className="object-cover grayscale" />
+                ) : (
+                  <div className="absolute inset-0 bg-dark-grey border border-white/10 rounded" />
+                )}
+              </div>
               <div className="text-center mt-4 w-full">
-                <p>{member.name}</p>
-                {member.role && <p className="text-electric-blue whitespace-pre-line">{member.role}</p>}
+                <p className="text-base">{member.name}</p>
+                {member.role && <p className="text-electric-blue text-base whitespace-pre-line">{member.role}</p>}
               </div>
             </div>
           ))}
