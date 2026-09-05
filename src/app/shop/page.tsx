@@ -3,31 +3,27 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X } from "lucide-react";
+import { X, Minus, Plus } from "lucide-react";
+import { useCart } from "@/lib/cart-context";
+
+const CYSANA_PRODUCT = {
+  id: "cysana-malware-detector",
+  name: "Cysana malware detector and ransomware blocker",
+  description: "Detect more dangerous malware using the latest AI technology and prevent malware from encrypting your data.",
+  unitAmount: 10000, // $100.00 in cents
+  image: "/images/logos/conatix-cysana.png",
+};
 
 export default function ShopPage() {
-  const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState<"info" | "refund" | "shipping">("info");
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
-  const handleCheckout = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert("Checkout failed: " + (data.error || "Unknown error"));
-      }
-    } catch (err) {
-      console.error("Checkout error:", err);
-      alert("Failed to initiate checkout. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+  const handleAddToCart = () => {
+    addToCart(CYSANA_PRODUCT, quantity);
+    setShowModal(false);
+    setQuantity(1);
   };
 
   return (
@@ -131,27 +127,39 @@ export default function ShopPage() {
                 </div>
 
                 <div className="border-t border-b border-white/10 py-3 my-1">
-                  <span className="text-2xl font-bold text-white">$100.00</span>
+                  <span className="text-2xl font-bold text-white">
+                    ${((CYSANA_PRODUCT.unitAmount / 100) * quantity).toFixed(2)}
+                  </span>
                   <span className="text-light-grey text-sm ml-2 font-light">USD / seat / year</span>
                 </div>
 
-                {/* Secure Checkout Button */}
+                {/* Quantity Selector */}
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-light-grey font-semibold">Quantity</span>
+                  <div className="flex items-center gap-3">
+                    <button
+                      onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                      disabled={quantity <= 1}
+                      className="w-8 h-8 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                      <Minus className="w-4 h-4" />
+                    </button>
+                    <span className="text-white w-6 text-center">{quantity}</span>
+                    <button
+                      onClick={() => setQuantity((q) => q + 1)}
+                      className="w-8 h-8 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition cursor-pointer"
+                    >
+                      <Plus className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Add to Cart Button */}
                 <button
-                  onClick={handleCheckout}
-                  disabled={loading}
-                  className="w-full py-3 px-6 rounded bg-khaki-gold text-white font-bold text-base hover:bg-khaki-gold-bright transition duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  onClick={handleAddToCart}
+                  className="w-full py-3 px-6 rounded bg-khaki text-white font-bold text-base hover:bg-khaki-bright transition duration-200 cursor-pointer"
                 >
-                  {loading ? (
-                    <>
-                      <svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Redirecting to Secure Checkout...
-                    </>
-                  ) : (
-                    "Buy Now"
-                  )}
+                  Add to Cart
                 </button>
 
                 {/* Info tabs section */}

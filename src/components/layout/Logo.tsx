@@ -17,16 +17,16 @@ interface LogoDict {
 // logo data stored in a dictionary 
 const logoDict: LogoDict = {
   // Threats Routes
-  "/threats/malware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana logo", className: "h-[46px]" },
-  "/threats/ransomware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana logo", className: "h-[46px]" },
-  "/threats/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo", className: "h-[46px]" },
-  "/threats/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo", className: "h-[46px]" },
+  "/threats/malware": { src: "/images/logos/conatix-cysana-orange-tight.png", alt: "Conatix Cysana logo", className: "h-[58px]" },
+  "/threats/ransomware": { src: "/images/logos/conatix-cysana-orange-tight.png", alt: "Conatix Cysana logo", className: "h-[58px]" },
+  "/threats/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo", className: "h-[58px]" },
+  "/threats/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo", className: "h-[58px]" },
 
   // Solutions Routes
-  "/solutions/malware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana orange logo", className: "h-[46px]" },
-  "/solutions/ransomware": { src: "/images/logos/conatix-cysana-orange.png", alt: "Conatix Cysana orange logo", className: "h-[46px]" },
-  "/solutions/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo", className: "h-[46px]" },
-  "/solutions/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo", className: "h-[46px]" },
+  "/solutions/malware": { src: "/images/logos/conatix-cysana-orange-tight.png", alt: "Conatix Cysana orange logo", className: "h-[58px]" },
+  "/solutions/ransomware": { src: "/images/logos/conatix-cysana-orange-tight.png", alt: "Conatix Cysana orange logo", className: "h-[58px]" },
+  "/solutions/insider-fraud": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia logo", className: "h-[58px]" },
+  "/solutions/supplier": { src: "/images/logos/conatix-omniskia.png", alt: "Conatix Omniskia Logo", className: "h-[58px]" },
 };
 
 export default function Logo() {
@@ -40,13 +40,13 @@ export default function Logo() {
   };
 
   return (
-    <Link href="/" className="-ml-[4px] flex items-center justify-start h-[48px] w-[135px] shrink-0">
+    <Link href="/" className="-ml-[4px] flex items-center justify-start h-[62px] w-[135px] shrink-0">
       <Image
         src={logo.src}
         alt={logo.alt}
         width={135}
-        height={48}
-        className={`${logo.className || "h-[34px]"} w-auto object-contain max-h-[48px]`}
+        height={58}
+        className={`${logo.className || "h-[34px]"} w-auto object-contain max-h-[58px]`}
         priority
       />
     </Link>

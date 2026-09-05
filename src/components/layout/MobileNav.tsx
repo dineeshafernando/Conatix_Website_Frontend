@@ -36,7 +36,9 @@ export default function MobileNav() {
   return (
     <nav className="bg-dark-grey text-light-grey relative flex justify-between items-center h-[76px] px-6 mb-5 font-denson-bold">
       <Logo />
-      <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
+      <div className="flex items-center gap-4">
+        <button onClick={toggleHamburger}>{isHamburger ? <Menu size={48} className="cursor-pointer" /> : <X size={48} className="cursor-pointer"/>}</button>
+      </div>
       {isHamburger ? null : 
       <div className="bg-dark-grey opacity-90 z-1000 p-5 pt-0 absolute text-md top-full left-0 w-full text-center">
         <ul>{navigations}</ul>

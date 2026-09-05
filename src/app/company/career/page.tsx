@@ -11,6 +11,7 @@ export default function CareerPage() {
   const rightRoles = [
     "Malware Analyst",
     "Software Tester",
+    "Product and Project Management",
     "Video Editor",
     "Marketing and Sales",
     "Operations and Administration",

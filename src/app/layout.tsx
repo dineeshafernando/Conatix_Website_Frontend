@@ -5,6 +5,8 @@ import "./globals.css";
 import NavBar from "@/components/layout/DesktopNavBar"
 import MobileNav from "@/components/layout/MobileNav"
 import Footer from "@/components/layout/Footer"
+import { CartProvider } from "@/lib/cart-context"
+import CartDrawer from "@/components/CartDrawer"
 
 export const metadata: Metadata = {
   title: "Conatix Website",
@@ -85,15 +87,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={fonts}>
       <body className="min-h-screen flex flex-col bg-grey font-catamaran text-white">
-        {/*navbar conditional rendering using tailwind styling */}
-        <div className="hidden lg:block sticky top-0 z-50">
-          <NavBar />
-        </div>
-        <div className="block lg:hidden sticky top-0 z-50">
-          <MobileNav />
-        </div>
-        <main className="flex-1 mx-6 mt-10 mb-24">{children}</main>
-        <Footer /> 
+        <CartProvider>
+          {/*navbar conditional rendering using tailwind styling */}
+          <div className="hidden lg:block sticky top-0 z-50">
+            <NavBar />
+          </div>
+          <div className="block lg:hidden sticky top-0 z-50">
+            <MobileNav />
+          </div>
+          <main className="flex-1 mx-6 mt-10 mb-24">{children}</main>
+          <Footer />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
