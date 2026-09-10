@@ -34,6 +34,10 @@ See other font weight styling here: https://tailwindcss.com/docs/font-weight.
 
 /* base styles for certain HTML elements */
 @layer base {
+  body {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+  }
   h1 {
     @apply text-5xl mb-5
   }

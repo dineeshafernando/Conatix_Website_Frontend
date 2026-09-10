@@ -38,8 +38,8 @@ export const coreTeam: CoreMember[] = [
     image: "/images/team/core-doreen-duoduaah.jpg",
   },
   {
-    name: "Thein Htike Zaw",
-    role: "AI Engineer",
-    image: "/images/team/core-thein-htike-zaw.jpg",
+    name: "Bhranti",
+    role: "",
+    image: "", // pending photo
   },
 ];

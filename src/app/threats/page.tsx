@@ -18,7 +18,7 @@ export default function ThreatsPage() {
 
       <section className="flex flex-col gap-4 items-center justify-center mb-15">
         <p className="w-full max-w-[1000px] mx-auto text-left text-xl font-light text-light-grey">
-          Ransomware, like malware still one of the most pervasive and costly cyber threats.
+          Ransomware, like malware, is still one of the most pervasive and costly cyber threats…and is present in nearly half of all breaches.
         </p>
 
         {/* Text-based Data Table and 374X Callout with Catamaran lining numbers */}
@@ -52,8 +52,8 @@ export default function ThreatsPage() {
 
           {/* Right: 374X Callout */}
           <div className="w-full lg:w-[28%] flex flex-col items-center justify-center text-center font-catamaran">
-            <span className="text-6xl md:text-7xl lg:text-8xl font-light text-khaki tracking-tight leading-none mb-2">
-              374X
+            <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-khaki tracking-tight leading-none mb-2">
+              374<span className="inline-block relative top-[0.1em]">X</span>
             </span>
             <p className="text-electric-blue text-base md:text-lg font-light leading-snug">
               Projected total increase in<br />

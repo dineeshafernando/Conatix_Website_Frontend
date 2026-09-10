@@ -18,15 +18,9 @@ export const ThreatsPageData: ThreatsPageDataProps[] = [
     maxWidth: 1000,
   },
   {
-    description: "Insider fraud can threaten your IoT, field, or critical infrastructure network",
+    description: "Insider fraud can also threaten your IoT, field, or critical infrastructure network. Any connected vehicle that receives a software update from the manufacturer is susceptible to insider fraud.",
     imageUrl: "/images/threats/van-side-v3.png",
     altText: "Side view of an ambulance image",
-    maxWidth: 1000,
-  },
-  {
-    description: "Any connected vehicle that receives software update from the manufacturer is susceptible to insider fraud",
-    imageUrl: "/images/threats/van-top-v4.png",
-    altText: "Top view of an ambulance image",
     maxWidth: 1000,
   },
 ];

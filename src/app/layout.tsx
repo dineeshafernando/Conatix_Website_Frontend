@@ -86,7 +86,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fonts}>
-      <body className="min-h-screen flex flex-col bg-grey font-catamaran text-white">
+      <body className="min-h-screen flex flex-col bg-grey font-catamaran text-white [font-variant-numeric:lining-nums_tabular-nums] [font-feature-settings:'lnum'_1,'tnum'_1]">
         <CartProvider>
           {/*navbar conditional rendering using tailwind styling */}
           <div className="hidden lg:block sticky top-0 z-50">
