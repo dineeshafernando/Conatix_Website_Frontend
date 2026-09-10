@@ -28,6 +28,7 @@ export const companyAwards: Award[] = [
     company: "City of London / Microsoft",
     logo: ["/images/awards/microsoft-city-of-london.png"],
     description: ["Top 5 UK SMEs for supplier risk management"],
+    scale: 1.4,
   },
   {
     company: "World Economic Forum",
@@ -43,6 +44,7 @@ export const companyAwards: Award[] = [
     company: "Citi",
     logo: ["/images/awards/citi.png"],
     description: ["Top 10% globally, Citi Cyber Fintech"],
+    scale: 0.85,
   },
   {
     company: "Desjardins",
@@ -58,6 +60,7 @@ export const companyAwards: Award[] = [
     company: "Scale AI",
     logo: ["/images/awards/scale_ai_v2.png"],
     description: ["Canada Digital Supercluster AI R&D grant"],
+    scale: 0.7,
   },
   {
     company: "UK Research and Innovation",
@@ -68,11 +71,13 @@ export const companyAwards: Award[] = [
     company: "Gartner",
     logo: ["/images/awards/gartner.png"],
     description: ["Multiple analysts vender briefings​ on insider fraud"],
+    scale: 0.7,
   },
   {
     company: "IBM",
     logo: ["/images/awards/ibm.png"],
     description: ["ISV Partners National Summit Germany, first prize business innovation"],
+    scale: 0.85,
   },
   {
     company: "TD Canada Trust",
@@ -93,10 +98,12 @@ export const companyAwards: Award[] = [
     company: "CISPA",
     logo: ["/images/awards/cispa.svg"],
     description: ["CISPA Saarbrücken, Germany"],
+    scale: 1.4,
   },
   {
     company: "Accenture",
     logo: ["/images/awards/accenture.png"],
     description: ["Profiled and cited in multiple reports to F500 CEOs on AI for business by the Chief Economist and CTO"],
+    scale: 1.8,
   },
 ];

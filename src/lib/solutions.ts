@@ -11,7 +11,7 @@ export interface SolutionsPageDataProps {
 
 export const SolutionsPageData: SolutionsPageDataProps[] = [
   {
-    description: "Conatix cybersecurity software can monitor all of your endpoints and your entire network – giving you unprecedented visibility, security and control",
+    description: "Conatix cybersecurity software can monitor all of your endpoints and your entire network in real-time - giving you unprecedented visibility, security and control.",
     imageUrl: "/images/solutions/security_cycle_v4.png",
     altText: "Security cycle image",
   },
@@ -51,7 +51,7 @@ export const malwarePageData: malewarePageDataProps[] = [
   },
   {
     dataId: "malware-detector",
-    description: "Cysana Malware Detector",
+    description: "The CYSANA malware detector applies multiple filters to your application and graphics file and transforms that binary data into an image that can be analyzed. If there is any malicious code inside, our CYSANA software should see it.",
     imageUrl: "/animations/malware/Malware Detector.gif",
     altText: "Malware detector animation",
   },

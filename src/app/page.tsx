@@ -7,9 +7,9 @@ export default function Home() {
         <h1 className="h1">Skilled in detection and prevention</h1>
         <div className="w-full max-w-[800px] mx-auto my-2">
           <Image
-            src="/images/cat-v3.png"
-            width={800}
-            height={387}
+            src="/images/cat-new.png"
+            width={1793}
+            height={877}
             alt="Conatix Caracal cat"
             className="w-full h-auto object-contain"
             priority

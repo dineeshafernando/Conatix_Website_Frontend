@@ -1,14 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { pressList } from "@/lib/resources";
 
-const greyShades = [
-  "#a0a0a0", // 1. Light Grey (matching Threats page text)
-  "#c4c4c4", // 2. Light Silver Grey
-  "#8a8a8a", // 3. Medium Slate Grey
-  "#d6d6d6", // 4. Soft Grey
-  "#737373", // 5. Dimmer Slate Grey
-];
-
 export default function PressPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 min-h-[75vh]">
@@ -18,7 +10,7 @@ export default function PressPage() {
       </p>
 
       <div className="flex flex-col gap-4">
-        {pressList.map((item, index) => (
+        {pressList.map((item) => (
           <a
             key={item.title}
             href={item.url}
@@ -30,8 +22,7 @@ export default function PressPage() {
               {item.source} • {item.date}
             </span>
             <span 
-              style={{ color: greyShades[index % greyShades.length] }}
-              className="flex items-center gap-2 text-lg font-bold font-catamaran group-hover:!text-electric-blue transition-colors"
+              className="text-[#c4c4c4] flex items-center gap-2 text-lg font-bold font-catamaran group-hover:text-electric-blue transition-colors"
             >
               {item.title}
               <ExternalLink className="w-4 h-4 shrink-0" />

@@ -1,14 +1,14 @@
 import Image from "next/image"
 import { ThreatsPageDataProps, supplierPageDataProps } from "@/lib/threats"
-import { SolutionsPageDataProps, malewarePageDataProps, ransomwarePageDataProps } from "@/lib/solutions"
+import { malewarePageDataProps, ransomwarePageDataProps } from "@/lib/solutions"
 
 interface OneColData {
-  data: (ThreatsPageDataProps | supplierPageDataProps | SolutionsPageDataProps | malewarePageDataProps | ransomwarePageDataProps)[]
+  data: (ThreatsPageDataProps | supplierPageDataProps | malewarePageDataProps | ransomwarePageDataProps)[]
 }
 
 export default function OneColumnLayout({data}:OneColData) {
 
-  const dataRows = data.map(({description, imageUrl, imgWidth, imgHeight, maxWidth, altText}:ThreatsPageDataProps | supplierPageDataProps | SolutionsPageDataProps | malewarePageDataProps | ransomwarePageDataProps, i) => {
+  const dataRows = data.map(({description, imageUrl, imgWidth, imgHeight, maxWidth, altText}:ThreatsPageDataProps | supplierPageDataProps | malewarePageDataProps | ransomwarePageDataProps, i) => {
     return (
       <div key={i} className="w-full" style={{ maxWidth: maxWidth ?? 800 }}>
         {description && <p className="mb-5 text-xl font-light text-light-grey">{description}</p>}

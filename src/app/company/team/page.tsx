@@ -9,15 +9,20 @@ export default function TeamPage() {
       <h1 className="h1 text-center">Team</h1>
       <Teams />
 
-      <section className="mt-16 text-center">
-        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4">World-Class Tech Team</h2>
-        <p className="text-light-grey font-light font-catamaran text-xl mb-2 max-w-3xl mx-auto">
-          Many decades experience in cybersecurity, science, military, government, business, signals intelligence, machine learning, neural networks, large language models, full-stack agile software development and product innovation
+      <section className="text-center max-w-4xl mx-auto mt-6 mb-16">
+        <p className="text-light-grey font-light font-catamaran text-xl mb-4">
+          Our world-class tech team and senior commercial advisory board bring many decades of experience in cybersecurity, antifraud, science, military, government, business, signals intelligence, machine learning, deep learning, large language models, encryption, visualization, full-stack agile software development and product innovation.
         </p>
-        <p className="text-light-grey font-light font-catamaran text-xl mb-8 max-w-3xl mx-auto">
+        <p className="text-light-grey font-light font-catamaran text-xl">
           Plus multiple active cooperation agreements with leading universities in our fields
         </p>
-        <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran mb-16">
+      </section>
+
+      <section className="w-full max-w-[1286px] mx-auto mb-16">
+        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4 text-left">
+          LEADERSHIP AND TECH TEAM
+        </h2>
+        <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran">
           {coreTeam.map((member) => (
             <div key={member.name} className="flex flex-col items-center flex-1 min-w-0 max-w-[170px]">
               <div className="relative w-full aspect-square">
@@ -36,18 +41,23 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="mt-16 text-center">
-        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4">SENIOR BUSINESS ADVISORY TEAM</h2>
-        <p className="text-light-grey font-light font-catamaran text-xl mb-8 max-w-3xl mx-auto">
-          Product management, technical sales, cybersecurity marketing, PR, network, antifraud and cybersec domain experience in US, Canada, UK and Europe
-        </p>
-        <div className="flex flex-wrap justify-center gap-16 text-2xl font-catamaran">
+      <section className="w-full max-w-[1286px] mx-auto mb-16">
+        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4 text-left">
+          SENIOR BUSINESS ADVISORS
+        </h2>
+        <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran">
           {advisors.map((advisor) => (
-            <div key={advisor.name} className="flex flex-col items-center w-[200px]">
-              <Image src={advisor.image} height={200} width={200} alt={`${advisor.name} profile picture`} className="w-[200px] h-[200px] object-cover grayscale" />
+            <div key={advisor.name} className="flex flex-col items-center flex-1 min-w-0 max-w-[170px]">
+              <div className="relative w-full aspect-square">
+                {advisor.image ? (
+                  <Image src={advisor.image} fill alt={`${advisor.name} profile picture`} className="object-cover grayscale" />
+                ) : (
+                  <div className="absolute inset-0 bg-dark-grey border border-white/10 rounded" />
+                )}
+              </div>
               <div className="text-center mt-4 w-full">
-                <p>{advisor.name}</p>
-                <p className="text-electric-blue whitespace-pre-line">{advisor.role}</p>
+                <p className="text-base">{advisor.name}</p>
+                {advisor.role && <p className="text-electric-blue text-base whitespace-pre-line">{advisor.role}</p>}
               </div>
             </div>
           ))}

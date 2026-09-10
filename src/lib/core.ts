@@ -8,38 +8,38 @@ export interface CoreMember {
 
 export const coreTeam: CoreMember[] = [
   {
-    name: "David Lehrer",
-    role: "CEO",
+    name: "David",
+    role: "CEO +\nCustomer Success",
     image: "/images/team/core-david-lehrer.png",
   },
   {
     name: "Santhosh",
-    role: "Generative AI",
+    role: "Cybersecurity +\nCustomer Success",
     image: "/images/team/core-santhosh-parampottupadam.png",
   },
   {
-    name: "Dineesha Fernando",
-    role: "Data Science",
+    name: "Dineesha",
+    role: "Fullstack Dev +\nCustomer Success",
     image: "/images/team/core-dineesha-fernando-v2.png",
   },
   {
-    name: "Prathamesh",
-    role: "Database",
-    image: "/images/team/core-prathamesh-v2.png",
+    name: "Bhranti",
+    role: "Machine Learning +\nCustomer Success",
+    image: "", // pending photo
   },
   {
     name: "Anirudh",
-    role: "AI",
+    role: "Gen AI +\nCustomer Success",
     image: "/images/team/core-anirudh-v3.png",
   },
   {
-    name: "Doreen Duoduaah",
-    role: "Machine Learning",
+    name: "Doreen",
+    role: "Deep Learning +\nCustomer Success",
     image: "/images/team/core-doreen-duoduaah.jpg",
   },
   {
-    name: "Bhranti",
-    role: "",
-    image: "", // pending photo
+    name: "Prathamesh",
+    role: "Data Science +\nCustomer Success",
+    image: "/images/team/core-prathamesh-v2.png",
   },
 ];

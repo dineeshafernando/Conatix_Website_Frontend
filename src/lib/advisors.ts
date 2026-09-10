@@ -8,38 +8,38 @@ export interface Advisor {
 
 export const advisors: Advisor[] = [
   {
-    name: "Greg Prickril",
-    role: "Product Management",
+    name: "Greg",
+    role: "Product Management +\nCustomer Success",
     image: "/images/team/advisor-greg-prickril.jpg",
   },
   {
-    name: "Michael Hiskey",
-    role: "Cybersecurity Marketing",
+    name: "Michael",
+    role: "Cybersec Marketing +\nCustomer Success",
     image: "/images/team/advisor-michael-hiskey.jpg",
   },
   {
-    name: "Ian Wugalter",
-    role: "Sales\nCanada",
+    name: "Ian",
+    role: "Sales Canada +\nCustomer Success",
     image: "/images/team/advisor-ian-wugalter.jpg",
   },
   {
-    name: "Tony DeGonia",
-    role: "Sales\nUSA",
+    name: "Tony",
+    role: "Sales USA +\nCustomer Success",
     image: "/images/team/advisor-tony-degonia-v3.png",
   },
   {
-    name: "John Cassidy",
-    role: "Sales\nUK & EU",
+    name: "John",
+    role: "Sales UK & EU +\nCustomer Success",
     image: "/images/team/advisor-john-cassidy.jpg",
   },
   {
-    name: "Maria Rosati",
-    role: "Public Relations",
+    name: "Maria",
+    role: "Public Relations +\nCustomer Success",
     image: "/images/team/advisor-maria-rosati.jpg",
   },
   {
-    name: "Andreas Lindenblatt",
-    role: "MSP CISO",
+    name: "Andreas",
+    role: "MSP & CISO +\nCustomer Success",
     image: "/images/team/advisor-andreas-lindenblatt.jpg",
   },
 ];
