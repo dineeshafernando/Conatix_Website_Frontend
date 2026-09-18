@@ -12,7 +12,7 @@ export interface ThreatsPageDataProps {
 
 export const ThreatsPageData: ThreatsPageDataProps[] = [
   {
-    description: "Insider fraud can threaten your enterprise IT network",
+    description: "Insider fraud can threaten your enterprise IT network.",
     imageUrl: "/images/threats/bank_building_v13.png",
     altText: "Bank build image",
     maxWidth: 1000,
@@ -34,6 +34,7 @@ export interface malewarePageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  captionOffsetPx?: number,
 }
 
 export const malewarePageData: malewarePageDataProps[] = [
@@ -76,6 +77,7 @@ export interface ransomwarePageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  captionOffsetPx?: number,
 }
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [
@@ -103,6 +105,7 @@ export interface insiderFraudPageData {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  captionOffsetPx?: number, // shifts textBelowImage horizontally to sit under a specific part of the image (e.g. the person, not the whole graphic)
 }
 
 
@@ -117,13 +120,15 @@ export const insiderFraudPageData: insiderFraudPageData[] = [
     imageUrl: "/images/threats/insider_malicious.png",
     altText: "insider malicious image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    textBelowImage: "Malicious Insider"
+    textBelowImage: "Malicious Insider",
+    captionOffsetPx: -65
   },
   {
     imageUrl: "/images/threats/insider_deepfake_v5.png",
     altText: "insider deepfake image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    textBelowImage: "Deepfake Employee"
+    textBelowImage: "Deepfake Employee",
+    captionOffsetPx: -30
   },
   {
     imageUrl: "/images/threats/insider_smart.png",
@@ -150,7 +155,7 @@ export interface supplierPageDataProps {
 
 export const supplierPageData: supplierPageDataProps[] = [
   {
-    imageUrl: "/images/threats/Supplier_v3.png",
+    imageUrl: "/images/threats/Supplier_v4.png",
     altText: "supplier image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },

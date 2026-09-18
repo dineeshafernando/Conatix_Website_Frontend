@@ -9,17 +9,14 @@ export default function TeamPage() {
       <h1 className="h1 text-center">Team</h1>
       <Teams />
 
-      <section className="text-center max-w-4xl mx-auto mt-6 mb-16">
-        <p className="text-light-grey font-light font-catamaran text-xl mb-4">
-          Our world-class tech team and senior commercial advisory board bring many decades of experience in cybersecurity, antifraud, science, military, government, business, signals intelligence, machine learning, deep learning, large language models, encryption, visualization, full-stack agile software development and product innovation.
-        </p>
+      <section className="text-center max-w-5xl mx-auto mt-6 mb-16">
         <p className="text-light-grey font-light font-catamaran text-xl">
-          Plus multiple active cooperation agreements with leading universities in our fields
+          Our world-class tech team and senior commercial advisory board bring many decades of experience in cybersecurity, antifraud, science, military, government, business, signals intelligence, machine learning, deep learning, large language models, encryption, visualization, full-stack agile software development and product innovation.
         </p>
       </section>
 
       <section className="w-full max-w-[1286px] mx-auto mb-16">
-        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4 text-left">
+        <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-4 text-left">
           LEADERSHIP AND TECH TEAM
         </h2>
         <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran">
@@ -34,7 +31,7 @@ export default function TeamPage() {
               </div>
               <div className="text-center mt-4 w-full">
                 <p className="text-base">{member.name}</p>
-                {member.role && <p className="text-electric-blue text-base whitespace-pre-line">{member.role}</p>}
+                {member.role && <p className="text-[#c4c4c4] text-base whitespace-pre-line">{member.role}</p>}
               </div>
             </div>
           ))}
@@ -42,7 +39,7 @@ export default function TeamPage() {
       </section>
 
       <section className="w-full max-w-[1286px] mx-auto mb-16">
-        <h2 className="text-xl font-light font-catamaran text-light-grey mb-4 text-left">
+        <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-4 text-left">
           SENIOR BUSINESS ADVISORS
         </h2>
         <div className="flex flex-nowrap justify-center gap-4 text-2xl font-catamaran">
@@ -57,11 +54,14 @@ export default function TeamPage() {
               </div>
               <div className="text-center mt-4 w-full">
                 <p className="text-base">{advisor.name}</p>
-                {advisor.role && <p className="text-electric-blue text-base whitespace-pre-line">{advisor.role}</p>}
+                {advisor.role && <p className="text-[#c4c4c4] text-base whitespace-pre-line">{advisor.role}</p>}
               </div>
             </div>
           ))}
         </div>
+        <p className="text-light-grey font-light font-catamaran text-xl text-center mt-10">
+          We also maintain active cooperation agreements with leading universities in our fields.
+        </p>
       </section>
     </main>
   )

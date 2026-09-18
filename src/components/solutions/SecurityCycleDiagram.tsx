@@ -1,5 +1,5 @@
 export default function SecurityCycleDiagram() {
-  const stageText = "fill-electric-blue font-catamaran font-bold tracking-wide uppercase";
+  const stageText = "fill-electric-blue stroke-electric-blue font-bungee-hairline tracking-wide uppercase";
   const circleStroke = "stroke-dark-grey";
 
   return (
@@ -7,7 +7,7 @@ export default function SecurityCycleDiagram() {
       viewBox="0 0 1000 480"
       className="w-full h-auto"
       role="img"
-      aria-label="Security lifecycle: Detection is central, reached from Prediction and Prevention above, and followed by Investigation and Retaliation below."
+      aria-label="Security lifecycle: Detection is central, reached from Prediction and Prevention above, and followed by Investigation (skipping straight past Mitigation) and Retaliation below."
     >
       <defs>
         <marker
@@ -45,30 +45,35 @@ export default function SecurityCycleDiagram() {
       />
 
       {/* Prediction */}
-      <text x="15" y="68" fontSize="24" className={stageText}>
+      <text x="15" y="68" fontSize="24" className={stageText} strokeWidth="1.6">
         PREDICTION
       </text>
 
       {/* Prevention (circled) */}
       <ellipse cx="150" cy="130" rx="115" ry="30" fill="none" strokeWidth="6" className={circleStroke} />
-      <text x="150" y="130" fontSize="24" textAnchor="middle" dominantBaseline="central" className={stageText}>
+      <text x="150" y="130" fontSize="24" textAnchor="middle" dominantBaseline="central" className={stageText} strokeWidth="1.6">
         PREVENTION
       </text>
 
       {/* Detection (circled) */}
       <ellipse cx="480" cy="230" rx="195" ry="75" fill="none" strokeWidth="8" className={circleStroke} />
-      <text x="480" y="230" fontSize="44" textAnchor="middle" dominantBaseline="central" className={stageText}>
+      <text x="480" y="230" fontSize="44" textAnchor="middle" dominantBaseline="central" className={stageText} strokeWidth="1.6">
         DETECTION
+      </text>
+
+      {/* Mitigation */}
+      <text x="655" y="298" fontSize="24" className={stageText} strokeWidth="1.6">
+        MITIGATION
       </text>
 
       {/* Investigation (circled) */}
       <ellipse cx="790" cy="352" rx="140" ry="30" fill="none" strokeWidth="6" className={circleStroke} />
-      <text x="790" y="352" fontSize="24" textAnchor="middle" dominantBaseline="central" className={stageText}>
+      <text x="790" y="352" fontSize="24" textAnchor="middle" dominantBaseline="central" className={stageText} strokeWidth="1.6">
         INVESTIGATION
       </text>
 
       {/* Retaliation? */}
-      <text x="770" y="422" fontSize="24" className={stageText}>
+      <text x="770" y="422" fontSize="24" className={stageText} strokeWidth="1.6">
         RETALIATION?
       </text>
     </svg>

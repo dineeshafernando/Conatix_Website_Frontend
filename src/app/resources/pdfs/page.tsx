@@ -7,7 +7,7 @@ export default function PdfsPage() {
     <main className="max-w-5xl mx-auto px-6 py-12 min-h-[75vh]">
       <h1 className="h1 mb-3 text-center">Documents</h1>
       <p className="text-xl text-center text-light-grey mb-12 max-w-2xl mx-auto font-light">
-        Download our latest white papers, technical briefs, and partner documentation to learn more about our cybersecurity suites.
+        Download our latest white papers, technical briefs, and partner documentation to learn more about our cybersecurity software.
       </p>
 
       {/* Grid List of Resources */}

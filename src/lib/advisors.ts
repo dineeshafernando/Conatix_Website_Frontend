@@ -9,7 +9,7 @@ export interface Advisor {
 export const advisors: Advisor[] = [
   {
     name: "Greg",
-    role: "Product Management +\nCustomer Success",
+    role: "Product Mgmt +\nCustomer Success",
     image: "/images/team/advisor-greg-prickril.jpg",
   },
   {

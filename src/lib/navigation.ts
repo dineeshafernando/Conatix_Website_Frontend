@@ -53,7 +53,7 @@ export const navigation: NavSection[] = [
     children: [
       { label: "About", href: "/company/about" },
       { label: "Team", href: "/company/team" },
-      { label: "Partners", href: "/company/partners" },
+      { label: "Partners List", href: "/company/partners" },
       { label: "Awards", href: "/company/awards" },
       { label: "Career", href: "/company/career" },
     ],

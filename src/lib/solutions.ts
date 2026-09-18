@@ -37,9 +37,9 @@ export const malwarePageData: malewarePageDataProps[] = [
   },
   {
     dataId: "malware-dataflow",
-    imageUrl: "/images/solutions/binary_code.png",
+    imageUrl: "/images/solutions/binary_code_v2.png",
     altText: "Binary code image",
-    imgWidth: 391,
+    imgWidth: 280,
     imgHeight: 220,
   },
   {

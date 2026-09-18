@@ -42,7 +42,7 @@ export default function CareerPage() {
         </div>
 
         <p>
-          Please email a resume or c.v. as a PDF attachment, with any cover letter either in the body of the email or as a PDF attachment, to:{" "}
+          Please email a resume or c.v. as a PDF attachment, with cover letter either in the body of the email or as a PDF attachment, to:{" "}
           <a href="mailto:team@conatix.com" className="text-electric-blue hover-effect hover:underline">
             team@conatix.com
           </a>

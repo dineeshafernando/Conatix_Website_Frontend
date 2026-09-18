@@ -43,7 +43,7 @@ export default function ThreatsPage() {
                     <td className="pr-6 whitespace-nowrap font-light">
                       1 attack every {row.frequency} seconds
                     </td>
-                    <td className="text-khaki font-light whitespace-nowrap">{row.cost}</td>
+                    <td className="text-[#918952] font-normal whitespace-nowrap">{row.cost}</td>
                   </tr>
                 ))}
               </tbody>
@@ -53,7 +53,7 @@ export default function ThreatsPage() {
           {/* Right: 374X Callout */}
           <div className="w-full lg:w-[28%] flex flex-col items-center justify-center text-center font-catamaran">
             <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-khaki tracking-tight leading-none mb-2">
-              374<span className="inline-block relative top-[0.1em]">X</span>
+              374<span className="inline-block relative top-[0.06em] text-[0.8em]">X</span>
             </span>
             <p className="text-electric-blue text-base md:text-lg font-light leading-snug">
               Projected total increase in<br />
@@ -62,10 +62,6 @@ export default function ThreatsPage() {
             </p>
           </div>
         </div>
-
-        <p className="w-full max-w-[1000px] mx-auto text-left text-xl font-light text-light-grey">
-          Ransomware is now present in nearly half of all breaches.
-        </p>
       </section>
 
       <OneColumnLayout data={ThreatsPageData} />

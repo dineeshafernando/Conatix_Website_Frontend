@@ -10,12 +10,12 @@ export const coreTeam: CoreMember[] = [
   {
     name: "David",
     role: "CEO +\nCustomer Success",
-    image: "/images/team/core-david-lehrer.png",
+    image: "/images/team/core-david-lehrer-v2.png",
   },
   {
     name: "Santhosh",
     role: "Cybersecurity +\nCustomer Success",
-    image: "/images/team/core-santhosh-parampottupadam.png",
+    image: "/images/team/core-santhosh-parampottupadam-v3.png",
   },
   {
     name: "Dineesha",

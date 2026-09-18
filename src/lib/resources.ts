@@ -71,24 +71,24 @@ export const pressList: PressItem[] = [
     source: "CSO Magazine",
     date: "April 2024",
     title: "Top cybersecurity product news of the week: security orchestration, automation, and response",
-    url: "#", // TODO: get real link from David/Steven
+    url: "https://www.csoonline.com/article/1247366/top-cybersecurity-product-news-of-the-week.html",
   },
   {
     source: "EurekAlert, American Association for the Advancement of Science (AAAS)",
     date: "April 2024",
     title: "Stopping ransomware in its tracks: New enterprise app integrates AI & University research",
-    url: "#", // TODO: get real link from David/Steven
+    url: "https://www.eurekalert.org/news-releases/1041841",
   },
   {
     source: "Le Devoir (Quebec)",
     date: "September 2023",
     title: "Le Québec, un précurseur en cybersécurité grâce à son expertise en...",
-    url: "#", // TODO: get real link from David/Steven
+    url: "https://www.ledevoir.com/actualites/societe/798457/quebec-precurseur-cybersecurite-grace-expertise-ia",
   },
   {
     source: "City of London Cyber Innovation Challenge",
     date: "2022",
     title: "Cyber Innovation Challenge 2022 and 2023",
-    url: "#", // TODO: get real link from David/Steven
+    url: "https://www.cityoflondon.gov.uk/supporting-businesses/financial-professional-services/cyber-innovation-challenge/cyber-innovation-challenge-2022-and-2023",
   },
 ];

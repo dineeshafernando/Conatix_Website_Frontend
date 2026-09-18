@@ -10,7 +10,7 @@ interface InsiderFraudData {
 
 const insiderfraudData: InsiderFraudData[] = [
   {
-    description: "Conatix Omniskia insider fraud detection software continuously monitors every device on your network for suspicious activity: logs, mpackets, security, communication traffic, content and behavior.",
+    description: "Conatix Omniskia insider fraud detection software continuously monitors every device on your network for suspicious activity: logs, packets, security, communication traffic, content and behavior.",
     imgUrl: "/images/threats/van-top-v4.png",
     imgWidth: 800,
     imgHeight: 450,

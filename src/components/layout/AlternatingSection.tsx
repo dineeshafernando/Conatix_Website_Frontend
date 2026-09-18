@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { malewarePageDataProps, ransomwarePageDataProps } from "@/lib/threats"
+import { malewarePageDataProps, ransomwarePageDataProps, insiderFraudPageData } from "@/lib/threats"
 
 interface AlternationSectionProps {
-  data: malewarePageDataProps[] | ransomwarePageDataProps[]
+  data: malewarePageDataProps[] | ransomwarePageDataProps[] | insiderFraudPageData[]
 }
 
 export default function AlternatingSection({data}:AlternationSectionProps) {
 
-  const dataRows = data.map(({imageUrl, imgWidth, imgHeight, altText, description, textBelowImage}:malewarePageDataProps | ransomwarePageDataProps, i) => {
+  const dataRows = data.map(({imageUrl, imgWidth, imgHeight, altText, description, textBelowImage, captionOffsetPx}:malewarePageDataProps | ransomwarePageDataProps | insiderFraudPageData, i) => {
     const isReversed = i % 2 !== 0;
     return (
       <div
@@ -24,7 +24,14 @@ export default function AlternatingSection({data}:AlternationSectionProps) {
             alt={altText} 
             className="object-contain max-h-[380px] w-auto" 
           />
-          {textBelowImage && <p className="text-center text-light-grey">{textBelowImage}</p>}
+          {textBelowImage && (
+            <p
+              className="text-center text-light-grey"
+              style={captionOffsetPx ? { transform: `translateX(${captionOffsetPx}px)` } : undefined}
+            >
+              {textBelowImage}
+            </p>
+          )}
         </div>
         <div className={`w-full md:w-1/2 flex flex-col justify-center ${isReversed ? "md:pl-16 lg:pl-24" : "md:pr-6"}`}>
           <p className="text-xl font-light text-light-grey text-center md:text-left leading-relaxed">
