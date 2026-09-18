@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react"
+import { CYSANA_PRODUCT } from "@/lib/shop-product"
 
 export interface CartItem {
   id: string,
@@ -36,7 +37,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
-      if (raw) setItems(JSON.parse(raw))
+      if (raw) {
+        const saved: unknown = JSON.parse(raw)
+        if (Array.isArray(saved)) {
+          const restored = saved
+            .filter((item): item is CartItem => item?.id === CYSANA_PRODUCT.id && Number.isInteger(item.quantity) && item.quantity > 0)
+            .map((item) => ({ ...CYSANA_PRODUCT, quantity: Math.min(item.quantity, 100) }))
+          // Reprice carts saved before the temporary $1 plan was introduced.
+          // eslint-disable-next-line react-hooks/set-state-in-effect
+          setItems(restored)
+        }
+      }
     } catch {
       // ignore malformed/unavailable storage
     }
@@ -57,16 +68,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems((prev) => {
       const existing = prev.find((i) => i.id === item.id)
       if (existing) {
-        return prev.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + quantity } : i)
+        return prev.map((i) => i.id === item.id ? { ...item, quantity: Math.min(100, i.quantity + quantity) } : i)
       }
-      return [...prev, { ...item, quantity }]
+      return [...prev, { ...item, quantity: Math.min(100, quantity) }]
     })
     setIsCartOpen(true)
   }
 
   const updateQuantity = (id: string, quantity: number) => {
     if (quantity < 1) return
-    setItems((prev) => prev.map((i) => i.id === id ? { ...i, quantity } : i))
+    setItems((prev) => prev.map((i) => i.id === id ? { ...i, quantity: Math.min(100, quantity) } : i))
   }
 
   const removeFromCart = (id: string) => {

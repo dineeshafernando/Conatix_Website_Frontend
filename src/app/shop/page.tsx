@@ -5,14 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { X, Minus, Plus } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
-
-const CYSANA_PRODUCT = {
-  id: "cysana-malware-detector",
-  name: "Cysana malware detector and ransomware blocker",
-  description: "Detect more dangerous malware using the latest AI technology and prevent malware from encrypting your data.",
-  unitAmount: 10000, // $100.00 in cents
-  image: "/images/logos/conatix-cysana.png",
-};
+import { CYSANA_PRODUCT } from "@/lib/shop-product";
 
 export default function ShopPage() {
   const [showModal, setShowModal] = useState(false);
@@ -79,7 +72,7 @@ export default function ShopPage() {
                 <h2 className="text-sm text-white font-semibold leading-snug group-hover:underline group-hover:text-electric-blue transition-colors">
                   Cysana malware detector and ransomware blocker
                 </h2>
-                <p className="text-sm text-light-grey mt-1 font-light">$100.00</p>
+                <p className="text-sm text-light-grey mt-1 font-light">${(CYSANA_PRODUCT.unitAmount / 100).toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -146,8 +139,9 @@ export default function ShopPage() {
                     </button>
                     <span className="text-white w-6 text-center">{quantity}</span>
                     <button
-                      onClick={() => setQuantity((q) => q + 1)}
-                      className="w-8 h-8 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition cursor-pointer"
+                      onClick={() => setQuantity((q) => Math.min(100, q + 1))}
+                      disabled={quantity >= 100}
+                      className="w-8 h-8 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                     >
                       <Plus className="w-4 h-4" />
                     </button>

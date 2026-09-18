@@ -22,9 +22,6 @@ export default function CartDrawer() {
         body: JSON.stringify({
           items: items.map((i) => ({
             id: i.id,
-            name: i.name,
-            description: i.description,
-            unitAmount: i.unitAmount,
             quantity: i.quantity,
           })),
         }),
@@ -84,7 +81,8 @@ export default function CartDrawer() {
                   <span className="text-sm text-white w-6 text-center">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="w-6 h-6 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition cursor-pointer"
+                    disabled={item.quantity >= 100}
+                    className="w-6 h-6 flex items-center justify-center border border-white/20 rounded text-light-grey hover:text-white hover:border-white/40 transition disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <Plus className="w-3 h-3" />
                   </button>
@@ -110,7 +108,7 @@ export default function CartDrawer() {
               <span className="font-semibold">Estimated total</span>
               <span className="font-bold text-lg">{formatPrice(cartTotal)}</span>
             </div>
-            <p className="text-xs text-light-grey">Taxes are calculated at checkout.</p>
+            <p className="text-xs text-light-grey">Final amount is shown at secure checkout.</p>
             <button
               onClick={handleCheckout}
               disabled={loading}
