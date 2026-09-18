@@ -130,7 +130,7 @@ export default function Map() {
           referrerPolicy="strict-origin-when-cross-origin"
         />
       </div>
-      <ul className="grid grid-cols-2 md:grid-cols-5 max-w-6xl mx-auto gap-y-5 mt-10 px-4">
+      <ul className="grid grid-cols-2 md:grid-cols-5 max-w-6xl mx-auto gap-y-5 mt-10 px-4 xl:translate-x-12 2xl:translate-x-28">
         {locations}
       </ul>
     </section>
