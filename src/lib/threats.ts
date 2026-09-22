@@ -155,7 +155,7 @@ export interface supplierPageDataProps {
 
 export const supplierPageData: supplierPageDataProps[] = [
   {
-    imageUrl: "/images/threats/Supplier_v6.png",
+    imageUrl: "/images/threats/Supplier_v7.png",
     altText: "supplier image",
     description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
   },
