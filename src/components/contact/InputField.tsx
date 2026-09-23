@@ -22,7 +22,7 @@ export default function InputField({type, name, id, placeholder, isTextArea, isS
   if (isTextArea) {
     return (
     <div>
-      <label htmlFor={id}>{isRequired ? " *" : ""}{name}</label>
+      <label htmlFor={id} className="text-xl ml-1">{name}{isRequired ? " *" : ""}</label>
       <textarea name={name} id={id} placeholder={placeholder} className="contact-input w-full h-75" />
     </div>
     )

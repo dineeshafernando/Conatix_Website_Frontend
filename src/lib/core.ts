@@ -25,7 +25,7 @@ export const coreTeam: CoreMember[] = [
   {
     name: "Bhranti",
     role: "Machine Learning +\nCustomer Success",
-    image: "", // pending photo
+    image: "/images/team/core-bhranti-v1.jpg",
   },
   {
     name: "Anirudh",

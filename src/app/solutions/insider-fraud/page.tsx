@@ -10,31 +10,16 @@ interface InsiderFraudData {
 
 const insiderfraudData: InsiderFraudData[] = [
   {
-    description: "Conatix Omniskia insider fraud detection software continuously monitors every device on your network for suspicious activity: logs, packets, security, communication traffic, content and behavior.",
+    description: "Conatix Omniskia insider fraud detection software continuously monitors every device on your enterprise, field or IoT network for suspicious activity: logs, packets, security, communication traffic, content and behavior.",
     imgUrl: "/images/threats/van-top-v4.png",
     imgWidth: 800,
     imgHeight: 450,
     altText: "Top view of an ambulance image",
   },
   {
-    description: "This is a second line of text.",
-    imgUrl: "/animations/insider-fraud/isolated_2.gif",
-    altText: "Isolated video loop",
-  },
-  {
-    description: "This is a third line of text.",
-    imgUrl: "/animations/insider-fraud/contextual_2.gif",
-    altText: "Contextual 3D video loop",
-  },
-  {
-    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
-    imgUrl: "/animations/insider-fraud/insider-fraud-1.gif",
-    altText: "Insider fraud visualization 1",
-  },
-  {
-    description: "This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.",
+    description: "What good is automated 24/7 discovery and monitoring of all the assets and traffic on your network if you can’t see what is happening at a glance? The Omniskia 3D network visualization dashboard shows you clusters of suspicious activity as they occur and where they sit in context in large or small networks, so you can act to remediate them in real time.",
     imgUrl: "/animations/insider-fraud/insider-fraud-2.gif",
-    altText: "Insider fraud visualization 2",
+    altText: "Insider fraud 3D visualization dashboard",
   },
 ]
 
@@ -43,7 +28,12 @@ export default function InsiderFraudPage() {
   const visualizationEntries = insiderfraudData.map(({description, imgUrl, imgWidth, imgHeight, altText}:InsiderFraudData, i) => {
     return (
       <div key={i} className="max-w-[800px]">
-        <p className="mb-5 text-xl">{description}</p>
+        {i === 1 && (
+          <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-4 text-center">
+            INSIDER FRAUD 3D VISUALIZATION DASHBOARD
+          </h2>
+        )}
+        {description && <p className="mb-5 text-2xl font-medium text-[#c4c4c4]">{description}</p>}
         <Image src={imgUrl} width={imgWidth ?? 800} height={imgHeight ?? 800} alt={altText ?? "insider fraud visualizations"} />
       </div>
     )

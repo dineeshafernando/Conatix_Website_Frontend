@@ -51,7 +51,7 @@ export const malwarePageData: malewarePageDataProps[] = [
   },
   {
     dataId: "malware-detector",
-    description: "The CYSANA malware detector applies multiple filters to your application and graphics file and transforms that binary data into an image that can be analyzed. If there is any malicious code inside, our CYSANA software should see it.",
+    description: "The CYSANA malware detector applies multiple filters to your application and graphics file: running each file through multiple AI models as well as conventional curated signature matching. This multiphase analysis enables a probabilistic view of whether a file may be malicious or not.",
     imageUrl: "/animations/malware/Malware Detector.gif",
     altText: "Malware detector animation",
   },
@@ -68,7 +68,7 @@ export interface ransomwarePageDataProps {
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [
   {
-    description: "Ransomware Detector",
+    description: "Our patented method of blocking access to your own encryption keys to generate random numbers prevents would-be ransomware from strongly encrypting your data.",
     imageUrl: "/animations/ransomware/Ransomware Detector.gif",
     altText: "Ransomware detector animation",
   },

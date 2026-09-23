@@ -40,6 +40,6 @@ export const advisors: Advisor[] = [
   {
     name: "Andreas",
     role: "MSP & CISO +\nCustomer Success",
-    image: "/images/team/advisor-andreas-lindenblatt.jpg",
+    image: "/images/team/advisor-andreas-cysana.png",
   },
 ];

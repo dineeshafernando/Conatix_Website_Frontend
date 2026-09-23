@@ -1,13 +1,17 @@
 import Image from "next/image"
 import { malewarePageDataProps, ransomwarePageDataProps, insiderFraudPageData } from "@/lib/threats"
+import { CyberomicsPageDataProps } from "@/lib/cyberomics"
 
 interface AlternationSectionProps {
-  data: malewarePageDataProps[] | ransomwarePageDataProps[] | insiderFraudPageData[]
+  data: malewarePageDataProps[] | ransomwarePageDataProps[] | insiderFraudPageData[] | CyberomicsPageDataProps[]
 }
 
 export default function AlternatingSection({data}:AlternationSectionProps) {
 
-  const dataRows = data.map(({imageUrl, imgWidth, imgHeight, altText, description, textBelowImage, captionOffsetPx}:malewarePageDataProps | ransomwarePageDataProps | insiderFraudPageData, i) => {
+  const dataRows = data.map(({imageUrl, imgWidth, imgHeight, altText, description, textBelowImage, captionOffsetPx, headingAboveImage, highlightWord}:malewarePageDataProps | ransomwarePageDataProps | insiderFraudPageData | CyberomicsPageDataProps, i) => {
+    const descriptionParts = highlightWord
+      ? description.split(new RegExp(`(\\b${highlightWord}\\b)`, "g"))
+      : [description];
     const isReversed = i % 2 !== 0;
     return (
       <div
@@ -17,7 +21,12 @@ export default function AlternatingSection({data}:AlternationSectionProps) {
         }`}
       >
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-2">
-          <Image 
+          {headingAboveImage && (
+            <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-2 text-center">
+              {headingAboveImage}
+            </h2>
+          )}
+          <Image
             src={imageUrl} 
             width={imgWidth ?? 500} 
             height={imgHeight ?? 500} 
@@ -34,8 +43,14 @@ export default function AlternatingSection({data}:AlternationSectionProps) {
           )}
         </div>
         <div className={`w-full md:w-1/2 flex flex-col justify-center ${isReversed ? "md:pl-16 lg:pl-24" : "md:pr-6"}`}>
-          <p className="text-xl font-light text-light-grey text-center md:text-left leading-relaxed">
-            {description}
+          <p className="text-2xl font-medium text-[#c4c4c4] text-center md:text-left leading-relaxed">
+            {descriptionParts.map((part, partIndex) =>
+              highlightWord && part === highlightWord ? (
+                <span key={partIndex} className="text-[hsl(52,85%,62%)] font-normal">{part}</span>
+              ) : (
+                part
+              )
+            )}
           </p>
         </div>
       </div>

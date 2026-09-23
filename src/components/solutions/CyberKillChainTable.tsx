@@ -106,13 +106,13 @@ export default function CyberKillChainTable() {
               <th className="w-[12%] bg-black"></th>
 
               {/* Main headers */}
-              <th className="w-[20%] bg-[#e5e5e5] text-black font-bold text-lg md:text-xl py-3 px-5 border-r border-[#d4d4d4]">
-                Cyber Kill Chain Phases
+              <th className="w-[20%] bg-[#e5e5e5] text-black font-extrabold text-base md:text-lg py-3 px-5 border-r border-[#d4d4d4] whitespace-nowrap">
+                Cyber Kill Chain Phase
               </th>
-              <th className="w-[34%] bg-[#e5e5e5] text-black font-bold text-lg md:text-xl py-3 px-6 border-r border-[#d4d4d4]">
+              <th className="w-[34%] bg-[#e5e5e5] text-black font-extrabold text-base md:text-lg py-3 px-6 border-r border-[#d4d4d4]">
                 What the APT does
               </th>
-              <th className="w-[34%] bg-[#e5e5e5] text-black font-bold text-lg md:text-xl py-3 px-6">
+              <th className="w-[34%] bg-[#e5e5e5] text-black font-extrabold text-base md:text-lg py-3 px-6">
                 Example activity
               </th>
             </tr>
@@ -142,7 +142,13 @@ export default function CyberKillChainTable() {
 
                 {/* Phase Column */}
                 <td className="bg-[#7c6928] text-white font-bold text-base md:text-lg py-4 px-5 align-middle border-r border-[#695821]">
-                  {row.phaseNum}. {row.phaseName}
+                  {row.phaseNum === 6 ? (
+                    <span className="inline-block" style={{ textIndent: "-17.2px", paddingLeft: "17.2px" }}>
+                      6. Command and<br />Control
+                    </span>
+                  ) : (
+                    <>{row.phaseNum}. {row.phaseName}</>
+                  )}
                 </td>
 
                 {/* What the APT does Column */}

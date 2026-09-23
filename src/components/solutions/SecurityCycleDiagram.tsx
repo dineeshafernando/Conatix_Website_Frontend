@@ -1,6 +1,6 @@
 export default function SecurityCycleDiagram() {
   const stageText = "fill-electric-blue stroke-electric-blue font-bungee-hairline tracking-wide uppercase";
-  const circleStroke = "stroke-dark-grey";
+  const circleStroke = "stroke-[hsl(52,85%,62%)]";
 
   return (
     <svg

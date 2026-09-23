@@ -8,14 +8,8 @@ export interface DemoDataProps {
 
 export const demoData: DemoDataProps[] = [
   {
-    id: "malware",
-    description: "Malware Demo",
-    src: "",
-    alt: "Malware demo video",
-  },
-  {
     id: "insider-fraud",
-    description: "Insider Fraud Demo",
+    description: "Omniskia Insider Fraud Demo",
     src: "",
     alt: "Insider fraud demo video",
   },

@@ -96,13 +96,14 @@ export default function Map() {
     return (
       <li key={office.city} className="text-sm">
         <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
-          <button 
+          <button
             onClick={() => handleLocation(office)}
-            className={`w-full text-left hover-effect ${currentMapLocation ? "text-white" : ""}`}
+            className={`relative group w-full text-left hover-effect ${currentMapLocation ? "text-white" : ""}`}
             disabled={currentMapLocation}
           >
             {office.city} <br />
             {office.region}
+            <span className="nav-hover-animation"></span>
           </button>
         </div>
         <p>{office.company}</p>
@@ -130,7 +131,7 @@ export default function Map() {
           referrerPolicy="strict-origin-when-cross-origin"
         />
       </div>
-      <ul className="grid grid-cols-2 md:grid-cols-5 max-w-6xl mx-auto gap-y-5 mt-10 px-4 xl:translate-x-12 2xl:translate-x-28">
+      <ul className="grid grid-cols-2 md:grid-cols-5 max-w-6xl mx-auto gap-y-5 mt-10 px-4 md:translate-x-12 lg:translate-x-16 xl:translate-x-20 2xl:translate-x-40">
         {locations}
       </ul>
     </section>
