@@ -98,7 +98,7 @@ export default function Map() {
         <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
           <button
             onClick={() => handleLocation(office)}
-            className={`relative group w-full text-left hover-effect ${currentMapLocation ? "text-white" : ""}`}
+            className={`relative group w-fit text-left cursor-pointer disabled:cursor-default hover:text-white transition-colors ${currentMapLocation ? "text-white" : ""}`}
             disabled={currentMapLocation}
           >
             {office.city} <br />

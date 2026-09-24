@@ -20,7 +20,7 @@ export const companyAwards: Award[] = [
   },
   {
     company: "NYTechWeek",
-    logoWidth: 78,
+    logoWidth: 90,
     logo: ["/images/awards/demo_nyc_night.png"],
     logoBounds: [215, 15, 170, 170],
     description: ["Named 1 of the 15 most innovative NYC startups for NYTechWeek opening demo night"],
@@ -49,7 +49,7 @@ export const companyAwards: Award[] = [
   },
   {
     company: "U.S. Dept. of Homeland Security",
-    logoWidth: 80,
+    logoWidth: 92,
     logo: ["/images/awards/us_department.png"],
     logoBounds: [215, 15, 170, 170],
     description: ["“Appropriately builds on prior research.”"],

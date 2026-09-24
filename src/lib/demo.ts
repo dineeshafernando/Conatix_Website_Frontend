@@ -10,7 +10,7 @@ export const demoData: DemoDataProps[] = [
   {
     id: "insider-fraud",
     description: "Omniskia Insider Fraud Demo",
-    src: "",
+    src: "/videos/Insider_Fraud_Detector_Demo.mp4",
     alt: "Insider fraud demo video",
   },
 ];

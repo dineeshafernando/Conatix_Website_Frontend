@@ -17,7 +17,7 @@ export default function CompanyPage() {
           To keep you a step ahead of the smart bad guys and the dumb bad guys.
         </p>
         <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
-          to counter the threats you expect and the threats you don’t.
+          To counter the threats you expect and the threats you don’t.
         </p>
       </section>
     </main>

@@ -2,7 +2,7 @@ export default function ResourcesPage() {
   return (
     <main className="text-xl">
       <h1 className="h1">Resources</h1>
-      <section className="flex flex-col gap-6 items-center justify-center max-w-3xl mx-auto text-center">
+      <section className="flex flex-col gap-6 items-center justify-center max-w-[1000px] mx-auto text-center text-pretty">
         <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           If you have questions about our company or software and can’t find answers here, ask!
         </p>
