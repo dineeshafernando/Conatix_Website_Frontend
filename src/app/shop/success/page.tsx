@@ -40,10 +40,7 @@ export default async function SuccessPage({
         {/* Next steps card */}
         {confirmed && <div className="bg-grey p-4 rounded border border-white/5 w-full text-left text-sm text-light-grey">
           <p className="font-semibold text-white mb-1">What happens next?</p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Confirm the payment and subscription status in Stripe.</li>
-            <li>License delivery is not automated yet.</li>
-          </ul>
+          <p>Our team will reach out by email shortly with your license and setup instructions.</p>
         </div>}
 
         {/* Back home link */}

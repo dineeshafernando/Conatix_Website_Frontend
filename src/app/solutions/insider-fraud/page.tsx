@@ -27,14 +27,14 @@ export default function InsiderFraudPage() {
 
   const visualizationEntries = insiderfraudData.map(({description, imgUrl, imgWidth, imgHeight, altText}:InsiderFraudData, i) => {
     return (
-      <div key={i} className="max-w-[800px]">
+      <div key={i} className="max-w-[1000px]">
+        {description && <p className="mb-10 text-xl font-normal text-[#c4c4c4] leading-snug">{description}</p>}
         {i === 1 && (
-          <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-4 text-center">
+          <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-2 text-left">
             INSIDER FRAUD 3D VISUALIZATION DASHBOARD
           </h2>
         )}
-        {description && <p className="mb-5 text-2xl font-medium text-[#c4c4c4]">{description}</p>}
-        <Image src={imgUrl} width={imgWidth ?? 800} height={imgHeight ?? 800} alt={altText ?? "insider fraud visualizations"} />
+        <Image src={imgUrl} width={imgWidth ?? 800} height={imgHeight ?? 800} alt={altText ?? "insider fraud visualizations"} className="w-full h-auto" />
       </div>
     )
   })
@@ -43,7 +43,7 @@ export default function InsiderFraudPage() {
   return (
     <main>
       <h1 className="h1">Insider Solution</h1>
-      <div className="flex flex-col items-center gap-16">
+      <div className="flex flex-col items-center gap-20">
         {visualizationEntries}
       </div>
     </main>

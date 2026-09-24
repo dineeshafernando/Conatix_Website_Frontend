@@ -8,6 +8,7 @@ export interface ThreatsPageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  headingAboveImage?: string,
 }
 
 export const ThreatsPageData: ThreatsPageDataProps[] = [
@@ -157,6 +158,7 @@ export interface supplierPageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  headingAboveImage?: string,
 }
 
 export const supplierPageData: supplierPageDataProps[] = [

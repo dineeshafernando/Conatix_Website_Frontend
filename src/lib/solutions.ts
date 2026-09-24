@@ -25,6 +25,7 @@ export interface malewarePageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  headingAboveImage?: string,
 }
 
 export const malwarePageData: malewarePageDataProps[] = [
@@ -54,6 +55,8 @@ export const malwarePageData: malewarePageDataProps[] = [
     description: "The CYSANA malware detector applies multiple filters to your application and graphics file: running each file through multiple AI models as well as conventional curated signature matching. This multiphase analysis enables a probabilistic view of whether a file may be malicious or not.",
     imageUrl: "/animations/malware/Malware Detector.gif",
     altText: "Malware detector animation",
+    headingAboveImage: "MALWARE DETECTOR",
+    maxWidth: 1000,
   },
 ];
 
@@ -64,6 +67,7 @@ export interface ransomwarePageDataProps {
   imgWidth?: number,
   imgHeight?: number,
   maxWidth?: number,
+  headingAboveImage?: string,
 }
 
 export const ransomwarePageData: ransomwarePageDataProps[] = [
@@ -71,5 +75,7 @@ export const ransomwarePageData: ransomwarePageDataProps[] = [
     description: "Our patented method of blocking access to your own encryption keys to generate random numbers prevents would-be ransomware from strongly encrypting your data.",
     imageUrl: "/animations/ransomware/Ransomware Detector.gif",
     altText: "Ransomware detector animation",
+    headingAboveImage: "RANSOMWARE BLOCKER",
+    maxWidth: 1000,
   },
 ];

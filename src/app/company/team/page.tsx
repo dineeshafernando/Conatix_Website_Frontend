@@ -10,7 +10,7 @@ export default function TeamPage() {
       <Teams />
 
       <section className="text-center max-w-5xl mx-auto mt-6 mb-16">
-        <p className="text-[#c4c4c4] font-medium font-catamaran text-2xl">
+        <p className="text-[#c4c4c4] leading-snug font-normal font-catamaran text-xl">
           Our world-class tech team and senior commercial advisory board bring many decades of experience in cybersecurity, antifraud, science, military, government, business, signals intelligence, machine learning, deep learning, large language models, encryption, visualization, full-stack agile software development and product innovation.
         </p>
       </section>
@@ -59,7 +59,7 @@ export default function TeamPage() {
             </div>
           ))}
         </div>
-        <p className="text-[#c4c4c4] font-medium font-catamaran text-2xl text-center mt-10">
+        <p className="text-[#c4c4c4] leading-snug font-normal font-catamaran text-xl text-center mt-10">
           We also maintain active cooperation agreements with leading universities and research institutes in our fields.
         </p>
       </section>

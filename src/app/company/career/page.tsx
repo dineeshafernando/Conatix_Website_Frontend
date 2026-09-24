@@ -24,7 +24,7 @@ export default function CareerPage() {
     <main className="text-xl">
       <h1 className="h1">Career</h1>
       <section className="flex flex-col gap-6 items-center justify-center max-w-4xl mx-auto text-center">
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           Conatix hires interns year-round on a rolling basis for remote roles including:
         </p>
 
@@ -41,7 +41,7 @@ export default function CareerPage() {
           </ul>
         </div>
 
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           Please email a resume or c.v. as a PDF attachment, with cover letter either in the body of the email or as a PDF attachment, to:{" "}
           <a href="mailto:team@conatix.com" className="text-electric-blue hover-effect hover:underline">
             team@conatix.com

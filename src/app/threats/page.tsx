@@ -17,7 +17,7 @@ export default function ThreatsPage() {
       <h1 className="h1">Threats</h1>
 
       <section className="flex flex-col gap-4 items-center justify-center mb-15">
-        <p className="w-full max-w-[1000px] mx-auto text-left text-2xl font-medium text-[#c4c4c4]">
+        <p className="w-full max-w-[1000px] mx-auto text-left text-xl font-normal text-[#c4c4c4] leading-snug">
           Ransomware, like malware, is still one of the most pervasive and costly cyber threats…and is present in nearly half of all breaches.
         </p>
 

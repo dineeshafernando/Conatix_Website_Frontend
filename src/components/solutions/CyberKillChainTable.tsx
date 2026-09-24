@@ -110,10 +110,10 @@ export default function CyberKillChainTable() {
                 Cyber Kill Chain Phase
               </th>
               <th className="w-[34%] bg-[#e5e5e5] text-black font-extrabold text-base md:text-lg py-3 px-6 border-r border-[#d4d4d4]">
-                What the APT does
+                What the APT Does
               </th>
               <th className="w-[34%] bg-[#e5e5e5] text-black font-extrabold text-base md:text-lg py-3 px-6">
-                Example activity
+                Example Activity
               </th>
             </tr>
           </thead>

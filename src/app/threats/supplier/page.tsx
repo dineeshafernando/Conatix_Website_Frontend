@@ -5,7 +5,9 @@ export default function SupplierPage() {
   return (
     <main>
       <h1 className="h1">Supplier Threat</h1>
-      <OneColumnLayout data={supplierPageData} />
+      <div className="mt-8">
+        <OneColumnLayout data={supplierPageData} />
+      </div>
     </main>
   )
 }

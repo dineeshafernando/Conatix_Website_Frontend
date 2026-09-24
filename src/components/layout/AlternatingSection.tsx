@@ -20,9 +20,9 @@ export default function AlternatingSection({data}:AlternationSectionProps) {
           isReversed ? "md:flex-row-reverse" : "md:flex-row"
         }`}
       >
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-2">
+        <div className={`w-full md:w-1/2 flex flex-col justify-center gap-2 ${headingAboveImage ? "items-start" : "items-center"}`}>
           {headingAboveImage && (
-            <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-2 text-center">
+            <h2 className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor] mb-2 text-left">
               {headingAboveImage}
             </h2>
           )}
@@ -43,7 +43,7 @@ export default function AlternatingSection({data}:AlternationSectionProps) {
           )}
         </div>
         <div className={`w-full md:w-1/2 flex flex-col justify-center ${isReversed ? "md:pl-16 lg:pl-24" : "md:pr-6"}`}>
-          <p className="text-2xl font-medium text-[#c4c4c4] text-center md:text-left leading-relaxed">
+          <p className="text-xl font-normal text-[#c4c4c4] text-center md:text-left leading-snug">
             {descriptionParts.map((part, partIndex) =>
               highlightWord && part === highlightWord ? (
                 <span key={partIndex} className="text-[hsl(52,85%,62%)] font-normal">{part}</span>

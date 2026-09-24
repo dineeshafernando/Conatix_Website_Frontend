@@ -31,7 +31,7 @@ export default async function BlogPage({params}:BlogPageProps) {
         <p>Author: {blog.author} |</p>
         <p>Date: {formatDate(blog.date)}</p>
       </div>
-      <p className="text-2xl font-medium text-[#c4c4c4]">Summary: {blog.summary}</p>
+      <p className="text-xl font-normal text-[#c4c4c4] leading-snug">Summary: {blog.summary}</p>
       <div className="flex flex-col justify-center">
         <Image src={imgUrl} alt="blog image" width={750} height={625} className="mt-3 rounded-xl" priority />
         <p className="italic">Source: {blog.source}</p>

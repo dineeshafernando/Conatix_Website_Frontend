@@ -4,19 +4,19 @@ export default function CompanyPage() {
       <h1 className="h1">Company</h1>
       <section className="flex flex-col gap-6 items-center justify-center max-w-4xl mx-auto text-center">
         <p className="text-2xl font-semibold text-khaki-bright">Advanced technologies for the toughest threats.</p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           Conatix was applying AI to cybersecurity before it was cool.
         </p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           We were crushing the insider threat when many organizations were still blindsided by it.
         </p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           We continue innovating and deploying new approaches to prevention, detection and visualization at quantum speed.
         </p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           To keep you a step ahead of the smart bad guys and the dumb bad guys.
         </p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           to counter the threats you expect and the threats you don’t.
         </p>
       </section>

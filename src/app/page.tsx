@@ -16,12 +16,12 @@ export default function Home() {
           />
         </div>
         <p className="text-xl font-light text-light-grey text-left">The caracal is a wild jungle cat known for its oversized ears for detecting and its ruthlessness in pursuing prey</p>
-        <p className="text-2xl font-medium text-[#c4c4c4]">Conatix protects against the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware and insider fraud.</p>
-        <div className="text-2xl font-medium text-[#c4c4c4]">
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">Conatix protects against the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware and insider fraud.</p>
+        <div className="text-xl font-normal text-[#c4c4c4] leading-snug">
           <p>We catch malicious files and suspicious events in real time or stop them before they start.</p>
           <p>Better. Faster. Earlier. Zero Trust. Zero Day.</p>
         </div>
-        <p className="text-2xl font-medium text-[#c4c4c4]">Conatix has pioneered applying and combining multiple frontier technologies for cybersecurity monitoring, detection and prevention: technologies like our own patented anti-encryption method; dynamic <span className="font-sans">3D</span> network visualization; deep learning; machine learning; and gen AI. Even <span className="text-[hsl(52,85%,62%)] font-normal">before</span> it was cool.</p>
+        <p className="text-xl font-normal text-[#c4c4c4] leading-snug">Conatix has pioneered applying and combining multiple frontier technologies for cybersecurity monitoring, detection and prevention: technologies like our own patented anti-encryption method; dynamic <span className="font-sans">3D</span> network visualization; deep learning; machine learning; and gen AI. Even <span className="text-[hsl(52,85%,62%)] font-normal">before</span> it was cool.</p>
       </header>
    </main>
   );

@@ -45,7 +45,11 @@ export default function ContactPage() {
           on this menu to create a Support Ticket.
         </p>
         <p>
-          If you would like to be a customer, click here to schedule a demo with the Conatix team.
+          If you would like to be a customer,{" "}
+          <a href="https://calendar.conatix.com/david-lehrer" target="_blank" rel="noopener noreferrer" className="text-electric-blue hover-effect">
+            click here
+          </a>{" "}
+          to schedule a demo with the Conatix team.
         </p>
       </section>
     </main>
