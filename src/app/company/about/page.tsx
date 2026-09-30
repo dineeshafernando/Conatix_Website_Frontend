@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <main className="text-xl">
       <h1 className="h1">About</h1>
-      <section className="flex flex-col gap-6 items-center justify-center max-w-4xl mx-auto text-center">
+      <section className="flex flex-col gap-6 items-center justify-center max-w-[1000px] mx-auto text-center text-pretty">
         <p className="text-xl font-normal text-[#c4c4c4] leading-snug">
           Conatix was founded to apply frontier technologies to cybersecurity monitoring and detection.
         </p>
@@ -15,20 +15,22 @@ export default function AboutPage() {
           We provide this granularity of coverage and unprecedented visibility into your own network, in full compliance with GDPR, California Privacy and all other major privacy legislation.
         </p>
 
-        <div className="w-full max-w-2xl flex justify-between px-4 mt-6">
-          <span className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">Less Granular</span>
-          <span className="text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">More Granular</span>
+        <div className="w-full max-w-2xl flex justify-between px-4 mt-6 sm:hidden">
+          <span className="text-base font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">Less Granular</span>
+          <span className="text-base font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">More Granular</span>
         </div>
-        <Image
-          src="/images/company/magnifying_glasses.png"
-          width={1362}
-          height={765}
-          alt="Two magnifying glasses examining binary code"
-          className="w-full max-w-2xl h-auto"
-        />
-        <div className="w-full max-w-2xl flex justify-between px-4">
-          <span className="text-xl font-catamaran font-bold text-[hsl(52,85%,62%)]">Good</span>
-          <span className="text-xl font-catamaran font-bold text-[hsl(52,85%,62%)]">Better</span>
+        <div className="relative w-full max-w-2xl sm:mt-12">
+          <span className="hidden sm:block absolute bottom-[95%] right-[65%] whitespace-nowrap text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">Less Granular</span>
+          <span className="hidden sm:block absolute bottom-[95%] left-[66%] whitespace-nowrap text-xl font-bungee-hairline text-electric-blue [-webkit-text-stroke:1.5px_currentColor]">More Granular</span>
+          <Image
+            src="/images/company/magnifying_glasses.png"
+            width={1362}
+            height={765}
+            alt="Two magnifying glasses examining binary code"
+            className="w-full h-auto"
+          />
+          <span className="absolute top-[76%] left-[35%] -translate-x-1/2 -translate-y-1/2 text-3xl sm:text-5xl font-catamaran font-bold text-[hsl(52,85%,62%)]">Good</span>
+          <span className="absolute top-[76%] left-[66%] -translate-x-1/2 -translate-y-1/2 text-3xl sm:text-5xl font-catamaran font-bold text-[hsl(52,85%,62%)]">Better</span>
         </div>
 
         <p className="text-xl font-normal text-[#c4c4c4] leading-snug">

@@ -5,7 +5,7 @@ export default function PressPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12 min-h-[75vh]">
       <h1 className="h1 mb-3 text-center">Press</h1>
-      <p className="text-xl text-center text-[#c4c4c4] leading-snug mb-12 max-w-2xl mx-auto font-normal">
+      <p className="text-xl text-center text-[#c4c4c4] leading-snug mb-12 font-normal text-pretty">
         Media coverage and third-party recognition of Conatix's work in cybersecurity.
       </p>
 

@@ -22,7 +22,8 @@ export default function ShopPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 min-h-[70vh]">
       {/* Wix Style Breadcrumbs */}
-      <div className="text-light-grey text-xs mb-8 font-light flex items-center gap-2">
+      <h1 className="h1">Shop</h1>
+      <div className="text-light-grey text-sm mb-8 font-normal flex items-center gap-2">
         <Link href="/" className="hover:text-white transition duration-200">Home</Link>
         <span>&gt;</span>
         <span className="text-white">All Products</span>
@@ -33,9 +34,9 @@ export default function ShopPage() {
         
         {/* Left Sidebar: Browse Categories */}
         <div className="w-full md:w-1/4 flex flex-col gap-4">
-          <h3 className="text-xs uppercase tracking-wider text-light-grey font-bold">Browse by</h3>
+          <h3 className="text-sm uppercase tracking-wider text-light-grey font-bold">Browse by</h3>
           <div className="border-t border-white/10 pt-3">
-            <span className="text-sm text-white font-semibold underline cursor-pointer hover:opacity-80 transition">
+            <span className="text-base text-[#c4c4c4] font-normal underline cursor-pointer hover:opacity-80 transition">
               All Products
             </span>
           </div>
@@ -44,11 +45,11 @@ export default function ShopPage() {
         {/* Right Catalog: Product Card */}
         <div className="w-full md:w-3/4 flex flex-col gap-6">
           <div className="flex justify-between items-baseline mb-2">
-            <h1 className="text-3xl text-white font-normal">All Products</h1>
-            <span className="text-xs text-light-grey uppercase tracking-wider">Sort by: Recommended</span>
+            <h2 className="text-xl text-[#c4c4c4] font-normal leading-snug">All Products</h2>
+            <span className="text-sm text-light-grey uppercase tracking-wider">Sort by: Recommended</span>
           </div>
           
-          <span className="text-sm text-light-grey block -mt-4 mb-4">1 product</span>
+          <span className="text-base text-light-grey block -mt-4 mb-4">1 product</span>
 
           {/* Product Card Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -69,10 +70,10 @@ export default function ShopPage() {
               
               {/* Product Label */}
               <div className="text-left">
-                <h2 className="text-sm text-white font-semibold leading-snug group-hover:underline group-hover:text-electric-blue transition-colors">
+                <h2 className="text-base text-[#c4c4c4] font-normal leading-snug group-hover:underline group-hover:text-electric-blue transition-colors">
                   Cysana malware detector and ransomware blocker
                 </h2>
-                <p className="text-sm text-light-grey mt-1 font-light">${(CYSANA_PRODUCT.unitAmount / 100).toFixed(2)}</p>
+                <p className="text-base text-[#c4c4c4] mt-1 font-normal">${(CYSANA_PRODUCT.unitAmount / 100).toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -114,7 +115,7 @@ export default function ShopPage() {
                   <h2 className="text-2xl font-bold text-white mt-1 mb-2">
                     Cysana malware detector and ransomware blocker
                   </h2>
-                  <p className="text-sm text-light-grey leading-relaxed font-light">
+                  <p className="text-lg text-[#c4c4c4] leading-snug font-normal">
                     Detect more dangerous malware using the latest AI technology and prevent malware from encrypting your data and becoming ransomware.
                   </p>
                 </div>
@@ -123,12 +124,12 @@ export default function ShopPage() {
                   <span className="text-2xl font-bold text-white">
                     ${((CYSANA_PRODUCT.unitAmount / 100) * quantity).toFixed(2)}
                   </span>
-                  <span className="text-light-grey text-sm ml-2 font-light">USD / seat / year</span>
+                  <span className="text-[#c4c4c4] text-base ml-2 font-normal">USD / seat / year</span>
                 </div>
 
                 {/* Quantity Selector */}
                 <div className="flex items-center gap-4">
-                  <span className="text-sm text-light-grey font-semibold">Quantity</span>
+                  <span className="text-base text-[#c4c4c4] font-normal">Quantity</span>
                   <div className="flex items-center gap-3">
                     <button
                       onClick={() => setQuantity((q) => Math.max(1, q - 1))}
@@ -158,7 +159,7 @@ export default function ShopPage() {
 
                 {/* Info tabs section */}
                 <div className="mt-4 flex flex-col gap-3">
-                  <div className="flex border-b border-white/10 gap-5 text-xs font-semibold tracking-wider pb-1">
+                  <div className="flex border-b border-white/10 gap-5 text-sm font-semibold tracking-wider pb-1">
                     <button
                       onClick={() => setActiveTab("info")}
                       className={`pb-1 border-b-2 transition duration-200 ${
@@ -191,7 +192,7 @@ export default function ShopPage() {
                     </button>
                   </div>
 
-                  <div className="text-light-grey text-xs leading-relaxed min-h-[60px]">
+                  <div className="text-[#c4c4c4] text-base font-normal leading-snug min-h-[60px]">
                     {activeTab === "info" && (
                       <p>Cysana malware detector can be purchased per seat on an annual subscription basis.</p>
                     )}
