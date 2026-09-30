@@ -5,7 +5,7 @@ export default function Home() {
    <main>
       <header className="flex flex-col gap-6 text-2xl max-w-5xl mx-auto">
         <h1 className="h1">Skilled in detection and prevention</h1>
-        <div className="w-full max-w-[800px] mx-auto my-2">
+        <div className="w-full max-w-[800px] mx-auto my-2 flex flex-col gap-2">
           <Image
             src="/images/cat-new.png"
             width={1793}
@@ -14,8 +14,8 @@ export default function Home() {
             className="w-full h-auto object-contain"
             priority
           />
+          <p className="text-xl font-light text-white text-left pl-[2.34%]">The caracal is a desert cat known for its oversized ears for detection and its speed in leaping on its prey</p>
         </div>
-        <p className="text-xl font-light text-light-grey text-left">The caracal is a wild jungle cat known for its oversized ears for detecting and its ruthlessness in pursuing prey</p>
         <p className="text-xl font-normal text-[#c4c4c4] leading-snug">Conatix protects against the most critical threats and vulnerabilities on your organization’s IT network – malware, ransomware and insider fraud.</p>
         <div className="text-xl font-normal text-[#c4c4c4] leading-snug">
           <p>We catch malicious files and suspicious events in real time or stop them before they start.</p>

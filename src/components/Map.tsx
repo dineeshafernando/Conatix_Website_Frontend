@@ -98,15 +98,17 @@ export default function Map() {
         <div className="text-electric-blue font-bungee-hairline [-webkit-text-stroke:2px_currentColor]">
           <button
             onClick={() => handleLocation(office)}
-            className={`relative group w-fit text-left cursor-pointer disabled:cursor-default hover:text-white transition-colors ${currentMapLocation ? "text-white" : ""}`}
+            className={`group w-fit text-left cursor-pointer disabled:cursor-default hover:text-white transition-colors ${currentMapLocation ? "text-white" : ""}`}
             disabled={currentMapLocation}
           >
-            {office.city} <br />
-            {office.region}
-            <span className="nav-hover-animation"></span>
+            <span className="block">{office.city}</span>
+            <span className="relative inline-block">
+              {office.region}
+              <span className="nav-hover-animation"></span>
+            </span>
           </button>
         </div>
-        <p>{office.company}</p>
+        <p className="mt-[2px]">{office.company}</p>
         <ul>
           {office.addressLines.map((line) => (
             <li key={line}>{line}</li>
