@@ -10,6 +10,7 @@ export default function Home() {
           <p>We detect malware and insider threats that others miss, earlier and faster.</p>
           <p>We prevent the most dangerous kind of ransomware.</p>
           <p>Patented in 15 countries.</p>
+          <p>With leading university partners.</p>
           <p>Leading university and scientific institute partners.</p>
           <p>Military tested.</p>
           <p>Built for business.</p>
