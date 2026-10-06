@@ -10,8 +10,7 @@ export default function Home() {
           <p>We detect malware and insider threats that others miss, earlier and faster.</p>
           <p>We prevent the most dangerous kind of ransomware.</p>
           <p>Patented in 15 countries.</p>
-          <p>With leading university partners.</p>
-          <p>Leading university and scientific institute partners.</p>
+          <p>Designed with leading university and scientific institute partners.</p>
           <p>Military tested.</p>
           <p>Built for business.</p>
         </div>
@@ -24,7 +23,7 @@ export default function Home() {
             className="w-full h-auto object-contain"
             priority
           />
-          <p className="text-[17px] font-light text-white text-left pl-[2.34%]">The caracal is a desert cat known for its big ears for detecting and its speed in overtaking its prey.</p>
+          <p className="text-[18px] font-light text-white text-left pl-[3.2%]">The caracal is a desert cat known for its big ears for detecting and its speed in overtaking its prey.</p>
         </div>
       </header>
    </main>
