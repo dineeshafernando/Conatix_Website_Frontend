@@ -9,8 +9,8 @@ export default function Home() {
           <p>Conatix cybersecurity suite software tools stream, capture and analyze more detailed granular data than any other from endpoints, devices and networks in real time – without slowing you down.</p>
           <p>We detect malware and insider threats that others miss, earlier and faster.</p>
           <p>We prevent the most dangerous kind of ransomware.</p>
-          <p>Patented in 15 countries.</p>
           <p>Designed with leading university and scientific institute partners.</p>
+          <p>Patented in 15 countries.</p>
           <p>Military tested.</p>
           <p>Built for business.</p>
         </div>
